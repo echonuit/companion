@@ -1,0 +1,1624 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation utilisateur de VigieChiro Companion, l'application d'aide au traitement des nuits de capture acoustique de chauves-souris.">
+      
+      
+      
+        <link rel="canonical" href="https://companion.echonuit.fr/ecrans/validation/">
+      
+      
+        <link rel="prev" href="../lot/">
+      
+      
+        <link rel="next" href="../multisite/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Sons & validation - VigieChiro Companion</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#validation" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="VigieChiro Companion" class="md-header__button md-logo" aria-label="VigieChiro Companion" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VigieChiro Companion
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sons & validation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/echonuit/vigiechiro-pr-companion" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    echonuit/vigiechiro-pr-companion
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="VigieChiro Companion" class="md-nav__button md-logo" aria-label="VigieChiro Companion" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    VigieChiro Companion
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/echonuit/vigiechiro-pr-companion" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    echonuit/vigiechiro-pr-companion
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prise-en-main/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prise en main
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../personnaliser-les-tableaux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Personnaliser les tableaux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connexion-vigiechiro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Se connecter à Vigie-Chiro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../parcours/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parcours métier
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Référence par écran
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Référence par écran
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../accueil/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recherche/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recherche
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sites/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mes sites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../passage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Passage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../importation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Importation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qualification/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Qualification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Préparer le dépôt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Sons & validation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Sons & validation
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#filtrer-les-observations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtrer les observations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filtrer les observations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vues-sauvegardees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vues sauvegardées
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choisir-et-organiser-les-colonnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choisir et organiser les colonnes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reperer-et-ecouter-le-cri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repérer et écouter le cri
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quand-laudio-nest-plus-sur-le-disque" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quand l'audio n'est plus sur le disque
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relire-et-corriger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relire et corriger
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relire et corriger">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aller-vite-clavier-et-actions-groupees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aller vite : clavier et actions groupées
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consulter-la-fiche-dune-espece" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consulter la fiche d'une espèce
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-dun-passage-tadarida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation d'un passage (Tadarida)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validation d'un passage (Tadarida)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#publier-vos-corrections-vers-vigie-chiro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publier vos corrections vers Vigie-Chiro
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ce-que-la-publication-vous-rend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ce que la publication vous rend
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lavis-du-validateur-et-la-discussion-quil-ouvre" class="md-nav__link">
+    <span class="md-ellipsis">
+      L'avis du validateur, et la discussion qu'il ouvre
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="L'avis du validateur, et la discussion qu'il ouvre">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lire-le-fil-de-discussion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lire le fil de discussion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repondre-au-validateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Répondre au validateur
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sons-de-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sons de référence
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multisite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Carte & passages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analyse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Espèces & observations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagnostic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diagnostic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audit de cohérence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reglages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Réglages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../raccourcis-clavier/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raccourcis clavier
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossaire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossaire
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ et dépannage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#filtrer-les-observations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtrer les observations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filtrer les observations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vues-sauvegardees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vues sauvegardées
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choisir-et-organiser-les-colonnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choisir et organiser les colonnes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reperer-et-ecouter-le-cri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repérer et écouter le cri
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quand-laudio-nest-plus-sur-le-disque" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quand l'audio n'est plus sur le disque
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relire-et-corriger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relire et corriger
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relire et corriger">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aller-vite-clavier-et-actions-groupees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aller vite : clavier et actions groupées
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consulter-la-fiche-dune-espece" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consulter la fiche d'une espèce
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-dun-passage-tadarida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation d'un passage (Tadarida)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validation d'un passage (Tadarida)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#publier-vos-corrections-vers-vigie-chiro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publier vos corrections vers Vigie-Chiro
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ce-que-la-publication-vous-rend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ce que la publication vous rend
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lavis-du-validateur-et-la-discussion-quil-ouvre" class="md-nav__link">
+    <span class="md-ellipsis">
+      L'avis du validateur, et la discussion qu'il ouvre
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="L'avis du validateur, et la discussion qu'il ouvre">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lire-le-fil-de-discussion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lire le fil de discussion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repondre-au-validateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Répondre au validateur
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sons-de-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sons de référence
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/echonuit/vigiechiro-pr-companion/edit/main/docs/ecrans/validation.md" title="Editer cette page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/echonuit/vigiechiro-pr-companion/raw/main/docs/ecrans/validation.md" title="Consulter la source de cette page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="validation">Validation<a class="headerlink" href="#validation" title="Permanent link">&para;</a></h1>
+<p>L'écran <strong>Validation</strong> (la vue audio unifiée « Sons &amp; validation ») sert à <strong>écouter, relire et
+corriger</strong> les espèces identifiées par l'outil Tadarida, et à constituer votre <strong>corpus de sons de
+référence</strong>. On y arrive depuis plusieurs points : un <strong>passage</strong> (après dépôt, pour valider ses
+résultats Tadarida), l'accueil (<strong>Sons &amp; validation</strong>), <strong>Espèces &amp; observations</strong> (les détections d'une
+espèce) et <strong>Carte &amp; passages</strong> (un passage ou la sélection filtrée).</p>
+<p><img alt="Sons &amp; validation : table des observations, écoute pleine largeur et barre d'actions." src="../../assets/captures/apercu-sons-validation.png" /></p>
+<p>Quelle que soit la source, l'écran présente la <strong>table des observations</strong> (espèce retenue, proposition
+Tadarida, statut À revoir / Validée / Corrigée affiché en <strong>pastille colorée</strong> comme sur les autres
+écrans de données, mesures d'identification…) que vous pouvez <strong>filtrer</strong>,
+<strong>trier</strong> et dont vous <strong>choisissez les colonnes</strong>, ainsi qu'un <strong>panneau d'écoute pleine largeur</strong>
+(sonogramme + spectrogramme) pour la ligne sélectionnée, où vous <strong>repérez et rejouez le cri</strong> dans la
+séquence. Les <strong>colonnes de contexte</strong> (passage, carré, point) s'affichent quand la source couvre plusieurs
+passages et se masquent pour un passage unique.</p>
+<p>Le <strong>tri</strong> et les <strong>filtres</strong> que vous réglez sont <strong>mémorisés le temps de la session</strong> : si vous quittez
+puis rouvrez l'écran, vous retrouvez la revue là où vous l'aviez laissée, sans tout re-régler.</p>
+<h2 id="filtrer-les-observations">Filtrer les observations<a class="headerlink" href="#filtrer-les-observations" title="Permanent link">&para;</a></h2>
+<p>Une nuit d'enregistrement produit souvent des centaines d'observations : la <strong>barre de filtres</strong> vous aide
+à isoler celles que vous voulez revoir. Elle fonctionne « à la manière de Notion » :</p>
+<ul>
+<li>un <strong>champ de recherche</strong> permanent, à gauche, cherche dans le <strong>nom de fichier</strong>, l'<strong>espèce</strong> (taxon
+  Tadarida ou votre correction) et le <strong>commentaire</strong> ; la recherche ignore la casse et les accents ;</li>
+<li>un bouton <strong>« + Filtre »</strong> ajoute un critère sous forme de <strong>puce</strong> ; on retire une puce par sa croix.</li>
+</ul>
+<p>Les critères disponibles :</p>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th>Ce qu'il garde</th>
+<th>Par défaut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Statut</strong></td>
+<td>À revoir / Validée / Corrigée</td>
+<td>À revoir (le plus utile pour la revue)</td>
+</tr>
+<tr>
+<td><strong>Groupe</strong></td>
+<td>un groupe taxonomique présent (Chiroptères, Oiseaux, Orthoptères…)</td>
+<td><strong>Chiroptères</strong> s'il est présent : « chauves-souris uniquement », qui écarte bruit, oiseaux et orthoptères</td>
+</tr>
+<tr>
+<td><strong>Espèce</strong></td>
+<td>une espèce précise (taxon retenu)</td>
+<td>aucune tant que vous n'en choisissez pas une</td>
+</tr>
+<tr>
+<td><strong>Références</strong></td>
+<td>seulement les sons marqués « référence »</td>
+<td>(puce booléenne : sa présence suffit)</td>
+</tr>
+<tr>
+<td><strong>Proba</strong></td>
+<td>les détections dont la probabilité Tadarida est <strong>≥</strong> au seuil du curseur</td>
+<td>50 % ; les observations <strong>sans</strong> probabilité sont toujours gardées</td>
+</tr>
+<tr>
+<td><strong>Heure</strong></td>
+<td>les captures dont l'heure tombe dans la plage « de … à … »</td>
+<td><strong>nuit (21 h → 6 h)</strong> ; la plage gère le passage à minuit, et les captures sans heure sont gardées</td>
+</tr>
+</tbody>
+</table>
+<p>Les puces se <strong>combinent en ET</strong> : « Chiroptères » + « Proba ≥ 80 % » ne garde que les chauves-souris les
+plus sûres. Les <strong>compteurs</strong> de la barre de statut (À revoir / Validées / Corrigées) suivent en temps réel
+le <strong>sous-ensemble affiché</strong>, pas la nuit entière : vous voyez toujours combien il reste à traiter dans ce
+que vous avez sous les yeux.</p>
+<p>Vous pouvez <strong>exporter ce sous-ensemble</strong> en <strong>CSV</strong> via <strong>☰ → Exporter les observations (CSV)</strong> : le
+fichier reprend exactement les observations <strong>actuellement affichées</strong> (donc les filtres appliqués), avec
+leurs colonnes (carré, point, site, date, espèce, statut, fréquence, commentaire…). Le CSV est en UTF‑8 et
+s'ouvre directement dans un tableur (Excel, LibreOffice) pour l'analyse ou la transmission.</p>
+<p><img alt="La barre de filtres avec la puce « Groupe : Chiroptères » active : la table ne montre plus que les chauves-souris." src="../../assets/captures/apercu-sons-validation-filtres.png" /></p>
+<h3 id="vues-sauvegardees">Vues sauvegardées<a class="headerlink" href="#vues-sauvegardees" title="Permanent link">&para;</a></h3>
+<p>La revue <strong>au fil de l'eau</strong> est déjà mémorisée automatiquement (vous retrouvez vos filtres et votre tri à
+la réouverture). Au-delà, une combinaison de filtres utile peut être <strong>enregistrée sous un nom</strong> pour être
+rejouée d'un clic : les vues enregistrées s'affichent comme des <strong>onglets</strong> au-dessus de la barre de
+filtres. Cliquer sur le nom d'un onglet <strong>rejoue</strong> sa combinaison ; le bouton <strong>« + Vue »</strong>, au bout de la
+barre, enregistre les filtres <strong>courants</strong> sous un nouveau nom ; sur chaque onglet, le <strong>crayon</strong> le renomme
+et la <strong>croix</strong> le supprime.</p>
+<h2 id="choisir-et-organiser-les-colonnes">Choisir et organiser les colonnes<a class="headerlink" href="#choisir-et-organiser-les-colonnes" title="Permanent link">&para;</a></h2>
+<p>Comme tous les tableaux de l'application, celui-ci se <strong>trie</strong>, se <strong>réorganise</strong> et laisse <strong>choisir ses
+colonnes</strong> (clic droit ou menu ☰ « outils ») : le fonctionnement commun est décrit dans
+<a href="../../personnaliser-les-tableaux/">Personnaliser les tableaux</a>.</p>
+<p>Le <strong>clic droit</strong> sur une observation réunit par ailleurs ses actions : <strong>ouvrir le passage</strong>, la
+<strong>fiche de l'espèce</strong>, le sous-menu <strong>Validation ▸</strong> (valider, corriger, certitude, référence, douteux)
+et <strong>Copier ▸</strong> (nom latin, n° de carré). Vous n'êtes donc plus obligé de remonter au menu ☰ ni aux
+boutons pour agir sur la ligne que vous écoutez :
+voir <a href="../../personnaliser-les-tableaux/#agir-sur-une-ligne-double-clic-et-clic-droit">Agir sur une ligne</a>.</p>
+<p>Ici, outre l'espèce, le statut et la proposition Tadarida, la table peut afficher : le <strong>nom de fichier</strong> de la
+séquence, la <strong>date d'enregistrement</strong>, l'<strong>heure de capture</strong>, la <strong>fréquence médiane</strong>, votre
+<strong>certitude</strong>, un <strong>indicateur de commentaire</strong>, et les mesures d'identification <strong>FME</strong> (fréquence de
+moindre énergie) et <strong>fréquence terminale</strong>, calculées sur le cri sélectionné.</p>
+<p><img alt="La table avec toutes les colonnes affichées, dont la fréquence médiane et les mesures FME / fréquence terminale." src="../../assets/captures/apercu-sons-validation-colonnes.png" /></p>
+<p>Les mesures <strong>FME</strong> et <strong>fréquence terminale</strong> demandent d'analyser le signal du cri : elles se
+<strong>remplissent au fil de l'écoute</strong> (un tiret « — » tant que la ligne n'a pas été sélectionnée), pour ne pas
+analyser toute la nuit d'un coup.</p>
+<h2 id="reperer-et-ecouter-le-cri">Repérer et écouter le cri<a class="headerlink" href="#reperer-et-ecouter-le-cri" title="Permanent link">&para;</a></h2>
+<p>Le <strong>panneau d'écoute</strong> montre le <strong>sonogramme</strong> et le <strong>spectrogramme</strong> de la séquence sélectionnée. Comme
+les cris de chauves-souris sont des <strong>ultrasons</strong>, le son est <strong>ralenti dix fois</strong> (expansion temporelle
+×10) pour devenir audible.</p>
+<p>Quand une observation pointe un cri précis dans la séquence, la <strong>fenêtre de ce cri</strong> (entre son début et
+sa fin) est <strong>surlignée</strong> sur le sonogramme et le spectrogramme, et la <strong>lecture s'y positionne</strong>
+directement : vous entendez le bon cri sans chercher. Le menu ☰ propose deux options d'écoute : la
+<strong>lecture automatique</strong> à chaque sélection (activée par défaut) et la <strong>lecture en boucle</strong>.</p>
+<h2 id="quand-laudio-nest-plus-sur-le-disque">Quand l'audio n'est plus sur le disque<a class="headerlink" href="#quand-laudio-nest-plus-sur-le-disque" title="Permanent link">&para;</a></h2>
+<p>Si le passage a été <strong>archivé</strong> (voir <a href="../passage/">Passage</a>), ou si une partie de ses fichiers a
+disparu de votre disque, l'écran vous le dit franchement plutôt que de vous laisser devant un lecteur
+muet :</p>
+<ul>
+<li>un <strong>bandeau</strong> en tête d'écran annonce « passage archivé » ou « audio partiel », avec le nombre de
+  séquences encore présentes ;</li>
+<li>à la place du lecteur, un <strong>encart</strong> explique pourquoi ce son n'est pas écoutable et comment le
+  récupérer (réimporter les fichiers d'origine, bouton <strong>Réactiver ce passage</strong> dans l'écran Passage) ;</li>
+<li>si l'audio n'est absent que <strong>partiellement</strong>, l'écoute fonctionne normalement sur les séquences
+  dont le fichier est là, et l'encart n'apparaît que sur les autres.</li>
+</ul>
+<p><strong>Tout le travail sur les données reste possible</strong> : filtrer, trier, choisir les colonnes, commenter,
+marquer « douteux », corriger un taxon, changer votre certitude, exporter. Seule l'<strong>écoute</strong> est
+impossible — c'est bien ce qui distingue un passage archivé d'un passage perdu.</p>
+<h2 id="relire-et-corriger">Relire et corriger<a class="headerlink" href="#relire-et-corriger" title="Permanent link">&para;</a></h2>
+<p>Pour l'observation sélectionnée, vous pouvez :</p>
+<ul>
+<li><strong>Valider</strong> : retenir la proposition de Tadarida ;</li>
+<li><strong>Corriger</strong> : retenir un autre taxon, choisi dans la liste ;</li>
+<li><strong>Marquer / retirer la référence</strong> : ajouter l'observation à votre corpus de sons de référence, ou l'en retirer ;</li>
+<li><strong>Marquer douteux</strong> : noter « à repasser » une observation écoutée qui vous laisse un doute, pour y
+  revenir plus tard ;</li>
+<li><strong>Déclarer votre certitude</strong> : le menu <strong>Certitude</strong> (Sûr / Probable / Possible) enregistre le degré
+  de confiance que <strong>vous</strong> accordez à l'espèce retenue. C'est l'équivalent de la « Confiance
+  observateur » du portail Vigie-Chiro : <strong>vide tant que vous ne l'avez pas déclarée</strong> (elle n'est
+  jamais déduite d'une probabilité), remplaçable à tout moment, effaçable par « Effacer la
+  certitude ». La colonne <strong>Certitude</strong> de la table affiche votre déclaration (un tiret sinon).</li>
+</ul>
+<p>Un <strong>mode inventaire</strong> permet de propager une validation aux autres détections de la même espèce.</p>
+<p><strong>Éditer un commentaire</strong> : cliquez sur la <strong>case Commentaire</strong> d'une ligne pour saisir ou modifier une note
+sur cette observation (l'indicateur de commentaire de la table signale les lignes annotées).</p>
+<p><img alt="L'éditeur de commentaire ouvert au clic sur la case : une zone de texte et le bouton Enregistrer." src="../../assets/captures/apercu-sons-validation-commentaire.png" /></p>
+<h3 id="aller-vite-clavier-et-actions-groupees">Aller vite : clavier et actions groupées<a class="headerlink" href="#aller-vite-clavier-et-actions-groupees" title="Permanent link">&para;</a></h3>
+<p>La revue est pensée pour <strong>enchaîner</strong> les observations sans quitter le clavier :</p>
+<ul>
+<li><strong>↑ / ↓</strong> naviguent d'une ligne à l'autre ;</li>
+<li><strong>Entrée</strong> valide, <strong>R</strong> marque / retire la référence, <strong>D</strong> bascule le drapeau douteux ;</li>
+<li><strong>1 / 2 / 3</strong> déclarent la certitude (Sûr / Probable / Possible) ;</li>
+<li><strong>N</strong> saute à la prochaine observation « À revoir ».</li>
+</ul>
+<p>Vous pouvez aussi <strong>sélectionner plusieurs lignes</strong> (Ctrl+clic, ou Maj+clic pour une plage) et <strong>valider,
+corriger, marquer en référence ou déclarer la certitude de toute la sélection d'un coup</strong>. Une action groupée est <strong>tout ou rien</strong> (si elle
+échoue, aucune ligne n'est modifiée) et enregistre la validation en <strong>mode activité</strong> (sans propagation
+inventaire, qui n'aurait pas de sens sur une sélection hétérogène).</p>
+<p><img alt="Trois observations sélectionnées d'un coup dans la table : l'action (valider, corriger, référence) s'applique à toute la sélection." src="../../assets/captures/apercu-sons-validation-lot.png" /></p>
+<h2 id="consulter-la-fiche-dune-espece">Consulter la fiche d'une espèce<a class="headerlink" href="#consulter-la-fiche-dune-espece" title="Permanent link">&para;</a></h2>
+<p>En pleine revue, pour <strong>lever un doute</strong> sur une identification, un <strong>double-clic</strong> sur une observation
+(ou un <strong>clic droit → « Fiche de l'espèce »</strong>, ou encore le menu <strong>☰ → Fiche de l'espèce</strong>) ouvre dans
+votre <strong>navigateur</strong> une fiche d'information sur la <strong>proposition Tadarida</strong> de la ligne
+sélectionnée. L'entrée s'<strong>adapte à la sélection</strong> : elle nomme l'espèce (par exemple « Fiche de l'espèce
+(Pipistrelle commune) ») et s'ouvre au clic.</p>
+<p>Toutes les lignes n'ont pas de fiche : une séquence <strong>non identifiée</strong>, un pseudo-taxon (<strong>Bruit</strong>,
+<strong>Oiseau</strong>) ou un couple d'espèces n'en a aucune. Dans le menu, l'entrée est alors <strong>grisée</strong> avec la
+mention « aucune fiche disponible » ; au <strong>double-clic</strong>, rien ne s'ouvre et un <strong>bandeau</strong> vous le dit
+(« Aucune fiche disponible pour « Bruit » »). Sur une nuit réelle, où l'essentiel des lignes est du
+bruit, c'est le cas le plus fréquent : le double-clic ne reste jamais sans réponse.</p>
+<p><img alt="Le menu ☰ de Sons &amp; validation, où « Fiche de l'espèce (Pipistrelle commune) » ouvre la fiche de la proposition Tadarida sélectionnée." src="../../assets/captures/apercu-fiche-espece.png" /></p>
+<p>La <strong>source</strong> de la fiche dépend du taxon :</p>
+<ul>
+<li><strong>chauves-souris</strong> : la fiche descriptive du <strong>Plan National d'Actions Chiroptères</strong> (en français) ;</li>
+<li><strong>autres taxons</strong> (oiseaux, orthoptères…) : une source <strong>universelle</strong> par nom scientifique, <strong>GBIF</strong>
+  par défaut ou <strong>Wikipédia FR</strong> au choix.</li>
+</ul>
+<p>Ce choix se règle une fois pour toutes dans le <strong>☰ du bandeau</strong> (en haut à droite de la fenêtre), via la
+case <strong>« Fiches espèces sur Wikipédia (sinon GBIF) »</strong> : décochée (le défaut), les fiches hors
+chauves-souris s'ouvrent sur GBIF ; cochée, sur Wikipédia FR. Le réglage est <strong>mémorisé</strong> d'une session à
+l'autre.</p>
+<p><img alt="Le menu ☰ du bandeau : la case « Fiches espèces sur Wikipédia (sinon GBIF) » choisit la source des fiches hors chauves-souris." src="../../assets/captures/apercu-fiche-espece-source.png" /></p>
+<h2 id="validation-dun-passage-tadarida">Validation d'un passage (Tadarida)<a class="headerlink" href="#validation-dun-passage-tadarida" title="Permanent link">&para;</a></h2>
+<p>Ouvert sur un <strong>passage</strong> (accessible <strong>après le dépôt</strong> : Vigie-Chiro renvoie les résultats
+d'identification 24 à 48 h plus tard, voir le <a href="../../parcours/">parcours</a>), l'écran permet
+d'<strong>importer le fichier CSV</strong> de résultats Tadarida, puis d'<strong>exporter</strong> le fichier <code>_Vu</code> réinjectable
+(avec, en option, la trace du mode de validation). Ces actions propres au passage vivent dans le menu « ☰ ».</p>
+<p><img alt="Le menu ☰ ouvert sur un passage : import du CSV Tadarida, import et publication vers Vigie-Chiro, ouverture des données sur le portail, options d'export et d'écoute. Les entrées sans objet sont grisées et disent pourquoi." src="../../assets/captures/apercu-sons-validation-menu-actions.png" /></p>
+<p>Les entrées <strong>liées à Vigie-Chiro</strong> n'apparaissent que sur un <strong>passage</strong> et quand l'application est
+<a href="../../connexion-vigiechiro/">connectée</a> : sur le corpus de référence, ou hors connexion, le menu se
+réduit à ce qui a du sens. Une entrée sans objet reste <strong>visible mais grisée</strong>, avec sa raison entre
+parenthèses, plutôt que de disparaître sans explication.</p>
+<p>Plutôt que d'importer le CSV à la main, le menu <strong>☰ → Importer depuis Vigie-Chiro…</strong> récupère les
+résultats <strong>directement depuis la plateforme</strong> (application <a href="../../connexion-vigiechiro/">connectée</a>,
+passage déposé et traité). Si le passage n'est pas encore relié à une participation, l'application
+propose de choisir la bonne dans la liste de vos participations. L'import CSV reste disponible en
+repli - les deux alimentent le même écran.</p>
+<p>Le <strong>premier import</strong> est <strong>rapide</strong> : il récupère le fichier d'observations d'un seul coup quand la
+plateforme le propose. Il ne rapatrie alors ni les identifiants de la plateforme, ni l'avis du
+validateur, ni les échanges avec lui : rien de tout cela n'existe encore à ce stade, et les
+identifiants ne servent qu'au moment de <strong>publier vos corrections</strong> - c'est la publication qui va
+les chercher (voir plus bas).</p>
+<p>Un <strong>réimport</strong>, lui, prend toujours la voie <strong>complète</strong>, page par page : c'est le geste par lequel
+vous allez chercher ce qui a changé côté plateforme, à commencer par l'<strong>avis du validateur</strong> du
+Muséum et vos échanges avec lui. Il serait absurde qu'il les efface au lieu de les rafraîchir. La
+même voie complète sert de repli quand le fichier d'observations n'est pas disponible. Elle s'affiche
+dans une <strong>fenêtre de progression</strong> avec un bouton <strong>Annuler</strong> : renoncer laisse le passage tel qu'il
+était, sans demi-import.</p>
+<p>Si l'analyse de la plateforme n'est pas terminée, l'import vous dit <strong>pourquoi</strong> il n'y a rien à
+récupérer : l'analyse n'a <strong>jamais été lancée</strong> (lancez-la depuis « Préparer le dépôt », étape 4), elle
+est <strong>planifiée</strong> ou <strong>en cours</strong> (patientez : comptez plusieurs dizaines de minutes), elle a <strong>échoué</strong>
+(le motif est indiqué), ou - cas anormal - elle est <strong>terminée sans renvoyer la moindre observation</strong>,
+et c'est alors le dépôt qu'il faut vérifier. Le suivi de l'analyse est affiché dans
+<a href="../lot/">Préparer le dépôt</a>.</p>
+<p>Le menu <strong>☰ → Ouvrir les données sur Vigie-Chiro</strong> ouvre dans votre navigateur la page des
+<strong>données de la participation</strong> sur le portail : pratique pour comparer ce que la plateforme a
+identifié avec ce que vous voyez ici. L'entrée n'apparaît que quand l'écran cible un passage, et
+reste grisée (« passage non lié ») tant que le passage n'a pas de participation liée.</p>
+<h3 id="publier-vos-corrections-vers-vigie-chiro">Publier vos corrections vers Vigie-Chiro<a class="headerlink" href="#publier-vos-corrections-vers-vigie-chiro" title="Permanent link">&para;</a></h3>
+<p>Dans l'autre sens, une fois vos observations revues (taxon retenu <strong>et</strong> certitude déclarée), le
+menu <strong>☰ → Publier les corrections vers Vigie-Chiro…</strong> pousse vos décisions vers la plateforme :
+chaque observation publiée y porte alors votre taxon et votre confiance d'observateur, comme si
+vous les aviez saisis sur le site. Une <strong>confirmation récapitule</strong> d'abord ce qui va partir et ce
+qui restera à quai : les observations <strong>sans certitude</strong> (déclarez-la d'abord) et les taxons <strong>hors
+référentiel</strong>. La publication est <strong>rejouable sans risque</strong> : republier réécrit les mêmes valeurs.</p>
+<p><img alt="La confirmation avant publication : ce qui est prêt à partir, ce qui sera d'abord ancré, ce qui reste à quai et pourquoi, et le rappel qu'une correction publiée se remplace mais ne se retire pas." src="../../assets/captures/apercu-publication-confirmation.png" /></p>
+<p>Rien n'est envoyé tant que vous n'avez pas accepté. Le récapitulatif distingue ce qui <strong>part</strong>, ce qui
+sera <strong>ancré d'abord</strong> (voir plus bas) et ce qui <strong>reste à quai</strong> avec sa cause : les observations à
+ancrer n'y figurent pas, puisque l'envoi va justement s'en occuper.</p>
+<p>Vos observations n'ont pas besoin d'être « rattachées » une par une à la plateforme au préalable :
+si ce lien manque, la publication le <strong>récupère elle-même</strong> avant d'envoyer. C'est le cas d'une nuit
+importée rapidement (le fichier d'observations seul) ou reconstruite depuis la plateforme. Une
+fenêtre de progression vous le dit alors (« Récupération des identifiants et des échanges avec le
+validateur… »), avec un bouton <strong>Annuler</strong> : cette récupération peut prendre quelques minutes. Elle
+<strong>préserve vos validations</strong> - publier ne vous coûtera jamais votre travail de revue. Une nuit déjà
+rattachée n'en paie pas le coût, et le geste part directement.</p>
+<p><img alt="La fenêtre de progression du rapatriement : le titre de l'opération, une barre d'avancement, l'étape en cours avec son numéro de page, et le bouton Annuler." src="../../assets/captures/apercu-publication-progression.png" /></p>
+<p><strong>Annuler</strong> rend la main immédiatement : l'arrêt est demandé à chaque page rapatriée, pas seulement à
+la fin. Ce que la fenêtre a déjà ramené reste acquis - renoncer ne défait rien.</p>
+<p>Le nom de cette étape dit les <strong>deux</strong> choses qu'elle ramène : les identifiants dont la publication a
+besoin, et les <strong>échanges avec le validateur</strong> du Muséum, s'il y en a - les deux voyagent ensemble.
+Au retour, le compte rendu vous dit <strong>sur combien d'observations</strong> le validateur s'est exprimé
+(« Le validateur s'est exprimé sur 3 observation(s). »), plutôt que de vous laisser le découvrir en
+ouvrant la bonne ligne par hasard. Il se tait quand il n'y a rien à dire.</p>
+<p>Une seule situation reste hors d'atteinte : une nuit qui n'a <strong>aucune participation</strong> sur la
+plateforme, donc rien à quoi se rattacher. L'entrée de menu est alors <strong>grisée</strong> et le dit
+(« rattachez la nuit à sa participation Vigie-Chiro »).</p>
+<h2 id="ce-que-la-publication-vous-rend">Ce que la publication vous rend<a class="headerlink" href="#ce-que-la-publication-vous-rend" title="Permanent link">&para;</a></h2>
+<p>À la fin, un <strong>rapport</strong> s'affiche sous l'entrée de menu. Il dit ce qui est parti, et surtout ce qui
+n'est <strong>pas</strong> parti :</p>
+<ul>
+<li>les corrections <strong>envoyées</strong> ;</li>
+<li>celles <strong>à compléter</strong>, dont la certitude n'a pas été déclarée ;</li>
+<li>celles <strong>sans ancrage plateforme</strong>, avec le remède : rattacher la nuit à sa participation ;</li>
+<li>celles <strong>hors référentiel</strong> ;</li>
+<li>les <strong>refus de la plateforme</strong> - et ils sont <strong>tous</strong> listés, chacun avec sa cause.</li>
+</ul>
+<p>Ce dernier point mérite d'être souligné : la version précédente n'en montrait <strong>qu'un seul sur N</strong>
+(« 3 refus, dont : … »). Les autres causes existaient et ne vous étaient jamais dites. Si une
+observation part et qu'une autre est refusée, vous savez maintenant laquelle et pourquoi.</p>
+<p>Chaque ligne porte une <strong>icône</strong> en plus de sa couleur, pour rester lisible si vous distinguez mal les
+couleurs.</p>
+<p>À savoir : une correction publiée se <strong>remplace</strong> mais ne se <strong>retire</strong> pas de la plateforme, et
+une <strong>relance du traitement serveur</strong> efface les corrections publiées (republiez alors après le
+nouveau traitement). L'export <code>_Vu</code> reste disponible en repli hors connexion.</p>
+<p>Pour importer, vous pouvez soit utiliser le menu « ☰ », soit <strong>glisser-déposer</strong> directement le fichier
+CSV sur l'écran : pratique quand la fenêtre de sélection de fichier du système ne s'ouvre pas (une astuce
+en bas de l'écran, visible quand l'écran est ouvert sur un passage, rappelle ce geste). À la fin de
+l'import, un bandeau confirme le nombre d'observations chargées ; en cas de problème (séquence introuvable,
+fichier illisible…), un bandeau rouge explique ce qui s'est passé.</p>
+<p><img alt="Sons &amp; validation : la table des observations « À revoir » juste après l'import d'un CSV, avec le bandeau récapitulatif." src="../../assets/captures/apercu-validation-tadarida.png" /></p>
+<p>L'import est <strong>tolérant</strong> : les observations dont le son n'est pas disponible sont ignorées (le bandeau en
+indique le nombre), et les taxons que Tadarida propose hors de la liste de référence sont conservés tels
+quels. Vous pouvez ainsi importer un fichier de résultats complet même si vous n'avez gardé qu'une partie
+des sons.</p>
+<h2 id="lavis-du-validateur-et-la-discussion-quil-ouvre">L'avis du validateur, et la discussion qu'il ouvre<a class="headerlink" href="#lavis-du-validateur-et-la-discussion-quil-ouvre" title="Permanent link">&para;</a></h2>
+<p>Sur Vigie-Chiro, <strong>trois personnes</strong> peuvent se prononcer sur une même détection :</p>
+<table>
+<thead>
+<tr>
+<th>Qui</th>
+<th>Ce qu'il dit</th>
+<th>Où c'est affiché</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tadarida</strong></td>
+<td>l'algorithme <strong>propose</strong> une espèce</td>
+<td>colonne « Proposition Tadarida »</td>
+</tr>
+<tr>
+<td><strong>Vous</strong></td>
+<td>vous <strong>corrigez</strong> si vous n'êtes pas d'accord</td>
+<td>colonnes « Votre taxon » et « Certitude »</td>
+</tr>
+<tr>
+<td><strong>Le validateur</strong> (expert du MNHN)</td>
+<td>il <strong>tranche</strong></td>
+<td>colonne « <strong>Avis du validateur</strong> »</td>
+</tr>
+</tbody>
+</table>
+<p>Le troisième avis arrive <strong>à chaque import</strong> depuis Vigie-Chiro, en même temps que le reste. Vous n'avez
+rien à faire pour l'obtenir : il apparaît dès qu'un expert s'est prononcé sur votre nuit.</p>
+<p><img alt="Les trois avis sur une même détection : Tadarida propose, vous corrigez, le validateur tranche - et ici, il vous contredit. La discussion s'ouvre à droite du lecteur." src="../../assets/captures/apercu-sons-validation-avis-validateur.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Le désaccord saute aux yeux</p>
+<p>L'avis du validateur est <strong>coloré selon qu'il vous confirme ou vous contredit</strong>. Un expert qui
+confirme ne vous demande rien ; un expert qui <strong>contredit</strong> votre correction est ce que vous devez
+voir en premier — c'est là que se joue la qualité de la donnée que vous avez déposée.</p>
+<p>Tant qu'aucun expert ne s'est prononcé — le cas le plus courant — la colonne reste discrète (« — »).</p>
+</div>
+<h3 id="lire-le-fil-de-discussion">Lire le fil de discussion<a class="headerlink" href="#lire-le-fil-de-discussion" title="Permanent link">&para;</a></h3>
+<p>Quand le validateur vous <strong>écrit</strong>, un <strong>panneau s'ouvre à droite du lecteur</strong> : vous lisez la discussion
+<strong>en écoutant le cri</strong>, sans changer d'écran. La colonne <strong>Discussion</strong> (une bulle en en-tête) indique le
+nombre de messages,
+pour repérer d'un coup d'œil les détections dont il faut parler.</p>
+<p>Chaque message dit <strong>qui</strong> parle (« Vous », « Le validateur ») et <strong>quand</strong>.</p>
+<h3 id="repondre-au-validateur">Répondre au validateur<a class="headerlink" href="#repondre-au-validateur" title="Permanent link">&para;</a></h3>
+<p>La zone de saisie sous le fil vous permet de <strong>répondre</strong>. Une <strong>confirmation</strong> vous montre d'abord le
+texte qui va partir.</p>
+<div class="admonition danger">
+<p class="admonition-title">Un message envoyé ne peut plus être retiré</p>
+<p>Contrairement à une correction (qui se <strong>remplace</strong>), un message est <strong>définitif</strong> : la plateforme ne
+permet <strong>ni de le supprimer, ni de le modifier</strong>, et il est lu par un expert du MNHN.</p>
+<p>C'est pourquoi la confirmation <strong>cite votre texte</strong> avant l'envoi : relisez-le. Si vous annulez, votre
+texte reste dans la zone de saisie — rien n'est perdu.</p>
+<p>Si l'envoi échoue (plateforme injoignable, par exemple), <strong>rien n'est publié</strong> et votre texte vous est
+rendu : vous ne risquez pas de croire envoyé un message que le validateur ne verra jamais.</p>
+</div>
+<p>La zone de saisie est <strong>désactivée</strong>, en expliquant pourquoi, quand il n'y a personne à qui parler : une
+détection issue d'un <strong>import CSV</strong> ou d'une <strong>saisie manuelle</strong> n'existe pas sur Vigie-Chiro.</p>
+<h2 id="sons-de-reference">Sons de référence<a class="headerlink" href="#sons-de-reference" title="Permanent link">&para;</a></h2>
+<p>Depuis l'accueil, l'activité <strong>Sons &amp; validation</strong> ouvre l'écran sur <strong>toutes les observations marquées
+« référence »</strong> : vous les <strong>écoutez</strong>, les <strong>validez / corrigez</strong>, <strong>retirez</strong> la référence, et
+<strong>exportez la bibliothèque</strong> (un récapitulatif CSV + la copie des fichiers son) vers un dossier de votre
+choix.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../lot/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Préparer le dépôt">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Préparer le dépôt
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../multisite/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Carte &amp; passages">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                Carte & passages
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Sébastien Nedjar
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

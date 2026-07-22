@@ -611,6 +611,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#copier-ou-laisser-vos-fichiers-ou-ils-sont" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copier, ou laisser vos fichiers où ils sont
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#suivre-lavancement" class="md-nav__link">
     <span class="md-ellipsis">
       Suivre l'avancement
@@ -1064,6 +1073,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#copier-ou-laisser-vos-fichiers-ou-ils-sont" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copier, ou laisser vos fichiers où ils sont
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#suivre-lavancement" class="md-nav__link">
     <span class="md-ellipsis">
       Suivre l'avancement
@@ -1274,6 +1292,23 @@ Gardez donc une <strong>sauvegarde</strong> de ce à quoi vous tenez.</p>
 <p>Le bouton <strong>Réactiver ce passage</strong> remet l'audio en place à partir d'un dossier que vous désignez
 (votre sauvegarde, un disque externe, la carte d'origine…). L'exploration est <strong>récursive</strong> : vous
 pouvez pointer la racine d'une sauvegarde.</p>
+<h3 id="copier-ou-laisser-vos-fichiers-ou-ils-sont">Copier, ou laisser vos fichiers où ils sont<a class="headerlink" href="#copier-ou-laisser-vos-fichiers-ou-ils-sont" title="Permanent link">&para;</a></h3>
+<p>Une fois le dossier désigné, l'application demande <strong>ce qu'elle doit en faire</strong>. La question est
+toujours posée, mais elle n'est pas formulée de la même façon selon l'endroit que vous avez choisi :</p>
+<ul>
+<li><strong>hors de votre dossier de travail</strong> - un serveur de fichiers, un disque externe, votre arborescence
+  habituelle : ces fichiers sont <strong>les vôtres</strong>, et en faire une copie créerait un doublon que vous
+  n'avez pas demandé. L'application propose donc de <strong>les laisser où ils sont</strong> et de s'y référer ;</li>
+<li><strong>une sauvegarde ponctuelle</strong> dont vous ne voulez pas dépendre : répondez <strong>non</strong>, et l'application
+  en garde sa propre copie, comme elle l'a toujours fait.</li>
+</ul>
+<p>Laisser les fichiers sur place a une conséquence, et elle vous est dite <strong>avant</strong> le choix, pas
+découverte après : cette nuit n'est plus écoutable tant que ce support n'est pas accessible - disque
+débranché, dossier réseau hors ligne. Elle le redevient <strong>d'elle-même</strong> dès qu'il revient, sans qu'il
+faille rien réactiver une seconde fois.</p>
+<p>Ce choix ne concerne que les fichiers <strong>que vous désignez</strong>. Les séquences que l'application
+<strong>régénère</strong> elle-même à partir de vos enregistrements bruts sont, elles, toujours écrites dans votre
+dossier de travail : elles n'existaient nulle part ailleurs, il n'y a donc rien à référencer.</p>
 <p><strong>Chaque fichier est vérifié avant d'être rebranché.</strong> C'est le cœur de l'affaire : deux jeux de
 fichiers peuvent porter <strong>les mêmes noms</strong> sans être les mêmes (une redécoupe, une autre expansion,
 une autre nuit du même carré). Rebrancher vos observations sur le mauvais audio produirait un
@@ -1342,9 +1377,10 @@ rien de nouveau pendant longtemps, c'est un défaut, et cela vaut la peine de le
 ajoute de l'audio sans jamais en retirer. <strong>Fermer</strong> n'est disponible qu'une fois l'opération terminée
 — survolez le bouton pour savoir pourquoi il attend.</p>
 <div class="admonition tip">
-<p class="admonition-title">Les fichiers de votre sauvegarde ne sont jamais touchés</p>
-<p>La réactivation <strong>copie</strong> : votre dossier source reste intact, et vos observations comme vos
-validations ne sont jamais recalculées — on rebranche des chemins, rien d'autre.</p>
+<p class="admonition-title">Les fichiers que vous désignez ne sont jamais touchés</p>
+<p>Que vous ayez demandé la copie ou la référence, votre dossier source reste <strong>intact</strong> : rien n'y
+est déplacé, renommé ni supprimé. Vos observations et vos validations ne sont pas davantage
+recalculées : on rebranche des chemins, rien d'autre.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Un passage reconstruit depuis Vigie-Chiro</p>

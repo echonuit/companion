@@ -699,6 +699,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Réglages
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -708,6 +719,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#emplacements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Où l'application range ses données (onglet « Emplacements »)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -801,6 +840,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#emplacements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Où l'application range ses données (onglet « Emplacements »)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -877,6 +933,9 @@ choisissez les séquences WAV.</p>
 <p>La <strong>taille maximale d'une archive</strong> (700 Mo par défaut, la limite acceptée par la plateforme) est
 utile pour générer des archives plus petites (connexion fragile) ; le changement s'applique à la
 <strong>prochaine génération</strong> d'archives.
+- <strong>Emplacements</strong> : <strong>où vivent</strong> le dossier de travail et la base de données (<code>vigiechiro.db</code>). Voir
+  la section <a href="#emplacements">ci-dessous</a> : ce choix a des
+  conséquences qu'il vaut la peine de connaître.
 - <strong>Fonctionnalités</strong> : <strong>activer ou désactiver</strong> les fonctionnalités optionnelles de l'application
   (l'<strong>import depuis Vigie-Chiro</strong>, le <strong>diagnostic</strong> du capteur, la <strong>préparation du dépôt</strong>, la
   <strong>vérification</strong>, l'<strong>importation Tadarida</strong>, l'<strong>analyse</strong> « Espèces &amp; observations » et la
@@ -895,6 +954,26 @@ synchronisés.</p>
 <p>« Conserver les originaux » figurait aussi sur l'écran d'import ; il n'y est plus. C'est une option
 de ré-analyse, dont l'immense majorité des imports n'a pas à se soucier : elle vit désormais ici,
 où on la trouve quand on la cherche.</p>
+</div>
+<h2 id="emplacements">Où l'application range ses données (onglet « Emplacements »)<a class="headerlink" href="#emplacements" title="Permanent link">&para;</a></h2>
+<p>L'onglet <strong>Emplacements</strong> décide <strong>où vivent</strong> deux choses :</p>
+<ul>
+<li>le <strong>dossier de travail</strong>, qui contient les sessions et leur audio ;</li>
+<li>la <strong>base de données</strong> (<code>vigiechiro.db</code>) : vos observations, vos validations, les liens avec Vigie-Chiro. C'est le <strong>seul fichier irremplaçable</strong> ; le reste se réimporte ou se recalcule.</li>
+</ul>
+<p>Pour chacun, le chemin courant est affiché, un bouton <strong>« Choisir… »</strong> ouvre un sélecteur de dossier, et l'emplacement <strong>par défaut</strong> est rappelé. Un dossier que l'application ne peut pas utiliser (un fichier, un dossier non inscriptible) est <strong>refusé au moment du choix</strong>, avec la raison : vous ne le découvrez pas au prochain démarrage.</p>
+<div class="admonition warning">
+<p class="admonition-title">Changer un emplacement ne déplace pas vos données</p>
+<p>Un emplacement est un <strong>pointeur</strong> : le changer dit à l'application <strong>où aller lire au prochain démarrage</strong>, il ne déplace rien. Si vous pointez la base vers un dossier <strong>vide</strong>, l'application y démarrera sur une base <strong>neuve</strong>, l'ancienne restant <strong>intacte</strong> à son ancien emplacement. Pour l'emporter, <strong>copiez le fichier vous-même</strong> avant de redémarrer. C'est le même principe que pour votre audio : l'application ne touche pas à vos fichiers à votre place.</p>
+</div>
+<p>Une fois le choix <strong>appliqué</strong>, un message rappelle qu'il vaudra <strong>au prochain démarrage</strong>, avec un bouton <strong>« Quitter l'application »</strong> pour redémarrer tout de suite. Un bouton <strong>« Rétablir les emplacements par défaut »</strong> annule un choix précédent.</p>
+<div class="admonition note">
+<p class="admonition-title">En ligne de commande</p>
+<p>La commande <code>vigiechiro emplacements</code> fait la même chose sans l'interface : sans option elle <strong>affiche</strong> les emplacements, <code>--definir-travail</code> / <code>--definir-base</code> les <strong>changent</strong> (avec la même vérification), <code>--reinitialiser</code> les <strong>rétablit</strong>. Utile pour scripter une installation.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Sous Flatpak, un dossier réseau demande une autorisation</p>
+<p>La version Flatpak est volontairement limitée aux dossiers qu'elle a le droit de lire. Un disque externe ou une carte SD conviennent. Un <strong>partage réseau</strong> (NAS) ouvert depuis votre gestionnaire de fichiers, lui, est monté à un endroit que le bac à sable ne voit pas : pour y ranger vos données, il faut l'<strong>autoriser</strong> (<code>flatpak override --user --filesystem=xdg-run/gvfs</code>) ou utiliser la version <code>.deb</code>. La version Windows et le <code>.deb</code> n'ont pas cette limite.</p>
 </div>
 
 

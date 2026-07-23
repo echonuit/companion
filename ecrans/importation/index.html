@@ -577,6 +577,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#jai-deja-les-fichiers-transformes" class="md-nav__link">
+    <span class="md-ellipsis">
+      J'ai déjà les fichiers transformés
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conserver-les-originaux-pour-re-analyse-option" class="md-nav__link">
     <span class="md-ellipsis">
       Conserver les originaux pour ré-analyse (option)
@@ -979,6 +988,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#jai-deja-les-fichiers-transformes" class="md-nav__link">
+    <span class="md-ellipsis">
+      J'ai déjà les fichiers transformés
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conserver-les-originaux-pour-re-analyse-option" class="md-nav__link">
     <span class="md-ellipsis">
       Conserver les originaux pour ré-analyse (option)
@@ -1154,6 +1172,31 @@ de 5 s devient 50 s à l'écoute, dans la bande audible). Un enregistrement de p
 <strong>plusieurs séquences</strong>, chacune nommée avec l'<strong>heure réelle de son début</strong> (ex. <code>…_225849</code>,
 <code>…_225854</code>, <code>…_225859</code>…) : c'est ce qui permet de retrouver, pour chaque observation Tadarida, la
 séquence audio correspondante.</p>
+<h2 id="jai-deja-les-fichiers-transformes">J'ai déjà les fichiers transformés<a class="headerlink" href="#jai-deja-les-fichiers-transformes" title="Permanent link">&para;</a></h2>
+<p>L'assistant ci-dessus part de vos <strong>enregistrements bruts</strong> (la carte SD) et les transforme. Mais il
+arrive que vous ayez <strong>déjà</strong> les séquences transformées d'une nuit dans un dossier, sans plus avoir la
+carte : une nuit préparée sur un autre poste, récupérée d'une sauvegarde, ou rangée sur un NAS. Dans ce
+cas, inutile de tout recalculer.</p>
+<p>Le bouton <strong>« J'ai déjà les transformés… »</strong> crée le passage <strong>directement à partir de ce dossier</strong>, sans
+rejouer la transformation. Vous désignez le dossier, puis le <strong>point d'écoute</strong> auquel rattacher la nuit ;
+la série de l'enregistreur et la date sont <strong>lues dans les noms</strong> des fichiers.</p>
+<p>L'application vous demande ensuite <strong>quoi faire des fichiers</strong> :</p>
+<p><img alt="Référencer les fichiers là où ils sont, ou les copier dans le dossier de travail." src="../../assets/captures/apercu-import-transformes-question.png" /></p>
+<ul>
+<li><strong>Les laisser où ils sont</strong> (les <em>référencer</em>) : l'application ne copie rien, elle pointe vos fichiers
+  là où ils vivent. C'est le choix recommandé quand ils sont déjà rangés ailleurs (disque externe, NAS,
+  votre dossier de travail habituel). La nuit <strong>ne sera plus écoutable</strong> si ce support n'est pas
+  accessible (disque débranché, dossier réseau hors ligne), et le <strong>redeviendra</strong> dès qu'il l'est de
+  nouveau : l'application revérifie alors leur <strong>empreinte</strong>, pour être sûre que ce sont bien les mêmes
+  fichiers.</li>
+<li><strong>Les copier</strong> dans votre dossier de travail : l'application en prend une copie, comme pour un import
+  ordinaire. La nuit reste écoutable même si le dossier d'origine disparaît.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Ce que ce geste ne remplace pas</p>
+<p>C'est un raccourci pour des séquences <strong>déjà transformées</strong>. Pour importer une nuit depuis la carte SD
+(enregistrements bruts à renommer et transformer), utilisez l'<strong>assistant d'import</strong> ci-dessus.</p>
+</div>
 <h2 id="conserver-les-originaux-pour-re-analyse-option">Conserver les originaux pour ré-analyse (option)<a class="headerlink" href="#conserver-les-originaux-pour-re-analyse-option" title="Permanent link">&para;</a></h2>
 <p>L'import lit les enregistrements de la carte SD, les transforme en séquences d'écoute, et <strong>n'en garde
 pas de copie</strong>. Vos fichiers d'origine restent sur votre carte, intacts : l'application ne les modifie

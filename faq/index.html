@@ -1321,17 +1321,14 @@ continuer : l'import reste possible. Voir l'écran <a href="../ecrans/importatio
 séquences d'écoute manquantes ou un journal du capteur absent). Tant que ces points ne sont pas
 réglés, la préparation reste bloquée. Voir l'écran <a href="../ecrans/lot/">Préparer le dépôt</a>.</p>
 <h3 id="quel-dossier-dois-je-televerser-sur-vigie-chiro">Quel dossier dois-je téléverser sur Vigie-Chiro ?<a class="headerlink" href="#quel-dossier-dois-je-televerser-sur-vigie-chiro" title="Permanent link">&para;</a></h3>
-<p>Celui indiqué dans le <strong>récapitulatif</strong> de l'écran Préparer le dépôt après avoir cliqué sur « Vérifier et préparer le dépôt ».
-Le téléversement est <strong>manuel</strong> : vous l'effectuez depuis votre navigateur, puis vous revenez
-marquer la nuit comme déposée. Voir l'écran <a href="../ecrans/lot/">Préparer le dépôt</a>.</p>
+<p>En temps normal, <strong>vous n'avez pas à téléverser à la main</strong> : connectée à Vigie-Chiro, l'application <strong>dépose la nuit directement</strong> (bouton « Téléverser sur Vigie-Chiro »), reprend sur coupure, puis vous lancez l'analyse. Le dépôt navigateur reste un <strong>repli hors connexion</strong> : l'écran Préparer le dépôt ouvre alors le dossier <code>depot/</code>, et vous revenez « Marquer déposé ». Voir l'écran <a href="../ecrans/lot/">Préparer le dépôt</a>.</p>
 <h2 id="validation-des-especes">Validation des espèces<a class="headerlink" href="#validation-des-especes" title="Permanent link">&para;</a></h2>
 <h3 id="laction-sons-validation-est-grisee">L'action « Sons &amp; validation » est grisée<a class="headerlink" href="#laction-sons-validation-est-grisee" title="Permanent link">&para;</a></h3>
 <p>La validation des espèces n'est accessible qu'<strong>une fois la nuit déposée</strong> : Vigie-Chiro ne renvoie
 les résultats d'identification que 24 à 48 h après le dépôt. L'ordre est donc Vérifier, puis
 Déposer, puis Valider. Voir le <a href="../parcours/">Parcours métier</a>.</p>
 <h3 id="ou-recuperer-les-resultats-tadarida">Où récupérer les résultats Tadarida ?<a class="headerlink" href="#ou-recuperer-les-resultats-tadarida" title="Permanent link">&para;</a></h3>
-<p>Sur la plateforme Vigie-Chiro, 24 à 48 h après le dépôt : vous y téléchargez un fichier CSV de
-résultats, que vous <strong>importez</strong> ensuite dans l'écran <a href="../ecrans/validation/">Validation</a>.</p>
+<p>24 à 48 h après le dépôt, <strong>directement depuis l'application</strong> : ☰ ▸ « Importer depuis Vigie-Chiro » récupère les résultats par l'API. Vous pouvez aussi, en repli, télécharger le CSV de résultats sur le portail et l'<strong>importer</strong> dans l'écran <a href="../ecrans/validation/">Validation</a>.</p>
 <h2 id="espace-disque-et-archives">Espace disque et archives<a class="headerlink" href="#espace-disque-et-archives" title="Permanent link">&para;</a></h2>
 <h3 id="mon-disque-est-plein-que-puis-je-supprimer-sans-rien-perdre-dimportant">Mon disque est plein : que puis-je supprimer sans rien perdre d'important ?<a class="headerlink" href="#mon-disque-est-plein-que-puis-je-supprimer-sans-rien-perdre-dimportant" title="Permanent link">&para;</a></h3>
 <p><strong>Les « bruts »</strong> (les enregistrements d'origine) sont ce qui pèse le plus lourd, et ils ne servent
@@ -1364,9 +1361,7 @@ l'application n'a pas à s'alarmer que vous les ayez rangés ailleurs. Le passag
 dossier où ils se trouvent désormais : voir <strong>Réactiver ce passage</strong>.</p>
 <h2 id="divers">Divers<a class="headerlink" href="#divers" title="Permanent link">&para;</a></h2>
 <h3 id="ou-mes-donnees-sont-elles-stockees">Où mes données sont-elles stockées ?<a class="headerlink" href="#ou-mes-donnees-sont-elles-stockees" title="Permanent link">&para;</a></h3>
-<p>Dans une <strong>base de données locale</strong> sur votre ordinateur. L'application ne dialogue avec aucun
-serveur : les échanges avec Vigie-Chiro (dépôt, récupération des résultats Tadarida) se font
-<strong>manuellement</strong> via votre navigateur.</p>
+<p>Dans une <strong>base de données locale</strong> (SQLite) sur votre ordinateur : c'est là que vivent vos sites, passages et observations. L'application <strong>dialogue avec Vigie-Chiro</strong> pour ce qui relève du protocole (dépôt, synchronisation des sites, récupération des résultats, publication des corrections), mais <strong>n'envoie vos données à aucun autre service</strong>. Voir la <a href="https://github.com/echonuit/vigiechiro-pr-companion/blob/main/SECURITY.md">politique de sécurité et de données</a>.</p>
 <h3 id="comment-ecouter-une-sequence">Comment écouter une séquence ?<a class="headerlink" href="#comment-ecouter-une-sequence" title="Permanent link">&para;</a></h3>
 <p>La <strong>vue audio</strong> (sonogramme et spectrogramme) est présente dans les écrans de
 <a href="../ecrans/qualification/">Qualification</a> et de <a href="../ecrans/validation/">Validation</a> (écoute, validation

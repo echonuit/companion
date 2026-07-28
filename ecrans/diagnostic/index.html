@@ -766,6 +766,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exporter-la-courbe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exporter la courbe
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -937,6 +946,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exporter-la-courbe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exporter la courbe
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -981,6 +999,11 @@ action transverse, accessible depuis l'écran <a href="../passage/">Passage</a> 
 <li>la <strong>cohérence horaire</strong> : la fenêtre nocturne réelle au point d'écoute (heures de coucher et de
   lever du soleil), assortie d'une alerte « hors nuit » si l'enregistrement déborde de cette fenêtre
   (démarrage avant le coucher ou arrêt après le lever du soleil) ;</li>
+<li>la <strong>fenêtre nocturne</strong> matérialisée par un aplat pâle derrière la courbe : elle situe les mesures
+  dans la nuit réelle, et sans coordonnées au point elle disparaît plutôt que d'être inventée ;</li>
+<li>un bouton <strong>Exporter le graphe…</strong> qui écrit la courbe en image, <strong>redessinée</strong> pour l'occasion (donc
+  fidèle même fenêtre réduite) et portant son contexte : carré, point, passage, nombre de mesures,
+  version et date. C'est ce qu'on joint à un signalement d'anomalie ;</li>
 <li>l'état du <strong>GPS du point d'écoute</strong> : « disponible », ou « non renseigné » avec une invitation à
   compléter la fiche du site. Ce sont les coordonnées du point d'écoute (et non du capteur) ; le
   calcul de la fenêtre nocturne en dépend.</li>
@@ -1002,6 +1025,8 @@ les évènements du journal restent affichés.</p>
 fiche site) » et l'encart cohérence horaire disparaît : la fenêtre nocturne ne peut pas être calculée
 sans coordonnées. Le reste du diagnostic (courbe, anomalies, évènements) demeure exploitable.</p>
 <p><img alt="L'écran de diagnostic sans coordonnées GPS : repère « non renseigné », cohérence horaire absente." src="../../assets/captures/apercu-diagnostic-sans-gps.png" /></p>
+<h2 id="exporter-la-courbe">Exporter la courbe<a class="headerlink" href="#exporter-la-courbe" title="Permanent link">&para;</a></h2>
+<p><img alt="L'image exportée du graphe climatique : la courbe redessinée, avec sous elle le passage, le nombre de mesures et la provenance." src="../../assets/captures/apercu-diagnostic-export.png" /></p>
 
 
 

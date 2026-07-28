@@ -1531,12 +1531,22 @@ Le choix est enregistré à <strong>Appliquer</strong>, indépendamment du renom
 une nuit <strong>déjà déposée</strong>, dont l'année et le numéro sont pourtant verrouillés.</p>
 <p>Le regroupement se retrouve ensuite dans <strong>Carte &amp; passages</strong> (colonne, tri et filtre) et dans
 <strong><a href="../saison/#ne-voir-quune-campagne">Ma saison</a></strong> (filtre).</p>
+<p>Le bouton <strong>Gérer…</strong>, à côté de la liste, ouvre la fenêtre où l'on <strong>crée, renomme et supprime</strong> les
+campagnes. C'est de là que vient la première : tant qu'aucune n'existe, la liste ne propose rien.</p>
+<p><img alt="La fenêtre « Gérer les campagnes » : la liste des campagnes existantes, et le formulaire qui sert à en créer une ou à modifier celle qui est sélectionnée." src="../../assets/captures/apercu-passage-campagnes.png" /></p>
+<p>Le formulaire sert aux <strong>deux</strong> usages. Vide, il crée. Une campagne sélectionnée dans la liste, il la
+reflète et <strong>Enregistrer</strong> applique vos changements. <strong>Enregistrer</strong> et <strong>Supprimer</strong> restent grisés
+tant qu'aucune campagne n'est choisie.</p>
 <div class="admonition note">
-<p class="admonition-title">Créer, renommer, supprimer une campagne</p>
-<p>Ces trois gestes se font pour l'instant <strong>en ligne de commande</strong> : <code>vigiechiro creer-campagne
---nom "Suivi ENS"</code>, <code>modifier-campagne</code>, <code>supprimer-campagne</code>. Supprimer une campagne <strong>détache</strong> ses
-nuits, elle ne les efface jamais. Un écran de gestion est à venir.</p>
+<p class="admonition-title">Supprimer une campagne n'efface aucune nuit</p>
+<p>La confirmation annonce combien de passages y étaient rattachés. Ils sont <strong>détachés</strong>, pas
+supprimés : ils restent dans vos données, simplement sans campagne. C'est pourquoi la question
+pose le chiffre avant d'agir, et non après.</p>
 </div>
+<p>À la fermeture de cette fenêtre, la liste déroulante se met à jour : une campagne créée à l'instant y
+est immédiatement proposée, et le choix que vous aviez déjà fait n'est pas perdu.</p>
+<p>Les mêmes gestes restent disponibles en ligne de commande (<code>creer-campagne</code>, <code>modifier-campagne</code>,
+<code>supprimer-campagne</code>).</p>
 <h3 id="participation-opportuniste">Participation opportuniste<a class="headerlink" href="#participation-opportuniste" title="Permanent link">&para;</a></h3>
 <p>Une <strong>participation opportuniste</strong> est une nuit réalisée sur le <strong>carré d'un autre observateur</strong>. Elle
 est identique en données à une nuit ordinaire, mais elle ne relève pas du protocole Point Fixe : elle

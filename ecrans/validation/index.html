@@ -747,6 +747,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#ce-que-limport-vous-rend-a-la-fin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ce que l'import vous rend à la fin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#publier-vos-corrections-vers-vigie-chiro" class="md-nav__link">
     <span class="md-ellipsis">
       Publier vos corrections vers Vigie-Chiro
@@ -1188,6 +1197,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#ce-que-limport-vous-rend-a-la-fin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ce que l'import vous rend à la fin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#publier-vos-corrections-vers-vigie-chiro" class="md-nav__link">
     <span class="md-ellipsis">
       Publier vos corrections vers Vigie-Chiro
@@ -1529,6 +1547,45 @@ Muséum et vos échanges avec lui. Il serait absurde qu'il les efface au lieu de
 même voie complète sert de repli quand le fichier d'observations n'est pas disponible. Elle s'affiche
 dans une <strong>fenêtre de progression</strong> avec un bouton <strong>Annuler</strong> : renoncer laisse le passage tel qu'il
 était, sans demi-import.</p>
+<h4 id="ce-que-limport-vous-rend-a-la-fin">Ce que l'import vous rend à la fin<a class="headerlink" href="#ce-que-limport-vous-rend-a-la-fin" title="Permanent link">&para;</a></h4>
+<p>Quand l'import se termine, un <strong>compte rendu</strong> dit ce qu'il a fait, en proportions plutôt qu'en une
+phrase.</p>
+<p><img alt="Le compte rendu d'un réimport : la part importée, les lignes écartées, et les mentions qui disent ce
+qui coûte quelque chose." src="../../assets/captures/apercu-import-vigiechiro-compte-rendu.png" /></p>
+<p>La barre ventile <strong>toutes les lignes reçues</strong> : celles qui sont devenues des observations, et celles qui
+ont été écartées. Le reste tient en mentions, chacune à son registre :</p>
+<table>
+<thead>
+<tr>
+<th>Mention</th>
+<th>Ce qu'elle veut dire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>validations perdues</strong> ⚠</td>
+<td>des corrections, marquages ou commentaires que vous aviez saisis n'ont pas retrouvé d'observation correspondante dans le nouveau jeu. <strong>Ce travail est définitivement perdu.</strong></td>
+</tr>
+<tr>
+<td><strong>validations préservées</strong></td>
+<td>vos saisies ont été réattachées aux nouvelles observations : un réimport ne vous coûte pas votre revue</td>
+</tr>
+<tr>
+<td><strong>lignes ignorées</strong> ⚠</td>
+<td>leur séquence audio est absente, ou la ligne n'a pas de taxon. Si ce sont les séquences qui manquent, importez d'abord la nuit de ce passage</td>
+</tr>
+<tr>
+<td><strong>taxons hors référentiel</strong></td>
+<td>des codes inconnus du référentiel ont été enregistrés en souches : leurs observations sont bien importées, il n'y a rien à faire</td>
+</tr>
+<tr>
+<td><strong>échanges avec le validateur</strong></td>
+<td>des observations portent un message du Muséum. La mention est là pour que vous ne les découvriez pas par hasard, en ouvrant la bonne ligne</td>
+</tr>
+</tbody>
+</table>
+<p>Les deux lignes de validations n'apparaissent qu'au <strong>réimport</strong> : sur un premier import, il n'y avait
+rien à préserver ni à perdre, et l'afficher à zéro ferait chercher un problème qui n'existe pas.</p>
 <p>Si l'analyse de la plateforme n'est pas terminée, l'import vous dit <strong>pourquoi</strong> il n'y a rien à
 récupérer : l'analyse n'a <strong>jamais été lancée</strong> (lancez-la depuis « Préparer le dépôt », étape 4), elle
 est <strong>planifiée</strong> ou <strong>en cours</strong> (patientez : comptez plusieurs dizaines de minutes), elle a <strong>échoué</strong>

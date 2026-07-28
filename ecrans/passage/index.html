@@ -657,6 +657,24 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#rattacher-a-une-campagne" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rattacher à une campagne
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#participation-opportuniste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Participation opportuniste
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#renseigner-lenregistreur" class="md-nav__link">
     <span class="md-ellipsis">
       Renseigner l'enregistreur
@@ -1161,6 +1179,24 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#rattacher-a-une-campagne" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rattacher à une campagne
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#participation-opportuniste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Participation opportuniste
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#renseigner-lenregistreur" class="md-nav__link">
     <span class="md-ellipsis">
       Renseigner l'enregistreur
@@ -1487,6 +1523,42 @@ matériel du micro) et renseigner l'<strong>enregistreur</strong>.</p>
 <p>Sur un passage <strong>déjà déposé</strong>, l'année et le numéro sont <strong>verrouillés</strong> (ils forment l'identité de la
 nuit côté Vigie-Chiro), mais la <strong>météo et le micro restent modifiables</strong>. C'est utile, par exemple, pour
 compléter à la main la météo d'un passage <strong>reconstruit</strong> que la plateforme n'a pas rapatriée.</p>
+<h3 id="rattacher-a-une-campagne">Rattacher à une campagne<a class="headerlink" href="#rattacher-a-une-campagne" title="Permanent link">&para;</a></h3>
+<p>Une <strong>campagne</strong> regroupe les nuits qui relèvent d'un même suivi (« Suivi ENS 2026 », « Convention
+carrière »…). Le rattachement est <strong>facultatif</strong> : une nuit sans campagne reste une nuit normale.</p>
+<p>La liste <strong>Campagne</strong> propose les campagnes existantes, avec « (aucune campagne) » en tête pour détacher.
+Le choix est enregistré à <strong>Appliquer</strong>, indépendamment du renommage : on peut donc rattacher ou détacher
+une nuit <strong>déjà déposée</strong>, dont l'année et le numéro sont pourtant verrouillés.</p>
+<p>Le regroupement se retrouve ensuite dans <strong>Carte &amp; passages</strong> (colonne, tri et filtre) et dans
+<strong><a href="../saison/#ne-voir-quune-campagne">Ma saison</a></strong> (filtre).</p>
+<div class="admonition note">
+<p class="admonition-title">Créer, renommer, supprimer une campagne</p>
+<p>Ces trois gestes se font pour l'instant <strong>en ligne de commande</strong> : <code>vigiechiro creer-campagne
+--nom "Suivi ENS"</code>, <code>modifier-campagne</code>, <code>supprimer-campagne</code>. Supprimer une campagne <strong>détache</strong> ses
+nuits, elle ne les efface jamais. Un écran de gestion est à venir.</p>
+</div>
+<h3 id="participation-opportuniste">Participation opportuniste<a class="headerlink" href="#participation-opportuniste" title="Permanent link">&para;</a></h3>
+<p>Une <strong>participation opportuniste</strong> est une nuit réalisée sur le <strong>carré d'un autre observateur</strong>. Elle
+est identique en données à une nuit ordinaire, mais elle ne relève pas du protocole Point Fixe : elle
+est donc <strong>exemptée</strong> de la fenêtre calendaire (R3) et de l'intervalle conseillé entre deux passages
+(R4). Aucune alerte ne vous sera faite sur ses dates.</p>
+<p>La case <strong>Participation opportuniste</strong> permet de le déclarer. Elle sert surtout aux participations
+<strong>non connectées</strong>, celles que l'application ne peut pas rapprocher d'un site Vigie-Chiro.</p>
+<p>Trois chemins mènent au même résultat :</p>
+<ul>
+<li>la <strong>case à l'import</strong>, pour déclarer la nuit dès son arrivée ;</li>
+<li>la <strong>case de cette fenêtre</strong>, pour le corriger après coup ;</li>
+<li><strong>automatiquement</strong>, à la synchronisation : si la plateforme dit que le carré appartient à quelqu'un
+  d'autre, ses nuits sont marquées sans que vous ayez à y penser.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">L'automatique n'efface jamais votre choix</p>
+<p>La synchronisation <strong>ajoute</strong> des marquages, elle n'en retire aucun. Une case que vous avez cochée à
+la main survit à toutes les synchronisations suivantes — y compris sur une participation que la
+plateforme ne connaît pas.</p>
+</div>
+<p>Conséquence sur le suivi : une nuit opportuniste ne compte pas dans les deux passages attendus du point,
+et n'engendre aucun « reste à faire » dans <strong><a href="../saison/#les-nuits-opportunistes-ny-comptent-pas">Ma saison</a></strong>.</p>
 <h3 id="renseigner-lenregistreur">Renseigner l'enregistreur<a class="headerlink" href="#renseigner-lenregistreur" title="Permanent link">&para;</a></h3>
 <p>Le champ <strong>Enregistreur</strong> porte le <strong>numéro de série</strong> du Passive Recorder qui a produit la nuit.
 Normalement, l'application le lit dans les noms de fichiers de la carte SD à l'import. Quand elle n'y

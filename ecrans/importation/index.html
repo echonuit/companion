@@ -702,6 +702,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#nuit-deja-recuperee-depuis-vigie-chiro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nuit déjà récupérée depuis Vigie-Chiro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reprise-dun-import-interrompu" class="md-nav__link">
     <span class="md-ellipsis">
       Reprise d'un import interrompu
@@ -1185,6 +1194,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#nuit-deja-recuperee-depuis-vigie-chiro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nuit déjà récupérée depuis Vigie-Chiro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reprise-dun-import-interrompu" class="md-nav__link">
     <span class="md-ellipsis">
       Reprise d'un import interrompu
@@ -1461,6 +1479,22 @@ validations Tadarida déjà saisies) : l'action est irréversible.</p>
 <code>&lt;workspace&gt;/sauvegardes</code>) : si cette sauvegarde échoue, l'écrasement <strong>n'a pas lieu</strong>. Vous pouvez donc
 toujours revenir en arrière via <strong>☰ → Restaurer une sauvegarde…</strong> (voir <a href="../#sauvegarder-et-restaurer-la-base">Sauvegarder et restaurer la
 base</a>).</p>
+<h3 id="nuit-deja-recuperee-depuis-vigie-chiro">Nuit déjà récupérée depuis Vigie-Chiro<a class="headerlink" href="#nuit-deja-recuperee-depuis-vigie-chiro" title="Permanent link">&para;</a></h3>
+<p>Il arrive que la nuit de votre carte soit <strong>déjà là</strong> sans que vous l'ayez jamais importée : la
+synchronisation avec Vigie-Chiro rapatrie les nuits que la plateforme connaît, avec leurs observations et
+leur rattachement à la participation, mais <strong>sans leur audio</strong> - la plateforme ne le renvoie pas.</p>
+<p>Quand l'assistant reconnaît cette situation, il vous le dit et <strong>retire les deux gestes habituels</strong> de la
+zone d'avertissement, parce qu'ils vous coûteraient quelque chose :</p>
+<ul>
+<li><strong>« Utiliser ce n° »</strong> importerait la nuit une seconde fois, sur un numéro voisin. Vous vous
+  retrouveriez avec deux moitiés de la même nuit : l'une avec ses observations et son rattachement,
+  l'autre avec son son.</li>
+<li><strong>« Écraser et réimporter »</strong> supprimerait la nuit existante, donc <strong>ses observations, vos validations
+  et son rattachement</strong> - pour réimporter un son qu'on peut lui rendre sans rien perdre.</li>
+</ul>
+<p>Reste <strong>« Ouvrir cette nuit »</strong>, qui vous conduit à sa fiche. De là, <strong>« Réactiver ce passage »</strong> rebranche
+l'audio de votre carte sur la nuit existante : elle garde ses observations, vos validations et son
+rattachement, et retrouve son son (voir <a href="../passage/#reactiver-un-passage-reimporter-les-fichiers-dorigine">Réactiver un passage</a>).</p>
 <h3 id="reprise-dun-import-interrompu">Reprise d'un import interrompu<a class="headerlink" href="#reprise-dun-import-interrompu" title="Permanent link">&para;</a></h3>
 <p>Si un import a été <strong>interrompu</strong> (fenêtre fermée, coupure, annulation), il suffit de le <strong>relancer</strong> :
 l'application reconnaît les fichiers déjà copiés et transformés et les <strong>saute</strong>, pour reprendre là où elle

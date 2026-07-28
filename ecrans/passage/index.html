@@ -1398,14 +1398,20 @@ c'est même le cas qu'il sert le plus. Sa fiche est alors presque vide - aucun v
 et c'est normal : le son n'est nulle part ailleurs que sur votre carte SD.</p>
 <p><img alt="La fiche d'une nuit récupérée de Vigie-Chiro : volumes et séquences à zéro, « Vérifier l'enregistrement » hors de portée faute d'audio, et « Réactiver ce passage » actif pour aller le chercher sur la carte." src="../../assets/captures/apercu-passage-squelette.png" /></p>
 <h3 id="copier-ou-laisser-vos-fichiers-ou-ils-sont">Copier, ou laisser vos fichiers où ils sont<a class="headerlink" href="#copier-ou-laisser-vos-fichiers-ou-ils-sont" title="Permanent link">&para;</a></h3>
-<p>Une fois le dossier désigné, l'application demande <strong>ce qu'elle doit en faire</strong>. La question est
-toujours posée, mais elle n'est pas formulée de la même façon selon l'endroit que vous avez choisi :</p>
+<p>L'application demande <strong>ce qu'elle doit faire de vos fichiers</strong> - mais seulement quand la question a
+un objet, c'est-à-dire quand votre dossier contient des séquences <strong>déjà transformées</strong> qu'elle peut
+reposer telles quelles. Elle apparaît alors <strong>dans la fenêtre de réactivation</strong>, à la place des barres,
+et la procédure reprend dès que vous avez répondu.</p>
+<p>Sur une carte qui ne contient que vos <strong>enregistrements bruts</strong>, aucune question ne vous est posée :
+il n'y a rien à laisser en place, puisque les séquences sont recalculées et écrites dans votre dossier
+de travail.</p>
+<p>La formulation dépend de l'endroit que vous avez choisi :</p>
 <ul>
 <li><strong>hors de votre dossier de travail</strong> - un serveur de fichiers, un disque externe, votre arborescence
   habituelle : ces fichiers sont <strong>les vôtres</strong>, et en faire une copie créerait un doublon que vous
   n'avez pas demandé. L'application propose donc de <strong>les laisser où ils sont</strong> et de s'y référer ;</li>
-<li><strong>une sauvegarde ponctuelle</strong> dont vous ne voulez pas dépendre : répondez <strong>non</strong>, et l'application
-  en garde sa propre copie, comme elle l'a toujours fait.</li>
+<li><strong>une sauvegarde ponctuelle</strong> dont vous ne voulez pas dépendre : choisissez <strong>En faire une copie</strong>, et
+  l'application en garde la sienne, comme elle l'a toujours fait.</li>
 </ul>
 <p>Laisser les fichiers sur place a une conséquence, et elle vous est dite <strong>avant</strong> le choix, pas
 découverte après : cette nuit n'est plus écoutable tant que ce support n'est pas accessible - disque
@@ -1413,7 +1419,8 @@ débranché, dossier réseau hors ligne. Elle le redevient <strong>d'elle-même<
 faille rien réactiver une seconde fois.</p>
 <p>Ce choix ne concerne que les fichiers <strong>que vous désignez</strong>. Les séquences que l'application
 <strong>régénère</strong> elle-même à partir de vos enregistrements bruts sont, elles, toujours écrites dans votre
-dossier de travail : elles n'existaient nulle part ailleurs, il n'y a donc rien à référencer.</p>
+dossier de travail : elles n'existaient nulle part ailleurs, il n'y a donc rien à référencer - et c'est
+pour cela que la question ne vous est pas posée dans ce cas.</p>
 <p><strong>Chaque fichier est vérifié avant d'être rebranché.</strong> C'est le cœur de l'affaire : deux jeux de
 fichiers peuvent porter <strong>les mêmes noms</strong> sans être les mêmes (une redécoupe, une autre expansion,
 une autre nuit du même carré). Rebrancher vos observations sur le mauvais audio produirait un

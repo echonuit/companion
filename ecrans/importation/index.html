@@ -659,11 +659,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rapport-dimport" class="md-nav__link">
+  <a href="#compte-rendu-de-fin-dimport" class="md-nav__link">
     <span class="md-ellipsis">
-      Rapport d'import
+      Compte rendu de fin d'import
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Compte rendu de fin d'import">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ce-que-le-compte-rendu-signale-en-plus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ce que le compte rendu signale en plus
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1127,11 +1142,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rapport-dimport" class="md-nav__link">
+  <a href="#compte-rendu-de-fin-dimport" class="md-nav__link">
     <span class="md-ellipsis">
-      Rapport d'import
+      Compte rendu de fin d'import
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Compte rendu de fin d'import">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ce-que-le-compte-rendu-signale-en-plus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ce que le compte rendu signale en plus
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1377,22 +1407,39 @@ sur les autres tableaux de l'application. Cet écran étant transitoire (la list
 l'import), la disposition n'y est pas mémorisée d'une fois sur l'autre :
 voir <a href="../../personnaliser-les-tableaux/">Personnaliser les tableaux</a>.</p>
 <p><img alt="Import en cours : barre de progression, formulaire gelé." src="../../assets/captures/apercu-import-en-cours.png" /></p>
-<h2 id="rapport-dimport">Rapport d'import<a class="headerlink" href="#rapport-dimport" title="Permanent link">&para;</a></h2>
+<h2 id="compte-rendu-de-fin-dimport">Compte rendu de fin d'import<a class="headerlink" href="#compte-rendu-de-fin-dimport" title="Permanent link">&para;</a></h2>
 <p>L'import est <strong>résilient</strong> : un fichier illisible ou de format invalide n'interrompt pas toute la nuit.
-Les enregistrements exploitables sont importés, et un <strong>rapport</strong> récapitule à la fin ce qui a été
-importé, <strong>ignoré</strong> (fichier non pertinent) ou <strong>rejeté</strong> (avec la raison). Les fichiers rejetés sont
-listés directement sous le message de fin d'import.</p>
-<p><img alt="Import terminé avec rapport : le bilan structuré puis la liste des fichiers rejetés et leur raison." src="../../assets/captures/apercu-import-rejets.png" /></p>
-<p>Le rapport signale aussi, quand il y a lieu :</p>
+À la fin, un <strong>compte rendu</strong> répond aux trois questions que vous vous posez à ce moment-là, et il y
+répond <strong>en proportions</strong> plutôt qu'en listes.</p>
+<p><img alt="Import terminé : le verdict chiffré, la ventilation des fichiers, les volumes lus et écrits, et l'action suivante." src="../../assets/captures/apercu-import-rejets.png" /></p>
+<p><strong>« Est-ce que ça s'est bien passé ? »</strong> La pastille chiffre le résultat (« 583 / 612 importés ») et la
+barre en montre la <strong>part</strong> : ce qui est passé, ce qui a été ignoré parce que non pertinent, ce qui a été
+rejeté. La somme fait toujours le total des fichiers de la source — aucun reliquat ne peut disparaître
+dans un « autres ».</p>
+<p><strong>« Qu'est-ce que ça m'a coûté sur le disque ? »</strong> Deux barres comparent, <strong>à la même échelle</strong>, ce qui a
+été lu sur la carte et ce qui a été écrit sur le disque — ce dernier ventilé entre les enregistrements
+bruts conservés et les séquences d'écoute produites. Si vous avez désactivé la conservation des bruts,
+la barre « écrit » se réduit d'autant : c'est là que se voit ce que ce réglage vous économise.</p>
+<p><strong>« Qu'est-ce que je fais maintenant ? »</strong> Le pied propose <strong>Ouvrir le passage</strong>, pas un bouton
+« Fermer ».</p>
+<h3 id="ce-que-le-compte-rendu-signale-en-plus">Ce que le compte rendu signale en plus<a class="headerlink" href="#ce-que-le-compte-rendu-signale-en-plus" title="Permanent link">&para;</a></h3>
 <ul>
-<li>le <strong>doublon de nuit</strong> - si vous avez choisi d'importer une nuit déjà présente, il rappelle quels
-  passages existaient déjà, avec leur année et leur point ;</li>
-<li>les <strong>anomalies du journal du capteur</strong> - réveil non programmé, batterie faible, horloge
-  resynchronisée. Le capteur les enregistre dans son journal ; elles n'expliquent pas toujours un
-  problème, mais elles éclairent une nuit qui semble incomplète.</li>
+<li>les <strong>motifs de rejet</strong>, résumés en pied (« 6 fichiers déjà expansés, 2 en-têtes WAV illisibles ») et
+  <strong>dépliables d'un clic</strong> : chaque motif ouvre la liste des fichiers concernés ;</li>
+<li>les <strong>avertissements encore vrais</strong> — si le dossier mélangeait plusieurs enregistreurs, ou si le
+  journal du capteur ne correspondait pas aux fichiers, le compte rendu vous le <strong>rappelle</strong>. Importer ne
+  résout pas ces réserves : cela les inscrit dans le passage créé ;</li>
+<li>le <strong>doublon de nuit</strong> — si vous avez choisi d'importer une nuit déjà présente, il rappelle combien de
+  passages existaient déjà, et la liste s'ouvre comme les motifs ;</li>
+<li>les <strong>anomalies du journal du capteur</strong> — réveil non programmé, batterie faible, horloge
+  resynchronisée. Elles n'expliquent pas toujours un problème, mais elles éclairent une nuit qui semble
+  incomplète ;</li>
+<li>la <strong>participation créée sur Vigie-Chiro</strong>, quand vous êtes connecté et que le site est relié. L'import
+  écrit alors sur la plateforme, et il vous le dit plutôt que de vous le laisser découvrir au dépôt.</li>
 </ul>
-<p>Chaque ligne du rapport porte une <strong>icône</strong> en plus de sa couleur, pour rester lisible si vous
-distinguez mal les couleurs.</p>
+<p>Chaque mention porte une <strong>icône</strong> accordée à son registre — une coche pour une bonne nouvelle, un « i »
+pour un fait de contexte, un triangle pour ce sur quoi il faudra revenir — en plus de sa couleur, pour
+rester lisible si vous distinguez mal les couleurs.</p>
 <h2 id="securites-et-cas-particuliers">Sécurités et cas particuliers<a class="headerlink" href="#securites-et-cas-particuliers" title="Permanent link">&para;</a></h2>
 <p>Au-delà du chemin nominal, l'import intègre plusieurs <strong>garde-fous</strong> qui vous protègent des erreurs
 courantes. La plupart agissent en silence ; les autres vous <strong>demandent confirmation</strong> avant toute action

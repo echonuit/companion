@@ -1643,7 +1643,9 @@ C'est l'écran sur lequel vous revenez entre chaque étape du <a href="../../par
   pas lié (la participation est créée à l'import connecté, ou au premier dépôt).</li>
 <li><strong>Bandeau d'identité</strong> : date et plage horaire, enregistreur, <strong>statut</strong> et <strong>verdict</strong>.</li>
 <li><strong>Statut du workflow</strong> : une frise qui situe la nuit dans sa progression
-  (Importé, Transformé, Vérifié, Prêt à déposer, Dépôt en cours, Déposé).</li>
+  (Importé, Transformé, Vérifié, Prêt à déposer, Dépôt en cours, Déposé). Une nuit <strong>récupérée</strong> de
+  Vigie-Chiro n'a pas de frise : elle n'a parcouru aucune de ces étapes, elle est arrivée toute faite
+  de la plateforme. Son bandeau porte simplement « Récupéré ».</li>
 <li><strong>Résumé de la nuit</strong> : volumes (bruts et transformés), durée enregistrée, nombre de séquences.</li>
 <li><strong>Cartes d'actions</strong> : Vérifier l'enregistrement, Diagnostic matériel, Préparer le dépôt,
   Sons &amp; validation et <a href="../activite/">Activité de la nuit</a>. Une seule carte est mise en avant :
@@ -1679,24 +1681,35 @@ avant de redéposer). Le bouton n'apparaît que lorsqu'il a un sens, c'est-à-di
 effectivement déposé.</p>
 <p>Sur une nuit <strong>récupérée</strong> de Vigie-Chiro, en revanche, le bouton est là mais <strong>désactivé</strong> : il n'y a
 pas de dépôt à annuler ici. C'est la plateforme qui détient cette nuit, et aucun geste pris sur votre
-machine ne le change. Le bouton reste visible parce que la pastille annonce « Déposé » : son absence
-pure et simple vous laisserait chercher. Le survoler explique la situation et indique le bon geste,
-<strong>Supprimer</strong>, décrit juste en dessous.</p>
+machine ne le change. Le bouton reste visible plutôt que de disparaître, parce que la nuit <em>est</em> bien
+déposée là-bas : son absence pure et simple vous laisserait chercher. Le survoler explique la situation
+et indique le bon geste, <strong>Supprimer</strong>, décrit juste en dessous.</p>
 <p>(Ce n'est pas qu'une question de vocabulaire : annuler ce dépôt ramènerait la nuit en « Prêt à
 déposer », c'est-à-dire prête à être envoyée une seconde fois sur Vigie-Chiro, où elle est déjà.)</p>
 <h2 id="supprimer-une-nuit-venue-de-vigie-chiro">Supprimer une nuit venue de Vigie-Chiro<a class="headerlink" href="#supprimer-une-nuit-venue-de-vigie-chiro" title="Permanent link">&para;</a></h2>
 <p>Une nuit <strong>déposée</strong> ne se supprime pas : c'est une donnée officielle que vous avez transmise à la
 plateforme, l'application refuse de la détruire depuis l'écran.</p>
-<p>Une nuit <strong>récupérée</strong> de Vigie-Chiro porte pourtant le même statut « Déposé », et il est exact - la
-participation existe bien là-bas. Mais ce n'est pas vous qui l'avez déposée : la synchronisation vous l'a
-rapportée. La supprimer enlève une <strong>copie locale</strong>, rien de plus. La participation reste où elle est, et
-une prochaine synchronisation la rapatriera si vous la voulez de nouveau.</p>
+<p>Une nuit <strong>récupérée</strong> de Vigie-Chiro porte, elle, son propre statut : <strong>« Récupéré »</strong>, sur fond violet.
+Elle est bien sur la plateforme - la participation existe là-bas - mais ce n'est pas vous qui l'y avez
+mise : la synchronisation vous l'a rapportée. La supprimer enlève une <strong>copie locale</strong>, rien de plus. La
+participation reste où elle est, et une prochaine synchronisation la rapatriera si vous la voulez de
+nouveau.</p>
+<div class="admonition note">
+<p class="admonition-title">Pourquoi un statut à part</p>
+<p>Jusqu'à récemment ces nuits portaient « Déposé », ce qui était exact et trompeur à la fois : elles
+héritaient alors de toutes les protections d'une nuit que <strong>vous</strong> aviez déposée, y compris celles
+qui n'avaient aucun sens pour elles. Un statut distinct laisse chaque règle décider séparément - et
+c'est ainsi que Supprimer s'est ouvert pendant que Vérifier restait fermé.</p>
+</div>
 <p><strong>Supprimer</strong> est donc actif sur ces nuits-là. Auparavant, le seul recours était <strong>Annuler le dépôt</strong> puis
 <strong>Supprimer</strong> : un détour qui vous faisait affirmer quelque chose de faux - la nuit <em>est</em> déposée, et
 aucun geste pris ici ne le change - pour obtenir le droit de nettoyer votre base.</p>
 <p>La <strong>vérification</strong>, elle, reste fermée sur ces nuits, et pour une bonne raison : leur verdict se décide
-sur Vigie-Chiro, où elles vivent. Le motif affiché le dit maintenant, au lieu de vous annoncer que vous
-avez déposé une nuit que vous n'avez jamais déposée.</p>
+sur Vigie-Chiro, où elles vivent. Le motif affiché le dit, au lieu de vous annoncer que vous avez déposé
+une nuit que vous n'avez jamais déposée.</p>
+<p>Le <strong>renommage</strong> (année et n° de passage) reste verrouillé lui aussi : ces valeurs sont l'identité que le
+serveur donne à la nuit. Et <strong>Sons &amp; validation</strong> reste ouvert : les observations sont là, vous pouvez
+les écouter et les valider dès maintenant, sans attendre que l'audio revienne.</p>
 <h2 id="le-volume-des-bruts">Le volume des bruts<a class="headerlink" href="#le-volume-des-bruts" title="Permanent link">&para;</a></h2>
 <p>Le <strong>Résumé de la nuit</strong> affiche le <strong>volume des bruts</strong> : la copie des enregistrements d'origine, si
 l'import l'a conservée. Ces fichiers ne servent <strong>pas</strong> à l'écoute ni à la validation (celles-ci

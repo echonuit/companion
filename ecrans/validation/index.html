@@ -1629,7 +1629,8 @@ puis rouvrez l'écran, vous retrouvez la revue là où vous l'aviez laissée, sa
 à isoler celles que vous voulez revoir. Elle fonctionne « à la manière de Notion » :</p>
 <ul>
 <li>un <strong>champ de recherche</strong> permanent, à gauche, cherche dans le <strong>nom de fichier</strong>, l'<strong>espèce</strong> (taxon
-  Tadarida ou votre correction) et le <strong>commentaire</strong> ; la recherche ignore la casse et les accents ;</li>
+  Tadarida ou votre correction), le <strong>commentaire</strong> et le <strong>lieu</strong> (carré, point, site, commune) ; la
+  recherche ignore la casse et les accents ;</li>
 <li>un bouton <strong>« + Filtre »</strong> ajoute un critère sous forme de <strong>puce</strong> ; on retire une puce par sa croix.</li>
 </ul>
 <p>Les critères disponibles :</p>
@@ -1656,6 +1657,11 @@ puis rouvrez l'écran, vous retrouvez la revue là où vous l'aviez laissée, sa
 <td><strong>Espèce</strong></td>
 <td>une espèce précise (taxon retenu)</td>
 <td>aucune tant que vous n'en choisissez pas une</td>
+</tr>
+<tr>
+<td><strong>Lieu</strong></td>
+<td>les observations d'un ou plusieurs lieux à cocher : communes, carrés, points, sites présents dans la table</td>
+<td>aucun tant que vous ne cochez rien ; cocher plusieurs lieux les cumule</td>
 </tr>
 <tr>
 <td><strong>Références</strong></td>
@@ -1693,7 +1699,8 @@ bouclier, et l'inverse le fait disparaître.</p>
 (oiseaux, orthoptères, micromammifères) ne relèvent tout simplement pas de ce plan, qui ne parle que
 de chauves-souris.</p>
 <p>Les puces se <strong>combinent en ET</strong> : « Chiroptères » + « Proba ≥ 80 % » ne garde que les chauves-souris les
-plus sûres. Les <strong>compteurs</strong> de la barre de statut (À revoir / Validées / Corrigées) suivent en temps réel
+plus sûres ; « Espèce : Grand rhinolophe » + « Lieu : Aix-en-Provence » isole une espèce sur une commune,
+prête à être exportée (CSV, ou archive ZIP avec les sons) depuis le menu ☰. Les <strong>compteurs</strong> de la barre de statut (À revoir / Validées / Corrigées) suivent en temps réel
 le <strong>sous-ensemble affiché</strong>, pas la nuit entière : vous voyez toujours combien il reste à traiter dans ce
 que vous avez sous les yeux.</p>
 <p>À leur droite, un compteur dédié aux <strong>espèces à enjeu</strong> : « 12 à enjeu, 11 à revoir ». Il dit ce qui

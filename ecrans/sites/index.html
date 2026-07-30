@@ -1359,6 +1359,12 @@ modification, il est pré-rempli avec les valeurs existantes.</p>
 <p>La fenêtre intègre une <strong>carte-outil</strong> centrée sur le carré du site, <strong>synchronisée dans les deux
 sens</strong> avec les champs latitude / longitude (#153) : <strong>glissez le marqueur</strong> sur la carte pour fixer
 la position (les champs se remplissent), ou <strong>saisissez les coordonnées</strong> (le marqueur se déplace).</p>
+<p>Dès qu'un point géolocalisé est enregistré, sa <strong>commune</strong> est déterminée automatiquement depuis ses
+coordonnées (service public de géocodage, connexion requise) et mémorisée : c'est elle que retrouvent
+ensuite les recherches (« aix » dans <a href="../multisite/">Carte &amp; passages</a> ou la recherche globale) et
+l'export CSV des observations. Hors ligne, la commune attend simplement une prochaine occasion : une
+synchronisation, un nouvel enregistrement du point, ou la commande <code>rattraper-communes</code> en ligne de
+commande.</p>
 <p>Les champs acceptent <strong>deux formats</strong>, au choix : <strong>degrés décimaux</strong> (<code>43.5298</code>, la virgule est
 tolérée) <strong>ou</strong> <strong>degrés/minutes/secondes</strong> (<code>43°31'47"N</code>, <code>1°34'26.4"W</code>). Vous pouvez donc <strong>coller</strong>
 des coordonnées depuis n'importe quelle source ; elles sont converties automatiquement, et une saisie

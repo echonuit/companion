@@ -1759,6 +1759,10 @@ une saison réelle, 721 sons (658 Mo) partent en moins de cinq minutes.</p>
 <p>La même archive se produit <strong>en ligne de commande</strong> avec <code>vigiechiro exporter-sons</code> (<code>--passage &lt;id&gt;</code>
 ou <code>--espece &lt;code&gt;</code>, et <code>--sortie &lt;zip&gt;</code>), pour scripter des envois réguliers.</p>
 <p><img alt="La barre de filtres avec la puce « Groupe : Chiroptères » active : la table ne montre plus que les chauves-souris." src="../../assets/captures/apercu-sons-validation-filtres.png" /></p>
+<p>La puce <strong>« Lieu »</strong> procède de la même façon, en cochant un ou plusieurs lieux : c'est le seul endroit
+où la <strong>commune</strong> déduite des coordonnées du point se lit à l'écran, et elle se combine avec l'espèce
+pour préparer l'archive à envoyer.</p>
+<p><img alt="La puce « Lieu : Aix-en-Provence » posée dans la barre de filtres : la table ne montre plus que les observations de cette commune." src="../../assets/captures/apercu-sons-validation-lieu.png" /></p>
 <h3 id="vues-sauvegardees">Vues sauvegardées<a class="headerlink" href="#vues-sauvegardees" title="Permanent link">&para;</a></h3>
 <p>La revue <strong>au fil de l'eau</strong> est déjà mémorisée automatiquement (vous retrouvez vos filtres et votre tri à
 la réouverture). Au-delà, une combinaison de filtres utile peut être <strong>enregistrée sous un nom</strong> pour être
@@ -2095,8 +2099,12 @@ détection issue d'un <strong>import CSV</strong> ou d'une <strong>saisie manuel
 <h2 id="sons-de-reference">Sons de référence<a class="headerlink" href="#sons-de-reference" title="Permanent link">&para;</a></h2>
 <p>Depuis l'accueil, l'activité <strong>Sons &amp; validation</strong> ouvre l'écran sur <strong>toutes les observations marquées
 « référence »</strong> : vous les <strong>écoutez</strong>, les <strong>validez / corrigez</strong>, <strong>retirez</strong> la référence, et
-<strong>exportez la bibliothèque</strong> (un récapitulatif CSV + la copie des fichiers son) vers un dossier de votre
-choix.</p>
+<strong>exportez la bibliothèque</strong> en <strong>archive ZIP</strong> : le récapitulatif <code>bibliotheque-sons.csv</code> à la racine
+et les fichiers son sous <code>sons/</code>, prête à être transmise sans autre manipulation. Comme l'export
+« observations + sons », l'écriture annonce ce qu'elle emporte, avance fichier par fichier, s'annule
+sans rien laisser derrière elle, et <strong>compte les sons dont le fichier a quitté le disque</strong> (le CSV
+continue de les nommer).</p>
+<p><img alt="Le menu ☰ sur le corpus de référence : les trois exports (CSV des observations, observations + sons, bibliothèque de sons), les entrées propres à un passage restant masquées." src="../../assets/captures/apercu-menu-references.png" /></p>
 
 
 

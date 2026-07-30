@@ -1419,7 +1419,7 @@ la table des archives est vide.</p>
 <ul>
 <li>
 <p><strong>Téléversement automatique</strong> (application connectée à Vigie-Chiro) : le bouton
-  <strong>« Téléverser sur Vigie-Chiro »</strong> dépose la nuit directement — la participation est créée (ou
+  <strong>« Téléverser sur Vigie-Chiro »</strong> dépose la nuit directement : la participation est créée (ou
   réutilisée si elle l'a été à l'import), puis les <strong>archives ZIP</strong> sont téléversées <strong>plusieurs à la
   fois</strong> (5 en parallèle), ce qui raccourcit nettement le dépôt d'une grosse nuit. Une <strong>table de
   dépôt</strong> suit chaque archive (en attente → en cours → déposé, ou échec avec la raison au survol) avec
@@ -1438,7 +1438,7 @@ plateforme).
 <p>Le dépôt automatique est <strong>reprenable</strong> : une coupure réseau, une fermeture de l'application ou un
 échec partiel ne font <strong>rien perdre</strong>. Le passage prend le statut « <strong>Dépôt en cours</strong> » et, à la
 réouverture de l'écran, la table de dépôt réaffiche l'état exact de chaque fichier. Le bouton devient
-alors « <strong>Retenter les échecs</strong> » : seuls les fichiers manquants sont re-téléversés — jamais ceux déjà
+alors « <strong>Retenter les échecs</strong> » : seuls les fichiers manquants sont re-téléversés, jamais ceux déjà
 en ligne. Le passage ne devient « Déposé » que lorsque <strong>tous</strong> les fichiers sont en ligne.</p>
 <h3 id="ce-que-le-depot-vous-rend-a-la-fin">Ce que le dépôt vous rend à la fin<a class="headerlink" href="#ce-que-le-depot-vous-rend-a-la-fin" title="Permanent link">&para;</a></h3>
 <p>Quand le téléversement se termine, un <strong>compte rendu</strong> dit ce qui est en ligne, en proportions.</p>
@@ -1469,7 +1469,7 @@ l'application (vous pouvez aussi le faire depuis la page de la participation, su
 </div>
 <p><strong>Vous avez téléversé depuis le navigateur</strong> (repli manuel) : le bouton reste <strong>« Marquer
 déposé »</strong>. Il fait passer le passage au statut « Déposé » (ce qui déverrouille la validation
-Tadarida) et trace la date du dépôt — c'est une <strong>écriture locale</strong>, l'application ne peut pas deviner
+Tadarida) et trace la date du dépôt : c'est une <strong>écriture locale</strong>, l'application ne peut pas deviner
 seule ce que vous avez déposé à la main.</p>
 <h2 id="suivre-lanalyse-la-carte-traitement-vigie-chiro">Suivre l'analyse : la carte « Traitement Vigie-Chiro »<a class="headerlink" href="#suivre-lanalyse-la-carte-traitement-vigie-chiro" title="Permanent link">&para;</a></h2>
 <p>Déposer n'est pas la fin. Une fois la participation lancée, la plateforme <strong>analyse la nuit</strong> avec
@@ -1507,7 +1507,7 @@ vous dit où en est le calcul :</p>
 </tbody>
 </table>
 <p>L'application <strong>n'interroge pas la plateforme en permanence</strong> : elle affiche le dernier état qu'elle
-connaît, en précisant de quand il date — y compris hors connexion. Le bouton <strong>« Actualiser »</strong>
+connaît, en précisant de quand il date : y compris hors connexion. Le bouton <strong>« Actualiser »</strong>
 redemande l'état à Vigie-Chiro, et vous pouvez fermer l'application entre-temps : le calcul se
 poursuit sur le serveur.</p>
 <p>Si une analyse <strong>traîne depuis plus de 24 h</strong>, la carte vous le signale : elle semble bloquée, et il
@@ -1516,7 +1516,7 @@ peut valoir la peine de la relancer.</p>
 <p class="admonition-title">Une nuit déjà analysée ne se relance pas</p>
 <p>Une fois l'analyse terminée, le bouton « Lancer la participation » se <strong>verrouille</strong>. Ce n'est pas
 une limitation arbitraire : relancer un calcul <strong>efface d'abord les observations</strong> côté serveur
-pour les recalculer — or l'audio d'un dépôt en archives n'est <strong>pas conservé</strong> par la plateforme.
+pour les recalculer : or l'audio d'un dépôt en archives n'est <strong>pas conservé</strong> par la plateforme.
 Le recalcul rendrait donc une participation <strong>vide, définitivement</strong>.</p>
 <p>Si vous devez tout de même relancer (typiquement après un échec, où il n'y a plus rien à perdre),
 cela reste possible en ligne de commande, délibérément :
@@ -1526,7 +1526,7 @@ cela reste possible en ligne de commande, délibérément :
 <p>Le bouton <strong>« Réinitialiser le dépôt »</strong> (visible dès qu'un dépôt a été entamé) <strong>efface le suivi
 local</strong> : l'application oublie ce qu'elle croit avoir déposé et le passage revient à « Prêt à
 déposer ». Le téléversement suivant repart alors <strong>de zéro</strong>, toutes archives comprises.</p>
-<p>Il est utile quand le suivi local ne correspond plus à la réalité de la plateforme — typiquement si
+<p>Il est utile quand le suivi local ne correspond plus à la réalité de la plateforme : typiquement si
 une nuit apparaît « Déposée » côté application alors que la participation est vide côté site web. Vos
 <strong>archives sur le disque</strong> et le <strong>lien vers la participation</strong> sont conservés : rien n'est perdu, on
 ne remet à zéro que le compteur.</p>

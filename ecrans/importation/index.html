@@ -1653,7 +1653,7 @@ importer. Si ce n'est pas le cas, elle <strong>refuse</strong> et vous dit combi
 s'arrêter à mi-parcours en laissant un import incomplet.</p>
 <p>Le contrôle se fait <strong>nuit par nuit</strong> : sur une carte qui en contient plusieurs, celles déjà importées
 restent acquises.</p>
-<p>Quand l'option « conserver les originaux » est active, il faut <strong>deux fois</strong> la place — une fois pour
+<p>Quand l'option « conserver les originaux » est active, il faut <strong>deux fois</strong> la place : une fois pour
 la copie des enregistrements, une fois pour les séquences d'écoute. Le message vous propose alors de la
 désactiver, ce qui divise le besoin par deux.</p>
 <h2 id="source-compressee-zip">Source compressée (.zip)<a class="headerlink" href="#source-compressee-zip" title="Permanent link">&para;</a></h2>
@@ -1690,7 +1690,7 @@ donnera un <strong>passage distinct</strong> (au même point, avec des <strong>n
 <li><strong>Fichiers</strong> : nombre d'enregistrements de la nuit.</li>
 <li><strong>État</strong> : <strong>complète</strong> ou <strong>incomplète</strong>. Une nuit est signalée <strong>incomplète</strong> quand le journal
   montre qu'elle s'est arrêtée anormalement (carte SD pleine, interruption). Elle reste <strong>incluse par
-  défaut</strong> — à vous de décider de la conserver (pour la faire traiter par Tadarida) ou de la décocher.</li>
+  défaut</strong> : à vous de décider de la conserver (pour la faire traiter par Tadarida) ou de la décocher.</li>
 <li><strong>Passage n°</strong> : numéro attribué à la nuit, <strong>auto-numéroté</strong> à partir du prochain numéro libre du
   point (« — » si la nuit est décochée).</li>
 <li>La mention <strong>« déjà importée »</strong> rappelle qu'un passage existe déjà en base pour cette nuit.</li>
@@ -1705,7 +1705,7 @@ mono-nuit est inchangé).</p>
 <h2 id="pendant-limport">Pendant l'import<a class="headerlink" href="#pendant-limport" title="Permanent link">&para;</a></h2>
 <p>Une fois lancé, l'import affiche une <strong>barre de progression</strong> (avec l'estimation du temps restant) et
 <strong>gèle le formulaire</strong> le temps de l'opération. En dessous, une <strong>table de suivi par fichier</strong> montre
-où en est chaque enregistrement : en attente, en cours (avec l'étape — copie puis transformation),
+où en est chaque enregistrement : en attente, en cours (avec l'étape, copie puis transformation),
 terminé, ou <strong>rejeté</strong> avec la raison au survol. La copie et la transformation travaillent <strong>en
 parallèle</strong> sur plusieurs fichiers à la fois. En import multi-nuits, la table repart à chaque nuit.</p>
 <p>Un <strong>clic droit</strong> sur cette table laisse <strong>choisir et réordonner ses colonnes</strong> (« Colonnes… »), comme
@@ -1720,10 +1720,10 @@ répond <strong>en proportions</strong> plutôt qu'en listes.</p>
 <p><img alt="Import terminé : le verdict chiffré, la ventilation des fichiers, les volumes lus et écrits, et l'action suivante." src="../../assets/captures/apercu-import-rejets.png" /></p>
 <p><strong>« Est-ce que ça s'est bien passé ? »</strong> La pastille chiffre le résultat (« 583 / 612 importés ») et la
 barre en montre la <strong>part</strong> : ce qui est passé, ce qui a été ignoré parce que non pertinent, ce qui a été
-rejeté. La somme fait toujours le total des fichiers de la source — aucun reliquat ne peut disparaître
+rejeté. La somme fait toujours le total des fichiers de la source : aucun reliquat ne peut disparaître
 dans un « autres ».</p>
 <p><strong>« Qu'est-ce que ça m'a coûté sur le disque ? »</strong> Deux barres comparent, <strong>à la même échelle</strong>, ce qui a
-été lu sur la carte et ce qui a été écrit sur le disque — ce dernier ventilé entre les enregistrements
+été lu sur la carte et ce qui a été écrit sur le disque : ce dernier ventilé entre les enregistrements
 bruts conservés et les séquences d'écoute produites. Si vous avez désactivé la conservation des bruts,
 la barre « écrit » se réduit d'autant : c'est là que se voit ce que ce réglage vous économise.</p>
 <p><strong>« Qu'est-ce que je fais maintenant ? »</strong> Le pied propose <strong>Ouvrir le passage</strong>, pas un bouton
@@ -1732,19 +1732,19 @@ la barre « écrit » se réduit d'autant : c'est là que se voit ce que ce rég
 <ul>
 <li>les <strong>motifs de rejet</strong>, résumés en pied (« 6 fichiers déjà expansés, 2 en-têtes WAV illisibles ») et
   <strong>dépliables d'un clic</strong> : chaque motif ouvre la liste des fichiers concernés ;</li>
-<li>les <strong>avertissements encore vrais</strong> — si le dossier mélangeait plusieurs enregistreurs, ou si le
+<li>les <strong>avertissements encore vrais</strong> : si le dossier mélangeait plusieurs enregistreurs, ou si le
   journal du capteur ne correspondait pas aux fichiers, le compte rendu vous le <strong>rappelle</strong>. Importer ne
   résout pas ces réserves : cela les inscrit dans le passage créé ;</li>
-<li>le <strong>doublon de nuit</strong> — si vous avez choisi d'importer une nuit déjà présente, il rappelle combien de
+<li>le <strong>doublon de nuit</strong> : si vous avez choisi d'importer une nuit déjà présente, il rappelle combien de
   passages existaient déjà, et la liste s'ouvre comme les motifs ;</li>
-<li>les <strong>anomalies du journal du capteur</strong> — réveil non programmé, batterie faible, horloge
+<li>les <strong>anomalies du journal du capteur</strong> : réveil non programmé, batterie faible, horloge
   resynchronisée. Elles n'expliquent pas toujours un problème, mais elles éclairent une nuit qui semble
   incomplète ;</li>
 <li>la <strong>participation créée sur Vigie-Chiro</strong>, quand vous êtes connecté et que le site est relié. L'import
   écrit alors sur la plateforme, et il vous le dit plutôt que de vous le laisser découvrir au dépôt.</li>
 </ul>
-<p>Chaque mention porte une <strong>icône</strong> accordée à son registre — une coche pour une bonne nouvelle, un « i »
-pour un fait de contexte, un triangle pour ce sur quoi il faudra revenir — en plus de sa couleur, pour
+<p>Chaque mention porte une <strong>icône</strong> accordée à son registre : une coche pour une bonne nouvelle, un « i »
+pour un fait de contexte, un triangle pour ce sur quoi il faudra revenir : en plus de sa couleur, pour
 rester lisible si vous distinguez mal les couleurs.</p>
 <h2 id="securites-et-cas-particuliers">Sécurités et cas particuliers<a class="headerlink" href="#securites-et-cas-particuliers" title="Permanent link">&para;</a></h2>
 <p>Au-delà du chemin nominal, l'import intègre plusieurs <strong>garde-fous</strong> qui vous protègent des erreurs

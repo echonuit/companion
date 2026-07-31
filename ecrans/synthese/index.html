@@ -1356,7 +1356,7 @@ beaucoup ? »</strong></p>
 <p>Il liste les espèces détectées pendant une nuit et situe chaque nombre par rapport à ce qu'on observe
 habituellement pour cette espèce, à cette saison, dans cette région et dans ce milieu.</p>
 <p>On y arrive depuis l'écran d'un <strong>passage</strong>, par la carte « Synthèse de la nuit ».</p>
-<p><img alt="La synthèse d'une nuit : quatre espèces, leur classe d'activité et les quantiles qui la fondent, avec la mise en garde et la source en pied d'écran." src="../../assets/captures/apercu-synthese.png" /></p>
+<p><img alt="La synthèse d'une nuit : cinq espèces, leur classe d'activité et les quantiles qui la fondent, dont une classe marquée indicatif, une espèce sans seuil pour ce contexte et une espèce non couverte, avec la mise en garde et la source en pied d'écran." src="../../assets/captures/apercu-synthese.png" /></p>
 <h2 id="ce-que-le-tableau-montre">Ce que le tableau montre<a class="headerlink" href="#ce-que-le-tableau-montre" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1393,7 +1393,7 @@ c'est peut-être un individu qui a chassé devant le micro ; deux cents contacts
 fichiers, c'est une activité diffuse toute la nuit. La classe d'activité se calcule sur les
 <strong>contacts</strong> ; les fichiers vous disent si ces contacts sont concentrés.</p>
 <h2 id="pourquoi-les-seuils-saffichent-a-cote-de-la-classe">Pourquoi les seuils s'affichent à côté de la classe<a class="headerlink" href="#pourquoi-les-seuils-saffichent-a-cote-de-la-classe" title="Permanent link">&para;</a></h2>
-<p>Une classe seule est un verdict. Une classe accompagnée de « Q75 = 620 · Q98 = 3842 » est une
+<p>Une classe seule est un verdict. Une classe accompagnée de « Q75 = 261 · Q98 = 1804 » est une
 <strong>lecture que vous pouvez contester</strong> : et c'est ce qu'on attend d'un outil scientifique. Vous voyez
 sur quoi le produit s'appuie pour dire « Forte ».</p>
 <h2 id="identifications-validees-seulement">Identifications validées seulement<a class="headerlink" href="#identifications-validees-seulement" title="Permanent link">&para;</a></h2>
@@ -1407,17 +1407,21 @@ voir l'écart.</p>
 reste un choix explicite : rien dans l'application ne dit si votre point d'écoute est en forêt ou en
 ville. Par défaut, la comparaison est donc <strong>nationale</strong> : plus large, mais jamais fausse.</p>
 <p>Le référentiel réellement employé est <strong>écrit sous le tableau</strong> : « Comparé au référentiel :
-region Occitanie · Été ». Sans cette mention, la classe serait un oracle.</p>
+region Provence-Alpes-Cote dAzur · Printemps ». Sans cette mention, la classe serait un oracle.</p>
 <h2 id="quand-la-classe-nest-pas-donnee">Quand la classe n'est pas donnée<a class="headerlink" href="#quand-la-classe-nest-pas-donnee" title="Permanent link">&para;</a></h2>
 <p>La cellule dit toujours <strong>pourquoi</strong>, plutôt que de rester vide : une case blanche se lirait comme une
 donnée manquante :</p>
 <ul>
-<li><strong>« Non couvert par le référentiel »</strong> : orthoptères, oiseaux, bruit. Le référentiel ne parle que de
-  chauves-souris ;</li>
-<li><strong>« Pas de seuil pour ce contexte »</strong> : l'espèce est connue, mais aucune déclinaison ne la couvre ;</li>
-<li><strong>« Moyenne (indicatif) »</strong> : les seuils retenus reposent sur trop peu de nuits. On vous les montre
-  faute de mieux, sans les présenter comme une mesure.</li>
+<li><strong>« Non couvert par le référentiel »</strong> : l'espèce lui est étrangère. C'est le cas de la plupart des
+  orthoptères, des oiseaux et du bruit, le référentiel portant sur les chauves-souris ;</li>
+<li><strong>« Pas de seuil pour ce contexte »</strong> : l'espèce <strong>est</strong> au référentiel, mais aucune de ses
+  déclinaisons ne couvre cette région à cette saison ;</li>
+<li><strong>« Forte (indicatif) »</strong>, ou toute autre classe suivie de <em>(indicatif)</em> : les seuils retenus reposent
+  sur trop peu de nuits. On vous les montre faute de mieux, sans les présenter comme une mesure.</li>
 </ul>
+<p>Les deux premières mentions se ressemblent et ne disent pas la même chose. La distinction ne tient pas
+au groupe de l'espèce : sur la capture ci-dessus, la <strong>Cigale grise</strong> est un orthoptère et affiche « Pas
+de seuil pour ce contexte », parce que le référentiel la connaît mais ne la couvre qu'en été.</p>
 <h2 id="si-le-referentiel-manque">Si le référentiel manque<a class="headerlink" href="#si-le-referentiel-manque" title="Permanent link">&para;</a></h2>
 <p>Il peut arriver que le référentiel d'activité ne soit pas exploitable. L'écran ne se contente alors pas
 de laisser des cases blanches, qui se liraient comme des données manquantes : les colonnes <strong>Activité</strong>

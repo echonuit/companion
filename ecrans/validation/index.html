@@ -1756,6 +1756,7 @@ fichier ; <strong>Annuler</strong> interrompt proprement, sans laisser d'archive
 pas</strong> l'export : l'observation reste dans le CSV, le son manquant est <strong>compté</strong> dans le compte rendu
 final, et le CSV permet de le nommer. Comptez quelques minutes pour plusieurs centaines de sons - sur
 une saison réelle, 721 sons (658 Mo) partent en moins de cinq minutes.</p>
+<p>La commande <code>vigiechiro lister-observations</code> reprend <strong>les mêmes critères que la barre de filtres</strong> : <code>--statut</code>, <code>--taxon</code>, <code>--taxon-parent</code>, <code>--lieu</code>, <code>--reference</code>, <code>--douteux</code>, <code>--non-identifie</code>, <code>--a-enjeu</code>, <code>--proba-min</code> et la plage <code>--heure-debut</code> / <code>--heure-fin</code> (qui traverse minuit, comme la puce). Un critère qui <strong>désigne</strong> quelque chose d'introuvable refuse en nommant ce qui est présent ; un critère qui <strong>qualifie</strong> rend simplement une liste vide.</p>
 <p>La même archive se produit <strong>en ligne de commande</strong> avec <code>vigiechiro exporter-sons</code> (<code>--passage &lt;id&gt;</code>
 ou <code>--espece &lt;code&gt;</code>, et <code>--sortie &lt;zip&gt;</code>), pour scripter des envois réguliers.</p>
 <p><img alt="La barre de filtres avec la puce « Taxon parent : Chiroptères » active : la table ne montre plus que les chauves-souris." src="../../assets/captures/apercu-sons-validation-filtres.png" /></p>

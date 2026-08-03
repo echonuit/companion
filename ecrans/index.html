@@ -1073,6 +1073,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ces-fichiers-que-lapplication-depose-sans-quon-les-lui-demande" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ces fichiers que l'application dépose sans qu'on les lui demande
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#repartir-dune-base-neuve" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1238,6 +1249,59 @@ de la barre du haut permet de la <strong>protéger</strong> :</p>
 <p>Chaque dossier de la sauvegarde est confronté à ce qu'elle annonce contenir. Une seule
 discordance, et la restauration s'arrête <strong>avant</strong> d'avoir remplacé la base ou écrasé le moindre
 fichier : mieux vaut une restauration qui refuse qu'une restauration à moitié faite.</p>
+<p>Deux refus peuvent se produire, et dans les deux cas <strong>rien n'a été touché</strong> :</p>
+<ul>
+<li>« <strong>Cette sauvegarde a été écrite par une version plus récente de l'application</strong> » : mettez
+  l'application à jour, puis recommencez. Sa base contient des informations que cette version ne
+  sait pas lire.</li>
+<li>« <strong>La mise à jour de son schéma a échoué</strong> » : la sauvegarde a bien été remise en place, mais
+  l'application n'a pas su la mettre à jour, et <strong>votre base d'avant a été rétablie</strong>. Essayez une
+  autre sauvegarde.</li>
+</ul>
+</div>
+<h2 id="ces-fichiers-que-lapplication-depose-sans-quon-les-lui-demande">Ces fichiers que l'application dépose sans qu'on les lui demande<a class="headerlink" href="#ces-fichiers-que-lapplication-depose-sans-quon-les-lui-demande" title="Permanent link">&para;</a></h2>
+<p>Vous croiserez trois fichiers que vous n'avez pas créés. Aucun n'est un déchet, et aucun ne doit être
+supprimé pendant que l'application tourne.</p>
+<table>
+<thead>
+<tr>
+<th>Fichier</th>
+<th>Quand il apparaît</th>
+<th>À quoi il sert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sauvegardes/vigiechiro-avant-migration-V39.db</code></td>
+<td>après une mise à jour de l'application, quand la base doit évoluer</td>
+<td>une copie de votre base <strong>juste avant</strong> l'évolution. Si la mise à jour vous déplaît, c'est celle-là qu'on restaure</td>
+</tr>
+<tr>
+<td><code>vigiechiro.db.avant-restauration</code></td>
+<td>à chaque restauration</td>
+<td>l'état d'avant, mis de côté au cas où vous vous seriez trompé de sauvegarde</td>
+</tr>
+<tr>
+<td><code>.verrou</code></td>
+<td>tant que l'application est ouverte</td>
+<td>il empêche une <strong>seconde fenêtre</strong> d'écrire dans la même base en même temps</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Les fichiers « avant-migration » s'accumulent</p>
+<p>Un par évolution de la base, et l'application ne les supprime jamais : ils sont votre filet, elle
+n'a pas à décider à votre place quand vous n'en avez plus besoin. Sur une grosse base, pensez à
+faire le ménage de temps en temps, en gardant les plus récents.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">« VigieChiro Companion est déjà ouvert »</p>
+<p>L'application refuse de démarrer une <strong>seconde fois</strong> sur le même dossier de travail. Ce n'est pas
+une précaution excessive : deux fenêtres qui écrivent la même base la corrompent, et vous ne vous
+en apercevriez que bien plus tard.</p>
+<p>Le message nomme le processus qui occupe la place. Fermez l'autre fenêtre, puis relancez. Si
+l'application a été fermée brutalement, le verrou est libéré tout seul : il n'y a rien à
+supprimer à la main.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">La sauvegarde de la base seule ne protège pas vos sons</p>

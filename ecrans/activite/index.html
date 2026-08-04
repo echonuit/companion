@@ -1328,7 +1328,10 @@ plusieurs nuits n'ont pas de fenêtre commune, et en afficher une serait trompeu
 regardez</strong>, chacun sous son intitulé. Cocher plusieurs valeurs les cumule : deux carrés cochés
 montrent les deux. Un point y paraît toujours <strong>précédé de son carré</strong> (« 640380 · Z1 »), parce qu'un
 même code de point se retrouve sur presque tous les carrés et ne désignerait rien de précis tout seul.</p>
-<p><img alt="La liste ouverte de la puce « Lieu » : trois groupes nommés (Communes, Carrés, Points), le point paraissant sous la forme « 640380 · A1 »." src="../../assets/captures/apercu-activite-lieu.png" /></p>
+<p>Un <strong>carré nommé</strong> porte de même ses deux étiquettes, « 640380 · Bois du bourg » : le numéro et le nom
+que vous lui avez donné désignent le même lieu, et la liste ne vous fait pas choisir entre deux entrées
+identiques. Un carré sans nom garde son numéro seul.</p>
+<p><img alt="La liste ouverte de la puce « Lieu » : trois groupes nommés (Communes, Carrés, Points), le carré nommé paraissant sous la forme « 640380 · Bois du bourg » et le point sous la forme « 640380 · A1 »." src="../../assets/captures/apercu-activite-lieu.png" /></p>
 <p><img alt="L'écran ouvert sur toutes les nuits : la courbe cumule les passages et l'aplat nocturne a disparu." src="../../assets/captures/apercu-activite-transverse.png" /></p>
 <h2 id="exporter-limage">Exporter l'image<a class="headerlink" href="#exporter-limage" title="Permanent link">&para;</a></h2>
 <p>Le bouton <strong>Exporter l'image…</strong> enregistre la courbe telle qu'elle est affichée, au format PNG.
@@ -1345,7 +1348,7 @@ l'annonce serait indiscernable d'un clic sans effet.</p>
 <p>Pour produire le même contenu <strong>en tableau</strong> plutôt qu'en image, la ligne de commande expose
 <code>exporter-activite</code> (une ligne par espèce et par tranche, ouvrable dans un tableur). Elle accepte <strong>les mêmes filtres que l'écran</strong> : <code>--lieu</code> (répétable), <code>--nuit</code>, <code>--taxon-parent</code>, <code>--nature</code> et <code>--a-enjeu</code>, pour scripter « l'activité des chiroptères sur Ahetze » sans passer par l'interface.</p>
 <p>Avec <code>--a-enjeu</code>, un fichier vide peut vouloir dire deux choses opposées : aucune espèce prioritaire dans ces nuits, ou <strong>aucun référentiel chargé</strong>. La commande le dit alors explicitement, pour que vous sachiez s'il faut lire le résultat ou réparer l'installation.</p>
-<p>Une différence assumée : le <strong>point</strong> n'y est pas filtrable. Un code de point se retrouve sur presque tous les carrés ; l'écran le montre précédé du sien, ce qu'une valeur d'option ne peut pas reproduire sans devenir pénible à écrire. <code>--lieu</code> porte donc la commune ou le carré.</p>
+<p>Une différence assumée : le <strong>point</strong> n'y est pas filtrable. Un code de point se retrouve sur presque tous les carrés, et <code>--lieu A1</code> ne désignerait donc rien de précis. <code>--lieu</code> porte la commune ou le carré, celui-ci par son numéro (<code>--lieu 640380</code>) comme par le nom que vous lui avez donné (<code>--lieu vallon</code>) : c'est le même lieu, et quand la commande refuse une valeur introuvable, elle nomme les carrés présents sous leurs deux étiquettes, telles que l'écran les montre.</p>
 
 
 

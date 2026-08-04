@@ -1300,10 +1300,18 @@ supprimé pendant que l'application tourne.</p>
 </tbody>
 </table>
 <div class="admonition note">
-<p class="admonition-title">Les fichiers « avant-migration » s'accumulent</p>
+<p class="admonition-title">Les fichiers « avant-migration » s'accumulent, et l'application vous dit combien</p>
 <p>Un par évolution de la base, et l'application ne les supprime jamais : ils sont votre filet, elle
 n'a pas à décider à votre place quand vous n'en avez plus besoin. Sur une grosse base, pensez à
 faire le ménage de temps en temps, en gardant les plus récents.</p>
+<p>Encore faut-il savoir ce qu'il y a à ranger. <strong>☰ → Restaurer une sauvegarde</strong> ouvre désormais la
+liste de ce que le dossier contient - date, taille, nature de chacune, et le <strong>total occupé</strong> -
+au lieu d'un sélecteur de fichiers où l'on choisissait un <code>.db</code> sans rien savoir de lui.
+« Parcourir… » reste là pour une sauvegarde rangée ailleurs.</p>
+<p><img alt="Choisir une sauvegarde à restaurer : date, taille, nature et total." src="../assets/captures/apercu-restauration-choix-sauvegarde.png" /></p>
+<p>En ligne de commande, <code>vigiechiro lister-sauvegardes</code> donne la même chose, et
+<code>vigiechiro supprimer-sauvegarde --nom &lt;nom&gt; --confirmer</code> fait le ménage. Sans <code>--confirmer</code>, la
+commande vous dit ce qui serait perdu et ne touche à rien.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">« VigieChiro Companion est déjà ouvert »</p>

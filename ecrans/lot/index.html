@@ -1506,6 +1506,15 @@ vous dit où en est le calcul :</p>
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="admonition-title">« URL de stockage refusée »</p>
+<p>Vos enregistrements montent vers un espace de stockage dont <strong>la plateforme fournit l'adresse</strong>.
+L'application vérifie cette adresse avant d'y envoyer quoi que ce soit : si elle n'est pas celle
+attendue, ou si elle n'est pas chiffrée (<code>https</code>), le dépôt est <strong>refusé sans rien envoyer</strong>.</p>
+<p>Ce refus est anormal : il signifie que l'hébergement de Vigie-Chiro a changé, ou que quelque chose
+s'interpose. <strong>Signalez-le</strong> plutôt que de contourner. Rien n'a été envoyé, et votre nuit est
+intacte : le dépôt pourra être relancé une fois la cause connue.</p>
+</div>
 <p>L'application <strong>n'interroge pas la plateforme en permanence</strong> : elle affiche le dernier état qu'elle
 connaît, en précisant de quand il date : y compris hors connexion. Le bouton <strong>« Actualiser »</strong>
 redemande l'état à Vigie-Chiro, et vous pouvez fermer l'application entre-temps : le calcul se

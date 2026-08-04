@@ -774,6 +774,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#les-listes-sadaptent-a-ce-qui-reste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les listes s'adaptent à ce qui reste
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quand-un-filtre-ne-peut-pas-etre-repris" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quand un filtre ne peut pas être repris
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#exporter-les-observations-et-les-sons-zip" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1371,6 +1393,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#les-listes-sadaptent-a-ce-qui-reste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les listes s'adaptent à ce qui reste
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quand-un-filtre-ne-peut-pas-etre-repris" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quand un filtre ne peut pas être repris
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#exporter-les-observations-et-les-sons-zip" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1691,6 +1735,16 @@ puis rouvrez l'écran, vous retrouvez la revue là où vous l'aviez laissée, sa
 <td>(puce booléenne : sa présence suffit)</td>
 </tr>
 <tr>
+<td><strong>Douteux</strong></td>
+<td>seulement les observations que vous avez marquées « douteuses »</td>
+<td>(puce booléenne : sa présence suffit)</td>
+</tr>
+<tr>
+<td><strong>Non identifiés</strong></td>
+<td>seulement les séquences <strong>sans proposition Tadarida</strong> : présentes sur le disque, absentes du CSV, à identifier à la main</td>
+<td>(puce booléenne : sa présence suffit)</td>
+</tr>
+<tr>
 <td><strong>Espèces à enjeu</strong></td>
 <td>seulement les observations d'espèces <strong>prioritaires</strong> du Plan National d'Actions Chiroptères</td>
 <td>(puce booléenne : sa présence suffit)</td>
@@ -1722,7 +1776,26 @@ bouclier, et l'inverse le fait disparaître.</p>
 de chauves-souris.</p>
 <p>Les puces se <strong>combinent en ET</strong> : « Chiroptères » + « Proba ≥ 80 % » ne garde que les chauves-souris les
 plus sûres ; « Espèce : Grand rhinolophe » + « Lieu : Aix-en-Provence » isole une espèce sur une commune,
-prête à être exportée (CSV, ou archive ZIP avec les sons) depuis le menu ☰. Les <strong>compteurs</strong> de la barre de statut (À revoir / Validées / Corrigées) suivent en temps réel
+prête à être exportée (CSV, ou archive ZIP avec les sons) depuis le menu ☰.</p>
+<h3 id="les-listes-sadaptent-a-ce-qui-reste">Les listes s'adaptent à ce qui reste<a class="headerlink" href="#les-listes-sadaptent-a-ce-qui-reste" title="Permanent link">&para;</a></h3>
+<p>Quand vous ouvrez le menu d'une puce, il ne propose que les valeurs qui <strong>ramènent encore quelque
+chose</strong>, compte tenu des autres filtres posés. Isolez les chiroptères, et la puce « Lieu » cesse
+d'offrir les communes où vous n'avez entendu que des orthoptères : cliquer dessus n'aurait donné aucune
+ligne. Relâchez ce filtre, et elles réapparaissent.</p>
+<p>Une valeur que vous avez <strong>cochée</strong> et qui n'est plus disponible ne disparaît pas pour autant : elle
+reste cochée, grisée en italique. C'est délibéré. La retirer relâcherait votre filtre sans vous le dire,
+et l'écran montrerait alors <strong>plus</strong> que ce que la puce annonce. La voir grisée répond en même temps à
+la question qu'on se pose devant une table vide : « pourquoi n'y a-t-il rien ? ».</p>
+<h3 id="quand-un-filtre-ne-peut-pas-etre-repris">Quand un filtre ne peut pas être repris<a class="headerlink" href="#quand-un-filtre-ne-peut-pas-etre-repris" title="Permanent link">&para;</a></h3>
+<p>Trois situations vous font retrouver des filtres que vous n'avez pas posés à l'instant : rouvrir une
+<strong>vue enregistrée</strong>, arriver par « <strong>Voir sur la carte</strong> » depuis un autre écran, ou simplement
+<strong>revenir</strong> sur Sons &amp; validation après en être sorti.</p>
+<p>Dans ces trois cas, il arrive qu'un filtre ne puisse pas être remis en place : la valeur n'existe plus
+dans vos données, ou l'écran d'arrivée n'offre pas ce critère (la carte des espèces ne connaît ni la
+probabilité ni l'heure). <strong>Un bandeau vous le dit alors</strong>, en nommant ce qui manque.</p>
+<p>Ce n'est jamais silencieux, et c'est le point important : sans ce message, l'écran montrerait plus de
+lignes que le filtre ne le laisse croire, et rien ne l'indiquerait.</p>
+<p>Les <strong>compteurs</strong> de la barre de statut (À revoir / Validées / Corrigées) suivent en temps réel
 le <strong>sous-ensemble affiché</strong>, pas la nuit entière : vous voyez toujours combien il reste à traiter dans ce
 que vous avez sous les yeux.</p>
 <p>À leur droite, un compteur dédié aux <strong>espèces à enjeu</strong> : « 12 à enjeu, 11 à revoir ». Il dit ce qui

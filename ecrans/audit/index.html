@@ -958,6 +958,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#departement-divergent-deux-lectures-dun-meme-lieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        « Département divergent » : deux lectures d'un même lieu
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#filtrer-les-constats" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1192,6 +1203,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#departement-divergent-deux-lectures-dun-meme-lieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        « Département divergent » : deux lectures d'un même lieu
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#filtrer-les-constats" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1344,6 +1366,27 @@ fichiers sur le disque, et c'est <strong>voulu</strong>. L'audit le dit : parce 
 état normal vous laisserait croire que le disque est intact, et un audit qui <strong>crierait</strong> sur un état
 normal finirait par ne plus être lu du tout.</p>
 </div>
+<h2 id="departement-divergent-deux-lectures-dun-meme-lieu">« Département divergent » : deux lectures d'un même lieu<a class="headerlink" href="#departement-divergent-deux-lectures-dun-meme-lieu" title="Permanent link">&para;</a></h2>
+<p>Le département d'un point se lit de <strong>deux façons</strong>, et elles ne viennent pas du même endroit :</p>
+<ul>
+<li>par le <strong>numéro du carré</strong> : ses deux premiers chiffres (<code>840962</code> est dans le Vaucluse) ;</li>
+<li>par la <strong>commune du point</strong> : celle que ses coordonnées GPS ont désignée (Aix-en-Provence est dans les
+  Bouches-du-Rhône).</li>
+</ul>
+<p>Quand les deux ne concordent pas, l'audit le dit, en <strong>Information</strong> :</p>
+<blockquote>
+<p>Le point A1 est en Aix-en-Provence (département 13), mais son carré 840962 porte le département 84.</p>
+</blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Ce n'est pas forcément une erreur</p>
+<p>Un carré fait <strong>10 km de côté</strong> : il peut parfaitement chevaucher deux départements, et un point posé
+près du bord tombe alors de l'autre côté. C'est même le cas le plus courant.</p>
+<p>L'application <strong>ne sait pas</strong> distinguer ce cas d'un vrai problème : un GPS relevé au mauvais endroit,
+un numéro de carré mal recopié. Elle vous <strong>montre</strong> l'écart, vous seul connaissez le terrain. Si le
+point n'a rien à faire là, vérifiez ses coordonnées ou le numéro du carré.</p>
+</div>
+<p>Un point dont la commune n'a <strong>pas</strong> été résolue (pas de GPS, ou résolution jamais lancée) ne produit
+aucun constat : il n'y a pas de seconde lecture à confronter.</p>
 <h2 id="filtrer-les-constats">Filtrer les constats<a class="headerlink" href="#filtrer-les-constats" title="Permanent link">&para;</a></h2>
 <p>Un audit de saison mêle des natures très différentes : une carte SD débranchée, un nom de fichier hors
 convention, un dépôt inachevé. La <strong>barre de filtres</strong> vous laisse poser la question qui vous occupe :

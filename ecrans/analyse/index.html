@@ -898,6 +898,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Filtrer et exporter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#restreindre-a-un-lieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restreindre à un lieu
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1238,6 +1255,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Filtrer et exporter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#restreindre-a-un-lieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restreindre à un lieu
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1330,7 +1364,7 @@ saison). Les deux restent comptées ensemble par défaut : c'est à vous de dema
 </tr>
 <tr>
 <td><strong>Lieu</strong></td>
-<td>les observations d'un ou plusieurs lieux à cocher : communes, carrés, points, sites</td>
+<td>les observations d'un ou plusieurs lieux à cocher : communes, carrés et points présents dans l'inventaire, le carré portant son nom quand vous lui en avez donné un</td>
 </tr>
 <tr>
 <td><strong>Nature de la nuit</strong></td>
@@ -1405,6 +1439,17 @@ code d'espèce</strong> en mode <em>Par espèce</em>, par <strong>numéro de car
 carré</em> (la commune est celle déduite des coordonnées du point, voir <a href="../sites/">Mes sites</a>). Le
 bouton <strong>« Exporter… »</strong> enregistre l'inventaire <strong>affiché</strong> (tel que filtré) en <strong>CSV</strong>, prêt pour un
 tableur ou un partage.</p>
+<h3 id="restreindre-a-un-lieu">Restreindre à un lieu<a class="headerlink" href="#restreindre-a-un-lieu" title="Permanent link">&para;</a></h3>
+<p>La puce <strong>« Lieu »</strong> coche un ou plusieurs lieux parmi ceux <strong>présents dans ce que vous regardez</strong>,
+groupés par nature : les <strong>communes</strong>, les <strong>carrés</strong> et les <strong>points d'écoute</strong>. Cocher plusieurs
+valeurs les cumule, et une observation est retenue dès qu'<strong>un</strong> de ses lieux figure parmi ceux cochés.</p>
+<p>Un carré paraît sous ses deux étiquettes quand vous lui avez donné un nom, « 640380 · Étang de la
+Tuilière » : le numéro et le nom désignent le même lieu, et la liste ne vous fait pas choisir entre deux
+entrées identiques. Un point paraît toujours <strong>précédé de son carré</strong>, « 640380 · A1 », parce qu'un même
+code de point se retrouve sur presque tous les carrés et ne désignerait rien de précis tout seul.</p>
+<p><img alt="La liste ouverte de la puce « Lieu » : trois groupes nommés (Communes, Carrés, Points), les carrés paraissant sous la forme « 640380 · Étang de la Tuilière » et les points sous la forme « 640380 · A1 »." src="../../assets/captures/apercu-analyse-lieu.png" /></p>
+<p>Une commune peut couvrir <strong>plusieurs carrés</strong> : la cocher les retient tous, ce qui répond à « qu'ai-je
+entendu sur cette commune ? » sans avoir à savoir combien de carrés elle recouvre.</p>
 <h2 id="vues-sauvegardees">Vues sauvegardées<a class="headerlink" href="#vues-sauvegardees" title="Permanent link">&para;</a></h2>
 <p>Une combinaison de filtres utile peut être <strong>enregistrée sous un nom</strong> pour être rejouée d'un clic. Les
 vues enregistrées s'affichent comme des <strong>onglets</strong> au-dessus de l'inventaire : cliquer sur le nom d'un

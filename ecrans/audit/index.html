@@ -958,6 +958,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#filtrer-les-constats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtrer les constats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#aller-au-passage-accuse" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1181,6 +1192,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#filtrer-les-constats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtrer les constats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#aller-au-passage-accuse" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1294,7 +1316,7 @@ et vous <strong>énumère</strong> les écarts.</p>
 <tbody>
 <tr>
 <td><strong>Gravité</strong></td>
-<td><code>ERREUR</code> (à traiter), <code>AVERTISSEMENT</code> (à regarder), <code>INFO</code> (normal, mais bon à savoir)</td>
+<td><strong>Erreur</strong> (à traiter), <strong>Avertissement</strong> (à regarder), <strong>Information</strong> (normal, mais bon à savoir)</td>
 </tr>
 <tr>
 <td><strong>Catégorie</strong></td>
@@ -1317,11 +1339,55 @@ et vous <strong>énumère</strong> les écarts.</p>
 <p>Le bandeau du haut résume : <em>« 5 écarts : 1 erreur, 0 avertissement, 4 infos »</em>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tout n'est pas une anomalie</p>
-<p>Un constat en <strong>INFO</strong> ne demande souvent <strong>aucune action</strong> : une nuit <strong>archivée</strong> n'a plus ses
+<p>Un constat en <strong>Information</strong> ne demande souvent <strong>aucune action</strong> : une nuit <strong>archivée</strong> n'a plus ses
 fichiers sur le disque, et c'est <strong>voulu</strong>. L'audit le dit : parce qu'un audit qui se tairait sur un
 état normal vous laisserait croire que le disque est intact, et un audit qui <strong>crierait</strong> sur un état
 normal finirait par ne plus être lu du tout.</p>
 </div>
+<h2 id="filtrer-les-constats">Filtrer les constats<a class="headerlink" href="#filtrer-les-constats" title="Permanent link">&para;</a></h2>
+<p>Un audit de saison mêle des natures très différentes : une carte SD débranchée, un nom de fichier hors
+convention, un dépôt inachevé. La <strong>barre de filtres</strong> vous laisse poser la question qui vous occupe :
+<em>« qu'est-ce qui est bloquant ? »</em>, <em>« qu'est-ce qui concerne cette nuit-là ? »</em>. Elle fonctionne comme
+celle des autres écrans :</p>
+<ul>
+<li>un <strong>champ de recherche</strong> permanent cherche dans la <strong>Cible</strong> et le <strong>Détail</strong> : les deux colonnes en
+  texte libre. La recherche ignore la casse et les accents ;</li>
+<li>un bouton <strong>« + Filtre »</strong> ajoute un critère sous forme de <strong>puce</strong> ; on retire une puce par sa croix ;</li>
+<li><strong>« Tout effacer »</strong> enlève d'un coup les puces <strong>et</strong> la recherche.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th>Ce qu'il garde</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gravité</strong></td>
+<td>les constats d'une gravité : Erreur, Avertissement, Information, Succès</td>
+</tr>
+<tr>
+<td><strong>Catégorie</strong></td>
+<td>les constats d'une nature : fichier absent du disque, préfixe non conforme, dépôt divergent…</td>
+</tr>
+<tr>
+<td><strong>Passage</strong></td>
+<td>les constats qui accusent une nuit précise. Un constat qui ne cite <strong>aucune</strong> nuit (un fichier orphelin, un serveur injoignable) n'a rien à y désigner : il n'apparaît pas dans la liste des passages</td>
+</tr>
+</tbody>
+</table>
+<p>Aucune puce n'est posée d'avance : un audit se lit d'abord <strong>en entier</strong>. Vous filtrez ensuite pour
+travailler.</p>
+<div class="admonition warning">
+<p class="admonition-title">Relancer l'audit peut faire disparaître ce que vous filtriez</p>
+<p>Vos filtres sont <strong>remis en place</strong> quand vous revenez sur l'écran. Mais entre-temps, l'audit a pu
+être relancé : la nuit 42 que vous suiviez n'a peut-être plus de constat du tout. Quand un filtre ne
+peut pas être repris, un <strong>bandeau vous le dit</strong> : l'écran montre alors <strong>plus large</strong> que ce que
+vous aviez demandé, et vous devez le savoir pour ne pas croire l'avoir déjà réduit.</p>
+</div>
+<p>Vous pouvez aussi <strong>enregistrer une vue</strong> (les onglets au-dessus de la barre) pour retrouver d'un clic une
+combinaison qui vous sert souvent : par exemple les erreurs de dépôt d'une campagne.</p>
 <h2 id="aller-au-passage-accuse">Aller au passage accusé<a class="headerlink" href="#aller-au-passage-accuse" title="Permanent link">&para;</a></h2>
 <p>Un constat <strong>nomme</strong> la nuit fautive. <strong>Double-cliquez</strong> sur la ligne : la fiche du passage s'ouvre, avec
 son contexte (carré, point). Vous n'avez pas à la retrouver à la main.</p>

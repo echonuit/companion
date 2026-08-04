@@ -1446,10 +1446,12 @@ et <a href="../../personnaliser-les-tableaux/">Personnaliser les tableaux</a>.</
 <p>L'<strong>export CSV</strong> de la sélection porte une colonne <code>campagne</code>, en fin de ligne.</p>
 <h3 id="les-colonnes-du-fichier-exporte">Les colonnes du fichier exporté<a class="headerlink" href="#les-colonnes-du-fichier-exporte" title="Permanent link">&para;</a></h3>
 <p>Le fichier reprend la sélection affichée, une ligne par passage, séparateur <code>;</code> :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>carre;nom_site;point;annee;passage;date;statut;verdict;analyse;analyse_relevee_le;campagne
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>carre;nom_site;commune;point;annee;passage;date;statut;verdict;analyse;analyse_relevee_le;campagne
 </code></pre></div>
 <p><code>carre</code> porte le <strong>numéro</strong> du carré, <code>nom_site</code> le <strong>nom</strong> que vous lui avez donné (vide si vous ne
-l'avez pas nommé) : ce sont les deux étiquettes d'un même lieu, comme dans la puce « Lieu ».</p>
+l'avez pas nommé) : ce sont les deux étiquettes d'un même lieu, comme dans la puce « Lieu ».
+<code>commune</code> est celle déduite des coordonnées du point, vide tant qu'aucune n'a été résolue : le fichier
+porte ainsi les mêmes lieux que le tableau, ce qui n'était pas le cas avant.</p>
 <blockquote>
 <p><strong>Si vous avez un script qui lit ce fichier</strong> : la première colonne s'appelait <code>site</code> et portait déjà
 le numéro de carré. Elle s'appelle désormais <code>carre</code>, et <code>nom_site</code> s'intercale en deuxième position.

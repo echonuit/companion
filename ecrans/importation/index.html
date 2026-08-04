@@ -736,6 +736,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Source compressée (.zip)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#une-archive-peut-etre-refusee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Une archive peut être refusée
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1383,6 +1400,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Source compressée (.zip)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#une-archive-peut-etre-refusee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Une archive peut être refusée
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1661,6 +1695,22 @@ désactiver, ce qui divise le besoin par deux.</p>
 l'application la <strong>décompresse</strong> d'abord, avec une barre de progression et un bouton « Annuler »,
 avant de poursuivre l'inspection comme pour un dossier ordinaire.</p>
 <p><img alt="Décompression d'une archive .zip choisie comme source : progression et annulation." src="../../assets/captures/apercu-import-decompression.png" /></p>
+<p>Sur un gros fichier, le compteur « X / N fichiers » ne bouge pas pendant plusieurs minutes : le volume
+déjà écrit s'affiche alors à côté du nom, pour que vous voyiez que la décompression avance. « Annuler »
+répond immédiatement, y compris au milieu d'un fichier.</p>
+<h3 id="une-archive-peut-etre-refusee">Une archive peut être refusée<a class="headerlink" href="#une-archive-peut-etre-refusee" title="Permanent link">&para;</a></h3>
+<p>L'application ouvre là un fichier dont elle ne sait rien. Avant de décompresser, elle vérifie que
+l'archive ressemble à une carte SD et que le disque peut l'accueillir. Elle refuse, <strong>sans rien avoir
+écrit</strong> :</p>
+<ul>
+<li>s'il <strong>manque de la place</strong> : le message dit ce qu'il faudrait et ce qui reste. Vous pouvez libérer
+  de l'espace, ou décompresser l'archive vous-même et désigner le dossier obtenu ;</li>
+<li>si elle contient <strong>beaucoup trop de fichiers</strong>, un fichier <strong>démesuré</strong>, ou un total démesuré.</li>
+</ul>
+<p>Une archive qui se met à écrire <strong>plus qu'elle n'avait annoncé</strong> est également interrompue en cours de
+route, et le dossier temporaire est supprimé.</p>
+<p>Ces limites sont larges : une vraie nuit de terrain passe sans que vous ayez quoi que ce soit à régler.
+Si l'une d'elles gênait une archive pourtant légitime, le message vous indique quoi faire.</p>
 <h2 id="linspection-vous-alerte">L'inspection vous alerte<a class="headerlink" href="#linspection-vous-alerte" title="Permanent link">&para;</a></h2>
 <p>L'inspection signale les anomalies <strong>avant</strong> l'import, pour éviter d'importer une mauvaise nuit.</p>
 <p>Un <strong>mélange</strong> dans le dossier (plusieurs enregistreurs aux séries différentes) déclenche un

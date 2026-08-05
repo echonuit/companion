@@ -1325,7 +1325,7 @@ diverger : un disque débranché, un fichier renommé à la main, un dépôt inc
 <strong>sans rien dire</strong>.</p>
 <p>L'écran <strong>Audit de cohérence</strong> existe pour que plus rien ne diverge en silence. Il <strong>confronte</strong> les trois
 et vous <strong>énumère</strong> les écarts.</p>
-<p><img alt="L'audit de cohérence : une nuit dont les fichiers ont disparu du disque, et un nom de fichier qui ne respecte pas la convention." src="../../assets/captures/apercu-audit.png" /></p>
+<p><img alt="L'audit de cohérence : trois écarts sur une même nuit. Un audio incomplet (information), un nom de fichier sans le préfixe attendu (erreur), et un département divergent entre le carré 640380 et la commune Saint-Martin-de-Seignanx (information)." src="../../assets/captures/apercu-audit.png" /></p>
 <h2 id="lire-un-constat">Lire un constat<a class="headerlink" href="#lire-un-constat" title="Permanent link">&para;</a></h2>
 <p>Chaque ligne est un <strong>écart</strong>, et se lit de gauche à droite :</p>
 <table>
@@ -1375,12 +1375,13 @@ normal finirait par ne plus être lu du tout.</p>
 </ul>
 <p>Quand les deux ne concordent pas, l'audit le dit, en <strong>Information</strong> :</p>
 <blockquote>
-<p>Le point A1 est en Aix-en-Provence (département 13), mais son carré 840962 porte le département 84.</p>
+<p>Départements 13 (commune) et 84 (carré) : le point A1 est en Aix-en-Provence, son carré 840962 dit autre chose.</p>
 </blockquote>
 <div class="admonition tip">
 <p class="admonition-title">Ce n'est pas forcément une erreur</p>
-<p>Un carré fait <strong>10 km de côté</strong> : il peut parfaitement chevaucher deux départements, et un point posé
-près du bord tombe alors de l'autre côté. C'est même le cas le plus courant.</p>
+<p>Un carré fait <strong>2 km de côté</strong> et le carroyage national ignore les limites administratives : un
+carré posé sur une frontière de département en chevauche deux, et un point près du bord tombe
+alors de l'autre côté.</p>
 <p>L'application <strong>ne sait pas</strong> distinguer ce cas d'un vrai problème : un GPS relevé au mauvais endroit,
 un numéro de carré mal recopié. Elle vous <strong>montre</strong> l'écart, vous seul connaissez le terrain. Si le
 point n'a rien à faire là, vérifiez ses coordonnées ou le numéro du carré.</p>

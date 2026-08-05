@@ -1453,6 +1453,17 @@ code de point se retrouve sur presque tous les carrés et ne désignerait rien d
 <p><img alt="La liste ouverte de la puce « Lieu » : trois groupes nommés (Communes, Carrés, Points), les carrés paraissant sous la forme « 640380 · Étang de la Tuilière » et les points sous la forme « 640380 · A1 »." src="../../assets/captures/apercu-analyse-lieu.png" /></p>
 <p>Une commune peut couvrir <strong>plusieurs carrés</strong> : la cocher les retient tous, ce qui répond à « qu'ai-je
 entendu sur cette commune ? » sans avoir à savoir combien de carrés elle recouvre.</p>
+<div class="admonition tip">
+<p class="admonition-title">Le même inventaire en ligne de commande</p>
+<p><code>vigiechiro lister-especes</code> rend la table <em>Par espèce</em>, <code>vigiechiro lister-carres</code> la table <em>Par
+carré</em>, avec les <strong>mêmes cinq critères</strong> que la barre à puces : <code>--statut</code>, <code>--taxon-parent</code>,
+<code>--lieu</code> (répétable), <code>--nature</code> et <code>--a-enjeu</code>. <code>--format json</code> remplace le CSV, et <code>--sortie
+&lt;fichier&gt;</code> écrit à la place de l'écran - dans les deux formats.</p>
+<p>Une différence utile à connaître : à l'écran vous <strong>cochez</strong> dans une liste, en ligne de commande
+vous <strong>tapez</strong> un fragment, qui correspond partiellement (« chirop » retient « Chiroptères »).
+Le <strong>point d'écoute</strong> ne s'y filtre pas : un code seul, « A1 », se retrouve sur presque tous les
+carrés et ne désignerait rien de précis.</p>
+</div>
 <h2 id="vues-sauvegardees">Vues sauvegardées<a class="headerlink" href="#vues-sauvegardees" title="Permanent link">&para;</a></h2>
 <p>Une combinaison de filtres utile peut être <strong>enregistrée sous un nom</strong> pour être rejouée d'un clic. Les
 vues enregistrées s'affichent comme des <strong>onglets</strong> au-dessus de l'inventaire : cliquer sur le nom d'un

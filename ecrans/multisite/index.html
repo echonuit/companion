@@ -1455,6 +1455,14 @@ et s'active par « Colonnes… ».</p>
   n'est jamais retenu par ce filtre : le demander, c'est demander les nuits qui en ont une.</li>
 </ul>
 <p>L'<strong>export CSV</strong> de la sélection porte une colonne <code>campagne</code>, en fin de ligne.</p>
+<div class="admonition tip">
+<p class="admonition-title">Les mêmes filtres en ligne de commande</p>
+<p><code>vigiechiro lister-passages</code> offre les <strong>sept</strong> critères de cet écran : <code>--carre</code>, <code>--lieu</code>
+(répétable), <code>--annee</code>, <code>--statut</code>, <code>--verdict</code>, <code>--analyse</code> et <code>--campagne</code>. Ils se cumulent comme
+les puces, et <code>--json</code> en donne une version exploitable par un script.</p>
+<p>La question qui demande trois clics ici - « les passages de ce carré, vérifiés, de cette année » -
+s'écrit <code>vigiechiro lister-passages --carre 640380 --statut VERIFIE --annee 2026</code>.</p>
+</div>
 <h3 id="les-colonnes-du-fichier-exporte">Les colonnes du fichier exporté<a class="headerlink" href="#les-colonnes-du-fichier-exporte" title="Permanent link">&para;</a></h3>
 <p>Le fichier reprend la sélection affichée, une ligne par passage, séparateur <code>;</code> :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>carre;nom_site;commune;point;annee;passage;date;statut;verdict;analyse;analyse_relevee_le;campagne

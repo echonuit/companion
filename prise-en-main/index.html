@@ -390,6 +390,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verifier-dou-vient-le-fichier-attestation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vérifier d'où vient le fichier (attestation)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#lancer-depuis-les-sources" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1218,6 +1229,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verifier-dou-vient-le-fichier-attestation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vérifier d'où vient le fichier (attestation)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#lancer-depuis-les-sources" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1402,14 +1424,36 @@ même nom suivi de <strong><code>.sha256</code></strong>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Ce que l'empreinte prouve, et ce qu'elle ne prouve pas</p>
 <p>Elle prouve que le fichier est <strong>identique</strong> à celui publié sur la page des Releases : elle
-détecte un téléchargement corrompu ou tronqué. Elle ne remplace pas une <strong>signature</strong> : elle
-n'atteste pas de l'identité de l'auteur, puisqu'elle est publiée au même endroit que les
-fichiers. Sa confiance vaut celle que vous accordez à la page du projet.</p>
+détecte un téléchargement corrompu ou tronqué. Elle ne dit rien de <strong>qui</strong> l'a produit, puisqu'elle
+est publiée au même endroit que les fichiers : sa confiance vaut celle que vous accordez à la page
+du projet.</p>
+<p>C'est exactement ce que l'<strong>attestation de provenance</strong> ci-dessous ajoute.</p>
 </div>
+<h2 id="verifier-dou-vient-le-fichier-attestation">Vérifier d'où vient le fichier (attestation)<a class="headerlink" href="#verifier-dou-vient-le-fichier-attestation" title="Permanent link">&para;</a></h2>
+<p>Chaque fichier publié porte une <strong>attestation de provenance</strong> : la preuve, vérifiable ailleurs que
+chez nous, qu'il a été produit par le workflow de publication de ce projet, à partir d'un commit
+précis.</p>
+<p>Il faut <a href="https://cli.github.com/">l'outil <code>gh</code> de GitHub</a>, puis :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>gh<span class="w"> </span>attestation<span class="w"> </span>verify<span class="w"> </span>VigieChiroCompanion-2.21.1-x64.msi<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span>--repo<span class="w"> </span>echonuit/vigiechiro-pr-companion
+</code></pre></div>
+<p>Une réponse <code>✓ Verification succeeded!</code> signifie que ce fichier <strong>sort bien de notre chaîne de
+publication</strong>. Elle nomme le dépôt, le workflow et le commit d'origine.</p>
+<div class="admonition note">
+<p class="admonition-title">Pourquoi c'est plus fort que l'empreinte</p>
+<p>L'empreinte et le fichier viennent du même endroit : qui contrôlerait la page pourrait publier les
+deux. L'attestation, elle, est signée au moment de la construction et déposée dans un <strong>journal
+public</strong> (<a href="https://www.sigstore.dev/">Sigstore</a>) que nous ne contrôlons pas. La falsifier
+demanderait de compromettre ce journal, pas seulement notre dépôt.</p>
+<p>Elle ne remplace pas la <strong>signature</strong> des installeurs, qui parle aux systèmes d'exploitation
+(SmartScreen, Gatekeeper) : celle-là viendra séparément. L'attestation parle à qui veut vérifier.</p>
+</div>
+<p>Le <strong>SBOM</strong> publié à côté des installeurs - l'inventaire des bibliothèques embarquées, <code>sbom-vX.Y.Z.json</code> -
+est attesté de la même façon.</p>
 <h2 id="lancer-depuis-les-sources">Lancer depuis les sources<a class="headerlink" href="#lancer-depuis-les-sources" title="Permanent link">&para;</a></h2>
 <p>Si vous travaillez à partir du code (par exemple avant la première version publiée), l'application
 se lance avec le Maven Wrapper, depuis la racine du projet :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./mvnw<span class="w"> </span>javafx:run
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./mvnw<span class="w"> </span>javafx:run
 </code></pre></div>
 <p>Un <strong>JDK 25</strong> est alors nécessaire. Le premier lancement télécharge les dépendances, les suivants
 sont immédiats.</p>

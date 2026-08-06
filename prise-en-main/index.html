@@ -1460,10 +1460,11 @@ se lance avec le Maven Wrapper, depuis la racine du projet :</p>
 <p>Un <strong>JDK 25</strong> est alors nécessaire. Le premier lancement télécharge les dépendances, les suivants
 sont immédiats.</p>
 <h2 id="decouvrir-lecran-daccueil">Découvrir l'écran d'accueil<a class="headerlink" href="#decouvrir-lecran-daccueil" title="Permanent link">&para;</a></h2>
-<p>Au lancement, l'application ouvre son <strong>écran d'accueil</strong>. Le bandeau vous invite à
-« sélectionner une activité pour traiter une nuit d'enregistrement », et propose cinq points
-d'entrée :</p>
-<p><img alt="L'écran d'accueil de VigieChiro Companion et ses cinq activités." src="../assets/captures/apercu-accueil.png" /></p>
+<p>Au lancement, l'application ouvre son <strong>écran d'accueil</strong>. Il annonce <strong>deux entrées</strong> : collecter vos
+nuits d'enregistrement d'un côté, exploiter vos espèces observées de l'autre. C'est la séparation qui
+structure tout le reste, et les activités se rangent dessous.</p>
+<p><img alt="L'écran d'accueil de VigieChiro Companion et ses deux entrées." src="../assets/captures/apercu-accueil.png" /></p>
+<p><strong>Collecte &amp; passages</strong> : la production de la donnée.</p>
 <table>
 <thead>
 <tr>
@@ -1474,25 +1475,49 @@ d'entrée :</p>
 <tbody>
 <tr>
 <td><strong>Mes sites</strong></td>
-<td>Gérer vos carrés et points d'écoute. C'est le point de départ : on déclare d'abord <em>où</em> l'on capture.</td>
-</tr>
-<tr>
-<td><strong>Importer une nuit</strong></td>
-<td>Importer une nuit de Passive Recorder depuis la carte SD.</td>
-</tr>
-<tr>
-<td><strong>Sons &amp; validation</strong></td>
-<td>Écouter, valider et exporter votre corpus de sons de référence.</td>
+<td>Vos carrés et points d'écoute. C'est le point de départ : on déclare d'abord <em>où</em> l'on capture.</td>
 </tr>
 <tr>
 <td><strong>Carte &amp; passages</strong></td>
 <td>La carte de vos sites et le tableau de tous vos passages, avec filtres, tri et export.</td>
 </tr>
+<tr>
+<td><strong>Ma saison</strong></td>
+<td>Ce qu'il vous reste à faire, point par point.</td>
+</tr>
+<tr>
+<td><strong>Audit de cohérence</strong></td>
+<td>Vérifier que fichiers, base et dépôts restent en correspondance, et réparer.</td>
+</tr>
 </tbody>
 </table>
-<p>Depuis ces points d'entrée, vous atteignez ensuite les autres écrans : un <strong>site</strong> donne accès à
-ses <strong>passages</strong> (les nuits), et un passage ouvre les écrans de <strong>qualification</strong>, de <strong>dépôt</strong>,
-de <strong>validation</strong> des espèces et de <strong>diagnostic</strong>.</p>
+<p><strong>Espèces &amp; biodiversité</strong> : l'exploitation de la donnée.</p>
+<table>
+<thead>
+<tr>
+<th>Activité</th>
+<th>À quoi elle sert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Espèces &amp; observations</strong></td>
+<td>L'inventaire de vos espèces détectées : où, quand, combien.</td>
+</tr>
+<tr>
+<td><strong>Activité de la nuit</strong></td>
+<td>La forme d'une nuit : les contacts par tranche horaire et par espèce.</td>
+</tr>
+<tr>
+<td><strong>Sons &amp; validation</strong></td>
+<td>Écouter, valider et exporter votre corpus de sons de référence.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>L'import n'est pas sur l'accueil</strong>, et c'est voulu : on importe une nuit <em>dans</em> un carré, donc le
+geste part du site. Depuis ces entrées, vous atteignez les autres écrans : un <strong>site</strong> donne accès à
+ses <strong>passages</strong> (les nuits), et un passage ouvre les écrans de <strong>qualification</strong>, de <strong>dépôt</strong>, de
+<strong>validation</strong> des espèces et de <strong>diagnostic</strong>.</p>
 <p>La barre du haut affiche un fil d'Ariane qui rappelle où vous vous trouvez et permet de revenir en
 arrière.</p>
 <h2 id="comment-lapplication-vous-repond">Comment l'application vous répond<a class="headerlink" href="#comment-lapplication-vous-repond" title="Permanent link">&para;</a></h2>

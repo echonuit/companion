@@ -1260,7 +1260,7 @@ copier, dans sa demande de confirmation, et la sauvegarde de la base le dit dans
 <p>Chaque dossier de la sauvegarde est confronté à ce qu'elle annonce contenir. Une seule
 discordance, et la restauration s'arrête <strong>avant</strong> d'avoir remplacé la base ou écrasé le moindre
 fichier : mieux vaut une restauration qui refuse qu'une restauration à moitié faite.</p>
-<p>Deux refus peuvent se produire, et dans les deux cas <strong>rien n'a été touché</strong> :</p>
+<p>Trois refus peuvent se produire, et dans les trois cas <strong>rien n'a été touché</strong> :</p>
 <ul>
 <li>« <strong>Cette sauvegarde a été écrite par une version plus récente de l'application</strong> » : mettez
   l'application à jour, puis recommencez. Sa base contient des informations que cette version ne
@@ -1269,7 +1269,10 @@ fichier : mieux vaut une restauration qui refuse qu'une restauration à moitié 
 <p><img alt="Le refus d'une sauvegarde écrite par une version plus récente : rien n'a été touché." src="../assets/captures/apercu-restauration-version-trop-recente.png" />
 - « <strong>La mise à jour de son schéma a échoué</strong> » : la sauvegarde a bien été remise en place, mais
   l'application n'a pas su la mettre à jour, et <strong>votre base d'avant a été rétablie</strong>. Essayez une
-  autre sauvegarde.</p>
+  autre sauvegarde.
+- « <strong>Il n'y a pas assez de place</strong> » : la restauration a besoin d'un peu plus d'espace que ce que
+  pèsent vos nuits, le temps de les remettre en place sans risque. Le message dit <strong>combien
+  libérer et où</strong> ; vous pouvez aussi restaurer vers un autre emplacement.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">« Sauvegarde restaurée, à un détail près »</p>
@@ -1287,6 +1290,20 @@ compte rendu qui l'accompagne nomme précisément ce qui a bougé. Trois cas :</
 <p><img alt="Une restauration qui aboutit et demande un regard : les nuits déplacées sont nommées une par une." src="../assets/captures/apercu-restauration-nuits-deplacees.png" /></p>
 <p>Dans les trois cas la base est restaurée. Ce qui est signalé porte sur les <strong>sons</strong>, pas sur vos
 métadonnées.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Quand la place est juste, l'application remet vos nuits une par une</p>
+<p>Pour remettre vos dossiers de son sans jamais laisser un dossier à moitié écrit, l'application les
+recopie <strong>à côté</strong> de leur place, puis les y fait basculer d'un coup. Cela demande un peu de place
+en plus, le temps de l'opération.</p>
+<p>Quand cette place manque, elle ne refuse pas : elle procède <strong>une nuit à la fois</strong>, et vous le dit
+dans le compte rendu. Chaque nuit reste complète ; ce qui change est qu'une coupure de courant en
+plein milieu laisserait les premières remises en place et pas les dernières - au lieu de tout
+laisser dans l'état d'avant.</p>
+<p>Elle ne refuse que s'il n'y a même pas la place pour <strong>une seule</strong> nuit, et vous dit alors combien
+libérer.</p>
+<p><img alt="Une restauration menée une nuit à la fois : le compte rendu dit ce que la garantie a perdu." src="../assets/captures/apercu-restauration-une-nuit-a-la-fois.png" /></p>
+<p><img alt="Le refus faute de place : combien libérer, où, et rien n'a été touché." src="../assets/captures/apercu-restauration-place-insuffisante.png" /></p>
 </div>
 <h2 id="ces-fichiers-que-lapplication-depose-sans-quon-les-lui-demande">Ces fichiers que l'application dépose sans qu'on les lui demande<a class="headerlink" href="#ces-fichiers-que-lapplication-depose-sans-quon-les-lui-demande" title="Permanent link">&para;</a></h2>
 <p>Vous croiserez trois fichiers que vous n'avez pas créés. Aucun n'est un déchet, et aucun ne doit être

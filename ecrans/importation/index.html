@@ -1859,14 +1859,24 @@ l'indique explicitement et les <strong>fichiers temporaires sont purgés</strong
 <li><strong>Numéro de passage déjà pris</strong> : au rattachement, si ce numéro est déjà utilisé sur ce point, un
   pré-contrôle vous en <strong>avertit</strong> avant l'import.</li>
 <li><strong>Fichiers déjà préfixés</strong> : si les enregistrements portent déjà un préfixe Vigie-Chiro (nuit déjà
-  renommée), l'application <strong>ne le double pas</strong> et <strong>signale toute discordance</strong> entre ce préfixe et le
-  rattachement demandé.</li>
+  renommée), l'application <strong>ne le double pas</strong>. Tant que ce préfixe <strong>correspond</strong> au rattachement
+  choisi, l'import se déroule normalement - réimporter une nuit déjà renommée est un parcours prévu.</li>
 <li><strong>Enregistrements déjà ralentis</strong> : un fichier dont le son a <strong>déjà</strong> subi l'expansion temporelle ×10 est
   <strong>rejeté</strong> (avec explication dans le rapport), pour éviter une <strong>double expansion</strong> qui rendrait les
   fréquences dix fois trop basses. Importez toujours les <strong>fichiers bruts</strong> issus du capteur.</li>
 </ul>
-<p>Ces avertissements sont <strong>non bloquants</strong> : ils vous alertent en ambre sans vous empêcher d'importer.</p>
-<p><img alt="Deux avertissements de rattachement en ambre : le numéro de passage choisi est déjà pris (avec le prochain numéro libre proposé), et certains fichiers portent un préfixe qui ne correspond pas au rattachement demandé. Ni l'un ni l'autre ne bloque l'import." src="../../assets/captures/apercu-import-rattachement-avertissements.png" /></p>
+<p>Ces avertissements-là sont <strong>non bloquants</strong> : ils vous alertent sans vous empêcher d'importer.</p>
+<div class="admonition danger">
+<p class="admonition-title">Un préfixe qui ne correspond pas au rattachement <strong>bloque</strong> l'import</p>
+<p>Si les fichiers portent le préfixe d'un <strong>autre</strong> carré ou d'un autre passage - par exemple
+<code>Car130711-…</code> alors que vous les rattachez au carré <code>640380</code> - l'import est <strong>refusé</strong>.</p>
+<p>Ce n'est pas une précaution de forme. Les noms existants ne sont jamais réécrits : ces fichiers
+partiraient <strong>tels quels</strong> au dépôt, et la participation du 640380 recevrait des sons estampillés
+d'un autre carré. La donnée serait incohérente avec elle-même, sur la plateforme nationale.</p>
+<p><strong>Deux sorties</strong> : corrigez le rattachement pour qu'il corresponde aux fichiers, ou repartez des
+<strong>originaux non préfixés</strong> issus du capteur.</p>
+</div>
+<p><img alt="Deux avertissements de rattachement en ambre : le numéro de passage choisi est déjà pris (avec le prochain numéro libre proposé), et certains fichiers portent un préfixe qui ne correspond pas au rattachement demandé. Le premier n'empêche pas d'importer ; le second, si." src="../../assets/captures/apercu-import-rattachement-avertissements.png" /></p>
 
 
 

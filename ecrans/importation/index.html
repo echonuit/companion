@@ -1723,6 +1723,20 @@ Si l'une d'elles gênait une archive pourtant légitime, le message vous indique
 <p>L'inspection signale les anomalies <strong>avant</strong> l'import, pour éviter d'importer une mauvaise nuit.</p>
 <p>Un <strong>mélange</strong> dans le dossier (plusieurs enregistreurs aux séries différentes) déclenche un
 avertissement, sans bloquer l'import :</p>
+<div class="admonition note">
+<p class="admonition-title">Seuls les enregistrements du journal sont importés</p>
+<p>Quand un dossier mélange deux capteurs, l'import ne prend que les enregistrements portant la
+<strong>série du journal</strong>. Les autres ne sont <strong>pas</strong> importés, et ne disparaissent pas pour autant : ils
+figurent dans le rapport de fin, marqués <strong>ignorés</strong>, avec la raison - « enregistré par un autre
+capteur que celui du journal ».</p>
+<p>Sans cette règle, la nuit importée porterait l'enregistreur du journal <strong>et</strong> des séquences venues
+d'ailleurs : une donnée qui se contredit elle-même, et qui partirait telle quelle au dépôt.</p>
+<p>Vos fichiers d'origine ne sont pas touchés : rien n'est déplacé ni supprimé sur la carte. Si les
+enregistrements écartés vous appartiennent aussi, importez-les à part, avec <strong>leur</strong> journal.</p>
+</div>
+<p>⚠️ Cette règle s'applique à l'import d'<strong>une nuit</strong>. Sans journal (mode dégradé), rien n'est écarté :
+l'application ne peut pas décider laquelle des séries est la bonne quand la référence vient elle-même
+des fichiers.</p>
 <p><img alt="Cas « mélange » : un avertissement signale que le dossier contient plusieurs enregistreurs (séries différentes)." src="../../assets/captures/apercu-import-melange.png" /></p>
 <p>Une <strong>incohérence</strong> entre le journal du capteur et les enregistrements (série ou date qui ne
 correspondent pas) est signalée plus fermement :</p>

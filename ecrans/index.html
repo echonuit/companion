@@ -1243,6 +1243,12 @@ n'est pas le cas. Et tant qu'une sauvegarde n'est pas terminée, elle porte un n
 si l'ordinateur s'éteint en cours de route, le dossier resté sur le disque <strong>n'apparaîtra pas</strong>
 dans la liste des sauvegardes. Vous ne risquez donc pas de restaurer une sauvegarde à moitié
 écrite en croyant qu'elle est complète.</p>
+<p>Elle refuse aussi quand elle <strong>ne peut pas savoir</strong> ce qu'elle emporterait : si un fichier de vos
+nuits ne se laisse pas lire (droits retirés, disque externe capricieux), le message le <strong>nomme</strong>
+et la sauvegarde est annulée plutôt que tentée à l'aveugle. Un fichier qu'on ne sait pas peser
+compterait pour zéro, la sauvegarde paraîtrait tenir, partirait, et échouerait en cours de copie
+en laissant un dossier qui ressemble à une sauvegarde. Rendez le fichier lisible, ou retirez la
+nuit concernée, puis recommencez.</p>
 </div>
 <ul>
 <li><strong>Restaurer une sauvegarde…</strong> : vous choisissez un fichier de sauvegarde ; après <strong>confirmation</strong>,

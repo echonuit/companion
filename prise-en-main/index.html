@@ -374,6 +374,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#sous-linux-en-quelques-commandes-flatpak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sous Linux, en quelques commandes : Flatpak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#installer-ou-simplement-decompresser" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1224,6 +1235,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#sous-linux-en-quelques-commandes-flatpak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sous Linux, en quelques commandes : Flatpak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#installer-ou-simplement-decompresser" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1371,6 +1393,21 @@ chose à l'utilisateur</strong>. Celle que winget vous propose peut donc être e
 numéros sur la page des Releases. <code>winget show Echonuit.VigieChiroCompanion</code> dit ce qui est servi
 aujourd'hui ; pour avoir la toute dernière, prenez l'installeur ou l'archive portable ci-dessous.</p>
 </div>
+<h3 id="sous-linux-en-quelques-commandes-flatpak">Sous Linux, en quelques commandes : Flatpak<a class="headerlink" href="#sous-linux-en-quelques-commandes-flatpak" title="Permanent link">&para;</a></h3>
+<p>Le paquet est publié, <strong>signé</strong>, sur un dépôt Flatpak que nous hébergeons nous-mêmes :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>flatpak<span class="w"> </span>remote-add<span class="w"> </span>--user<span class="w"> </span>--if-not-exists<span class="w"> </span>vigiechiro-companion<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span>https://flatpak.echonuit.fr/fr.echonuit.VigieChiroCompanion.flatpakrepo
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>flatpak<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>vigiechiro-companion<span class="w"> </span>fr.echonuit.VigieChiroCompanion
+</code></pre></div>
+<p>Pour lancer, puis plus tard mettre à jour :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>flatpak<span class="w"> </span>run<span class="w"> </span>fr.echonuit.VigieChiroCompanion
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>flatpak<span class="w"> </span>update<span class="w"> </span>--user<span class="w"> </span>fr.echonuit.VigieChiroCompanion
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Un dépôt maison plutôt qu'un magasin d'applications tiers</p>
+<p>Comme pour winget, seules les versions qui <strong>apportent quelque chose à l'utilisateur</strong> sont
+poussées sur ce dépôt - pas nécessairement la toute dernière de la page des Releases.</p>
+</div>
 <h3 id="installer-ou-simplement-decompresser">Installer, ou simplement décompresser<a class="headerlink" href="#installer-ou-simplement-decompresser" title="Permanent link">&para;</a></h3>
 <p><strong>L'installeur</strong> place l'application dans votre système comme n'importe quel logiciel : elle apparaît
 dans le menu Démarrer ou le Launchpad. Il demande en revanche les <strong>droits d'administration</strong>.</p>
@@ -1428,8 +1465,8 @@ prêtée.</p>
 </table>
 <p><strong>Sous Linux, une troisième forme</strong> existe : l'<strong>AppImage</strong>, un fichier unique et exécutable. Rien à
 décompresser, et elle s'ajoute au menu des applications.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>VigieChiroCompanion-2.20.0-linux-x86_64.AppImage
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>./VigieChiroCompanion-2.20.0-linux-x86_64.AppImage
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>VigieChiroCompanion-2.20.0-linux-x86_64.AppImage
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>./VigieChiroCompanion-2.20.0-linux-x86_64.AppImage
 </code></pre></div>
 <p>Dans tous les cas, tout le nécessaire est embarqué : <strong>aucune installation de Java</strong> n'est requise.</p>
 <div class="admonition tip">
@@ -1452,16 +1489,16 @@ même nom suivi de <strong><code>.sha256</code></strong>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux</label><label for="__tabbed_1_2">macOS</label><label for="__tabbed_1_3">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sha256sum<span class="w"> </span>-c<span class="w"> </span>VigieChiroCompanion-2.21.1-linux-x64-portable.tar.gz.sha256
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sha256sum<span class="w"> </span>-c<span class="w"> </span>VigieChiroCompanion-2.21.1-linux-x64-portable.tar.gz.sha256
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>shasum<span class="w"> </span>-a<span class="w"> </span><span class="m">256</span><span class="w"> </span>-c<span class="w"> </span>VigieChiroCompanion-2.21.1-arm64.dmg.sha256
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>shasum<span class="w"> </span>-a<span class="w"> </span><span class="m">256</span><span class="w"> </span>-c<span class="w"> </span>VigieChiroCompanion-2.21.1-arm64.dmg.sha256
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">(</span><span class="nb">Get-FileHash</span> <span class="p">.\</span><span class="n">VigieChiroCompanion</span><span class="p">-</span><span class="n">2</span><span class="p">.</span><span class="n">21</span><span class="p">.</span><span class="n">1-x64</span><span class="p">.</span><span class="n">msi</span> <span class="n">-Algorithm</span> <span class="n">SHA256</span><span class="p">).</span><span class="n">Hash</span><span class="p">.</span><span class="n">ToLower</span><span class="p">()</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">Get-Content</span> <span class="p">.\</span><span class="n">VigieChiroCompanion</span><span class="p">-</span><span class="n">2</span><span class="p">.</span><span class="n">21</span><span class="p">.</span><span class="n">1-x64</span><span class="p">.</span><span class="n">msi</span><span class="p">.</span><span class="n">sha256</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">(</span><span class="nb">Get-FileHash</span> <span class="p">.\</span><span class="n">VigieChiroCompanion</span><span class="p">-</span><span class="n">2</span><span class="p">.</span><span class="n">21</span><span class="p">.</span><span class="n">1-x64</span><span class="p">.</span><span class="n">msi</span> <span class="n">-Algorithm</span> <span class="n">SHA256</span><span class="p">).</span><span class="n">Hash</span><span class="p">.</span><span class="n">ToLower</span><span class="p">()</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">Get-Content</span> <span class="p">.\</span><span class="n">VigieChiroCompanion</span><span class="p">-</span><span class="n">2</span><span class="p">.</span><span class="n">21</span><span class="p">.</span><span class="n">1-x64</span><span class="p">.</span><span class="n">msi</span><span class="p">.</span><span class="n">sha256</span>
 </code></pre></div>
 </div>
 </div>
@@ -1483,8 +1520,8 @@ de publication de ce projet, à partir d'un commit précis.</p>
 <p>Les petits fichiers <code>.sha256</code>, eux, n'en ont pas : ils ne contiennent que l'empreinte du fichier
 d'à côté, et c'est ce fichier-là qu'il faut vérifier.</p>
 <p>Il faut <a href="https://cli.github.com/">l'outil <code>gh</code> de GitHub</a>, puis :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>gh<span class="w"> </span>attestation<span class="w"> </span>verify<span class="w"> </span>VigieChiroCompanion-2.21.1-x64.msi<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span>--repo<span class="w"> </span>echonuit/vigiechiro-pr-companion
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>gh<span class="w"> </span>attestation<span class="w"> </span>verify<span class="w"> </span>VigieChiroCompanion-2.21.1-x64.msi<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span>--repo<span class="w"> </span>echonuit/vigiechiro-pr-companion
 </code></pre></div>
 <p>Une réponse <code>✓ Verification succeeded!</code> signifie que ce fichier <strong>sort bien de notre chaîne de
 publication</strong>. Elle nomme le dépôt, le workflow et le commit d'origine.</p>
@@ -1502,7 +1539,7 @@ manière que les installeurs.</p>
 <h2 id="lancer-depuis-les-sources">Lancer depuis les sources<a class="headerlink" href="#lancer-depuis-les-sources" title="Permanent link">&para;</a></h2>
 <p>Si vous travaillez à partir du code (par exemple avant la première version publiée), l'application
 se lance avec le Maven Wrapper, depuis la racine du projet :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./mvnw<span class="w"> </span>javafx:run
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>./mvnw<span class="w"> </span>javafx:run
 </code></pre></div>
 <p>Un <strong>JDK 25</strong> est alors nécessaire. Le premier lancement télécharge les dépendances, les suivants
 sont immédiats.</p>

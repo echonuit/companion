@@ -1715,6 +1715,13 @@ Voir la <a href="../prise-en-main/">Prise en main</a>.</p>
 <p>L'application vous prévient elle-même quand une version plus récente existe, en nommant <strong>les deux
 numéros</strong> : celui que vous utilisez et celui qui est disponible. Vous savez ainsi si vous avez deux
 jours ou deux ans de retard, ce qui change ce qu'il y a à en faire.</p>
+<div class="admonition warning">
+<p class="admonition-title">Sous Windows, fermez l'application avant d'installer</p>
+<p>L'installeur ne peut pas remplacer un programme qui <strong>tourne encore</strong> : Windows tient ses fichiers
+ouverts. Une installation lancée pendant que Companion est ouvert <strong>ne se termine pas</strong>, et rien
+ne vous dira pourquoi. Fermez la fenêtre d'abord, puis installez. C'est vrai des deux gestes
+Windows ci-dessous, <code>winget upgrade</code> compris.</p>
+</div>
 <p>Le geste dépend de la façon dont vous avez installé :</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Installé par winget (Windows)</label><label for="__tabbed_1_2">Installé par Flatpak (Linux)</label><label for="__tabbed_1_3">Installeur téléchargé</label><label for="__tabbed_1_4">Archive portable</label></div>
 <div class="tabbed-content">
@@ -1728,8 +1735,8 @@ jours ou deux ans de retard, ce qui change ce qu'il y a à en faire.</p>
 </div>
 <div class="tabbed-block">
 <p>Reprenez l'installeur de la nouvelle version sur la page
-<a href="https://github.com/echonuit/vigiechiro-pr-companion/releases">Releases</a> et lancez-le : il
-remplace la version en place.</p>
+<a href="https://github.com/echonuit/vigiechiro-pr-companion/releases">Releases</a> et lancez-le,
+<strong>application fermée</strong> : il remplace alors la version en place.</p>
 </div>
 <div class="tabbed-block">
 <p>Remplacez le dossier décompressé par celui de la nouvelle version.</p>

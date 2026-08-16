@@ -645,6 +645,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#recuperer-un-carre-qui-existe-deja" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Récupérer un carré qui existe déjà
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#premier-lancement" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1204,6 +1215,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#recuperer-un-carre-qui-existe-deja" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Récupérer un carré qui existe déjà
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#premier-lancement" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1307,8 +1329,9 @@ répond en une seconde. Trois réponses possibles :</p>
 <ul>
 <li><strong>le carré n'y est pas encore</strong> : vous pouvez le déclarer ici ;</li>
 <li><strong>le carré y est déjà</strong> : le message <strong>nomme le site trouvé</strong>, protocole compris - un même carré porte
-  un site par protocole. Ne le redéclarez pas : récupérez-le avec <strong>Récupérer depuis Vigie-Chiro</strong>, ce
-  qui rapatrie aussi ses <strong>points déjà positionnés</strong> ;</li>
+  un site par protocole - et un bouton <strong>Récupérer ce carré</strong> apparaît. Le bouton <strong>Créer</strong> se ferme le
+  temps que dure ce verdict : déclarer un carré qui existe déjà là-bas produirait un doublon local sans
+  rattachement, et votre dépôt serait refusé plus tard ;</li>
 <li><strong>la vérification n'a pas pu se faire</strong> (hors connexion, portail injoignable) : c'est dit tel quel.
   Ce n'est <strong>pas</strong> « le carré est libre ».</li>
 </ul>
@@ -1316,12 +1339,31 @@ répond en une seconde. Trois réponses possibles :</p>
 <p>Si vous corrigez le numéro après avoir vérifié, la réponse <strong>disparaît</strong> : elle portait sur l'ancien
 numéro, et la laisser affichée vous ferait croire que le nouveau a été vérifié. Recliquez pour poser la
 question sur le carré corrigé.</p>
+<h3 id="recuperer-un-carre-qui-existe-deja">Récupérer un carré qui existe déjà<a class="headerlink" href="#recuperer-un-carre-qui-existe-deja" title="Permanent link">&para;</a></h3>
+<p><strong>Récupérer ce carré</strong> crée le site <strong>chez vous</strong>, rattaché à son homologue Vigie-Chiro, avec <strong>ses points
+d'écoute déjà positionnés</strong>. La fenêtre se ferme et la fiche du carré s'ouvre, avec le compte rendu de ce
+qui vient d'être créé.</p>
+<p><img alt="Le compte rendu affiché après la récupération : le carré, et le nombre de points d'écoute positionnés." src="../../assets/captures/apercu-sites-carre-recupere.png" /></p>
+<p>C'est ce rattachement qui compte : sans lui, le téléversement d'une nuit se solde par « site non rattaché
+à Vigie-Chiro ». Et il ne s'obtenait jusqu'ici que par la synchronisation, qui ne ramène que les carrés
+où <strong>une nuit est déjà déposée</strong> - ce que vous ne pouvez pas faire, justement, tant que le site n'est pas
+rattaché.</p>
+<p>Ce que vous aviez saisi est conservé : si vous aviez écrit un nom convivial ou un commentaire, le site
+récupéré les porte. Sinon il prend le titre de la plateforme.</p>
+<div class="admonition warning">
+<p class="admonition-title">Un carré peut exister sous un autre protocole</p>
+<p>Le même numéro peut désigner un site <strong>Point Fixe</strong>, <strong>Pédestre</strong> ou <strong>Routier</strong>. Companion ne traite
+que le Point Fixe : si le carré n'existe que sous un autre protocole, il vous le dit et ne récupère
+rien, plutôt que de vous rattacher au mauvais site.</p>
+<p><img alt="La fenêtre après une récupération refusée : le carré existe en Routier, protocole que l'application ne gère pas." src="../../assets/captures/apercu-sites-modale-site-autre-protocole.png" /></p>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Pourquoi ce détour évite un dépôt manqué</p>
 <p>Le portail n'autorise pas à activer un carré sans y créer un point. Un carré activé là-bas puis
 <strong>redéclaré ici</strong> donne deux sites pour le même carré, et un point local qui n'est pas celui du
 portail : la nuit déposée ensuite échoue, loin de sa cause. Vérifier d'abord, puis <strong>récupérer</strong>
-plutôt que redéclarer, évite toute cette chaîne.</p>
+plutôt que redéclarer, évite toute cette chaîne - et c'est aussi le chemin le plus court pour
+préparer une nuit <strong>opportuniste</strong> sur le carré de quelqu'un d'autre.</p>
 </div>
 <p>Chaque carte porte aussi, quand l'application est <a href="../../connexion-vigiechiro/">connectée à Vigie-Chiro</a>,
 un <strong>badge d'état plateforme</strong> : <strong>« Enregistré sur Vigie-Chiro »</strong> (bleu) quand le carré est relié au

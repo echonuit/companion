@@ -1525,7 +1525,7 @@ d'un feu vert.</p>
 <p>Elle offre les <strong>mêmes filtres</strong> que la barre de l'écran :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./vigiechiro<span class="w"> </span>audit-coherence<span class="w"> </span>--gravite<span class="w"> </span>ERREUR<span class="w">                   </span><span class="c1"># ce qui bloque</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>./vigiechiro<span class="w"> </span>audit-coherence<span class="w"> </span>--categorie<span class="w"> </span>DEPARTEMENT_DIVERGENT<span class="w">  </span><span class="c1"># une nature</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>./vigiechiro<span class="w"> </span>audit-coherence<span class="w"> </span>--contient<span class="w"> </span><span class="s2">&quot;carte sd&quot;</span><span class="w">              </span><span class="c1"># cible et détail</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>./vigiechiro<span class="w"> </span>audit-coherence<span class="w"> </span>--contient<span class="w"> </span><span class="s2">"carte sd"</span><span class="w">              </span><span class="c1"># cible et détail</span>
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Le code de sortie ne suit <strong>pas</strong> le filtre</p>
@@ -1535,8 +1535,8 @@ un dossier de travail abîmé n'affiche aucune erreur, et sort pourtant en <stro
 une base cassée. Le <code>1</code> répond toujours à « ce dossier a-t-il un problème ? », jamais à « le filtre
 a-t-il trouvé quelque chose ? ».</p>
 <p>Pour que ce <code>1</code> ne paraisse pas sorti de nulle part, la commande <strong>dit ce qu'elle a masqué</strong> :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>1 constat(s) affiché(s) sur 3. L&#39;audit entier compte 1 erreur(s), 0 avertissement(s),
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2 info(s), et c&#39;est lui que juge le code de sortie.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>1 constat(s) affiché(s) sur 3. L'audit entier compte 1 erreur(s), 0 avertissement(s),
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2 info(s), et c'est lui que juge le code de sortie.
 </code></pre></div>
 </div>
 <p>Un filtre dont la valeur existe mais ne correspond à rien le dit aussi (« Aucun constat ne correspond

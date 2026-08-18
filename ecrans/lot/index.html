@@ -779,6 +779,34 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#certains-refus-ne-se-reprennent-pas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Certains refus ne se reprennent pas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Certains refus ne se reprennent pas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ce-qui-peut-lever-un-refus-et-ce-qui-ne-le-peut-pas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ce qui peut lever un refus, et ce qui ne le peut pas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ce-que-le-depot-vous-rend-a-la-fin" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1287,6 +1315,34 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#certains-refus-ne-se-reprennent-pas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Certains refus ne se reprennent pas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Certains refus ne se reprennent pas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ce-qui-peut-lever-un-refus-et-ce-qui-ne-le-peut-pas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ce qui peut lever un refus, et ce qui ne le peut pas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ce-que-le-depot-vous-rend-a-la-fin" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1475,8 +1531,41 @@ plateforme si votre carré y existe, puis vous oriente en conséquence.</p>
 <p>Le dépôt automatique est <strong>reprenable</strong> : une coupure réseau, une fermeture de l'application ou un
 échec partiel ne font <strong>rien perdre</strong>. Le passage prend le statut « <strong>Dépôt en cours</strong> » et, à la
 réouverture de l'écran, la table de dépôt réaffiche l'état exact de chaque fichier. Le bouton devient
-alors « <strong>Retenter les échecs</strong> » : seuls les fichiers manquants sont re-téléversés, jamais ceux déjà
+alors « <strong>Reprendre le dépôt</strong> » : seuls les fichiers manquants sont re-téléversés, jamais ceux déjà
 en ligne. Le passage ne devient « Déposé » que lorsque <strong>tous</strong> les fichiers sont en ligne.</p>
+<h3 id="certains-refus-ne-se-reprennent-pas">Certains refus ne se reprennent pas<a class="headerlink" href="#certains-refus-ne-se-reprennent-pas" title="Permanent link">&para;</a></h3>
+<p>Toutes les archives en échec ne sont pas dans le même cas. Une coupure réseau, une lenteur du serveur
+ou une interruption de votre part laissent l'archive <strong>reprenable</strong> : la relancer a toutes les chances
+d'aboutir.</p>
+<p>Mais quand Vigie-Chiro <strong>refuse</strong> une archive, la renvoyer telle quelle serait refusée de la même
+façon. L'application ne vous propose donc plus de la reprendre, et cela se voit : le bouton cesse de
+s'appeler « Reprendre le dépôt » et redevient « <strong>Téléverser sur Vigie-Chiro</strong> », parce qu'il ne reste
+plus rien à reprendre.</p>
+<p>La table garde le détail : la cause de chaque échec y est lisible, archive par archive.</p>
+<h4 id="ce-qui-peut-lever-un-refus-et-ce-qui-ne-le-peut-pas">Ce qui peut lever un refus, et ce qui ne le peut pas<a class="headerlink" href="#ce-qui-peut-lever-un-refus-et-ce-qui-ne-le-peut-pas" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Ce que dit le refus</th>
+<th>Ce qui le lève</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>droits ou jeton</strong> (session expirée, autorisation manquante)</td>
+<td><strong>vous reconnecter</strong>. Les archives refusées pour cette raison redeviennent reprenables aussitôt, sans autre geste</td>
+</tr>
+<tr>
+<td><strong>contenu refusé</strong> (l'archive elle-même ne convient pas)</td>
+<td>rien d'extérieur. Il faut <strong>régénérer les archives</strong> de la nuit</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Après une régénération, la reprise ne revient pas toute seule</p>
+<p>Régénérer les archives d'une nuit ne réarme pas encore les unités refusées pour leur contenu.
+C'est une limite connue, suivie en <a href="https://github.com/echonuit/vigiechiro-pr-companion/issues/3946">#3946</a>.</p>
+</div>
 <h3 id="ce-que-le-depot-vous-rend-a-la-fin">Ce que le dépôt vous rend à la fin<a class="headerlink" href="#ce-que-le-depot-vous-rend-a-la-fin" title="Permanent link">&para;</a></h3>
 <p>Quand le téléversement se termine, un <strong>compte rendu</strong> dit ce qui est en ligne, en proportions.</p>
 <p><img alt="Le compte rendu d'un dépôt complet : la barre est pleine, le volume téléversé est dit, et l'étape suivante est proposée." src="../../assets/captures/apercu-lot-depot-compte-rendu.png" /></p>

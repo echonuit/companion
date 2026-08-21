@@ -1052,6 +1052,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#quand-un-fichier-est-refuse-parce-quil-est-trop-gros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quand un fichier est refusé parce qu'il est trop gros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#le-dossier-de-travail" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1222,6 +1233,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#quand-un-fichier-est-refuse-parce-quil-est-trop-gros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quand un fichier est refusé parce qu'il est trop gros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#le-dossier-de-travail" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1378,18 +1400,38 @@ recommencer.</p>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"rien déposé, code </span><span class="nv">$?</span><span class="s2">"</span>
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">fi</span>
 </code></pre></div>
+<h2 id="quand-un-fichier-est-refuse-parce-quil-est-trop-gros">Quand un fichier est refusé parce qu'il est trop gros<a class="headerlink" href="#quand-un-fichier-est-refuse-parce-quil-est-trop-gros" title="Permanent link">&para;</a></h2>
+<p>Le compagnon refuse de lire une entrée démesurée : un journal de carte, une réponse du serveur, une
+archive. Les limites sont larges - la plus basse vaut dix-sept mille fois le journal d'une nuit réelle -
+mais un cas légitime peut les dépasser.</p>
+<p>Le refus vous dit alors quoi taper :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Fichier de la carte refusé : « LogPR1925492.txt » fait 41,0 Mo, au-delà des 32,0 Mo admis.
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Cette limite se relève en ligne de commande : vigiechiro --reglage import.journal.max-octets=&lt;valeur&gt;.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>vigiechiro<span class="w"> </span>--reglage<span class="w"> </span>import.journal.max-octets<span class="o">=</span><span class="m">67108864</span><span class="w"> </span>importer<span class="w"> </span>--point<span class="w"> </span><span class="m">12</span><span class="w"> </span>--source<span class="w"> </span>/media/moi/CARTE
+</code></pre></div>
+<p>L'option se répète si plusieurs limites sont en cause, et une clé mal écrite vous liste celles qui
+existent. Elle ne vaut que pour la commande qu'elle accompagne : rien n'est retenu d'une fois sur
+l'autre.</p>
+<div class="admonition note">
+<p class="admonition-title">Ces limites ne sont pas dans les Réglages, et c'est voulu</p>
+<p>Elles protègent la lecture de fichiers venus du dehors, et personne n'a à choisir une taille de
+réponse serveur pour travailler. Elles se relèvent au cas par cas, quand un fichier légitime le
+demande - y compris si vous avez rencontré le refus <strong>dans la fenêtre</strong> : c'est la même limite, et
+la ligne de commande est l'endroit où elle se relève.</p>
+</div>
 <h2 id="le-dossier-de-travail">Le dossier de travail<a class="headerlink" href="#le-dossier-de-travail" title="Permanent link">&para;</a></h2>
 <p>Toutes les commandes travaillent sur le même dossier que l'application, <code>Documents/VigieChiro-Companion</code>.
 L'option <code>--workspace</code> permet d'en viser un autre :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>vigiechiro<span class="w"> </span>lister-passages<span class="w"> </span>--workspace<span class="w"> </span>/media/disque-externe/vigiechiro-2026
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>vigiechiro<span class="w"> </span>lister-passages<span class="w"> </span>--workspace<span class="w"> </span>/media/disque-externe/vigiechiro-2026
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Sous Flatpak, il faut aussi <strong>autoriser</strong> le dossier</p>
 <p>Un Flatpak ne voit que les dossiers qu'on lui accorde. Viser un autre dossier de travail demande
 donc les deux, l'autorisation <strong>et</strong> l'option :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>flatpak<span class="w"> </span>run<span class="w"> </span>--filesystem<span class="o">=</span>/media/disque-externe/vigiechiro-2026<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span>fr.echonuit.VigieChiroCompanion<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span>lister-passages<span class="w"> </span>--workspace<span class="w"> </span>/media/disque-externe/vigiechiro-2026
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>flatpak<span class="w"> </span>run<span class="w"> </span>--filesystem<span class="o">=</span>/media/disque-externe/vigiechiro-2026<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span>fr.echonuit.VigieChiroCompanion<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span>lister-passages<span class="w"> </span>--workspace<span class="w"> </span>/media/disque-externe/vigiechiro-2026
 </code></pre></div>
 <p>Sans <code>--filesystem</code>, la commande échoue en disant qu'elle ne trouve pas le dossier, alors qu'il
 existe bien : c'est le bac à sable qui le lui cache.</p>

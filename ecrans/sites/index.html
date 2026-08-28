@@ -702,6 +702,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Ajouter ou modifier un point d&#39;écoute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quand-la-position-ne-tombe-pas-dans-le-carre-declare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quand la position ne tombe pas dans le carré déclaré
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1310,6 +1327,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Ajouter ou modifier un point d&#39;écoute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quand-la-position-ne-tombe-pas-dans-le-carre-declare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quand la position ne tombe pas dans le carré déclaré
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1615,6 +1649,22 @@ Tant qu'aucun GPS n'est renseigné, le marqueur démarre <strong>au centre du ca
 <strong>approximative</strong> (anneau pointillé) : un point de départ à caler, pas une position mesurée.</p>
 <p><img alt="La fenêtre de création d'un point d'écoute : formulaire vierge." src="../../assets/captures/apercu-sites-modale-point-creation.png" /></p>
 <p><img alt="La même fenêtre en modification : les champs sont pré-remplis avec les valeurs du point existant." src="../../assets/captures/apercu-sites-modale-point.png" /></p>
+<h3 id="quand-la-position-ne-tombe-pas-dans-le-carre-declare">Quand la position ne tombe pas dans le carré déclaré<a class="headerlink" href="#quand-la-position-ne-tombe-pas-dans-le-carre-declare" title="Permanent link">&para;</a></h3>
+<p>Dès que vous renseignez des coordonnées, l'application regarde dans quel carré de la grille officielle
+elles tombent, et le compare à celui que le site déclare. Si les deux diffèrent, elle le dit.</p>
+<p><img alt="La fenêtre de modification quand la position tombe dans un autre carré : un message orange nomme les deux numéros." src="../../assets/captures/apercu-sites-modale-point-carre-divergent.png" /></p>
+<p><strong>Ce n'est pas un refus.</strong> Vous pouvez enregistrer quand même : c'est peut-être le numéro de carré du
+site qui est faux, et vous êtes seul à le savoir. Le message vous dit lequel des deux vérifier.</p>
+<p>Sans lui, une faute de frappe sur un numéro de carré ne se voit qu'au <strong>dépôt</strong>, très loin en aval,
+après avoir contaminé le nom de tous vos fichiers.</p>
+<p>Deux cas ne déclenchent <strong>aucun</strong> message, et c'est voulu :</p>
+<ul>
+<li><strong>la position est près d'une frontière</strong> : elle tombe dans deux carrés à la fois, parfois quatre à un
+  coin. Celui que vous avez déclaré est alors accepté, quel qu'il soit des deux : vous étiez là, pas
+  l'application ;</li>
+<li><strong>vous travaillez hors connexion</strong> : la vérification demande la grille à Vigie-Chiro. Elle se tait
+  plutôt que de vous alerter à tort, et la saisie reste entière.</li>
+</ul>
 
 
 

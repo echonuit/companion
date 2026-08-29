@@ -717,6 +717,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#faire-relire-une-nuit-par-quelquun-dautre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Faire relire une nuit par quelqu'un d'autre
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#etat-initial" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1191,6 +1202,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#faire-relire-une-nuit-par-quelquun-dautre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Faire relire une nuit par quelqu'un d'autre
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#etat-initial" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1288,6 +1310,32 @@ votre choix, que vous pouvez <strong>surcharger</strong> (le changement est alor
 verdict : le passage ne pourra pas être déposé tant qu'il n'est pas requalifié. La couleur et le
 pictogramme sont ceux d'un avertissement.</p>
 <p><img alt="L'écran de qualification après enregistrement d'un verdict « Inexploitable » : l'avertissement rappelle que le passage ne pourra pas être déposé." src="../../assets/captures/apercu-qualification-a-jeter.png" /></p>
+<h2 id="faire-relire-une-nuit-par-quelquun-dautre">Faire relire une nuit par quelqu'un d'autre<a class="headerlink" href="#faire-relire-une-nuit-par-quelquun-dautre" title="Permanent link">&para;</a></h2>
+<p>Une nuit peut se juger à deux. Les quatre gestes vivent dans le menu <strong>☰ outils</strong> de la liste, en deux
+groupes qui disent les deux rôles.</p>
+<p><strong>Vous confiez la nuit.</strong> « <strong>Emporter cette nuit…</strong> » vous demande où écrire le paquet, puis
+<strong>annonce ce qu'il pèsera</strong> avant d'écrire quoi que ce soit : le nombre de séquences, le volume total
+et la part d'audio. Rien n'est écrit tant que vous n'avez pas confirmé, et annuler ne laisse aucun
+fichier.</p>
+<p>Le paquet emporte les séquences de <strong>la sélection en cours</strong>, pas toute la nuit, et les verdicts que
+vous avez déjà posés. Votre relecteur juge donc le même échantillon que vous : deux tirages
+indépendants n'auraient presque aucune séquence en commun, et les deux avis ne se compareraient pas.</p>
+<p><strong>Votre relecteur reçoit.</strong> « <strong>Ouvrir un paquet reçu…</strong> » installe la nuit chez lui, avec votre
+sélection <strong>figée</strong> : il ne peut pas la régénérer, et l'application le lui dit plutôt que de griser un
+bouton sans explication. Son identité est relevée <strong>à l'ouverture</strong>, pas au moment où il juge, si bien
+qu'un jugement rendu deux semaines plus tard porte quand même son nom.</p>
+<p><strong>Il vous renvoie son avis.</strong> « <strong>Renvoyer mon avis…</strong> » écrit un paquet léger : son jugement signé,
+sans les séquences, que vous avez déjà.</p>
+<p><strong>Vous reprenez son avis.</strong> « <strong>Reprendre un avis reçu…</strong> » range son verdict <strong>à côté du vôtre</strong>, dans
+la colonne « Avis relecteur », avec son pseudo. Le vôtre ne bouge pas, et l'avis affiché ne pèse pas
+sur le verdict de la nuit : il s'affiche, il ne vote pas.</p>
+<p>Une séquence que personne n'a relue n'affiche <strong>rien</strong> dans cette colonne, plutôt qu'un badge qu'on
+prendrait pour un jugement.</p>
+<p><strong>Si un deuxième relecteur répond</strong>, l'application vous nomme celui qui est déjà là et le nombre de
+verdicts qui seraient perdus, et attend votre accord. Refuser ne change rien.</p>
+<p><strong>En ligne de commande.</strong> Les quatre gestes ont leur commande : <code>emporter-nuit</code>, <code>ouvrir-paquet-recu</code>,
+<code>renvoyer-avis</code> et <code>reprendre-avis</code>. <code>emporter-nuit</code> annonce le volume et s'arrête ; ajoutez <code>--oui</code>
+pour écrire. <code>reprendre-avis</code> refuse de remplacer un avis présent sans <code>--remplacer</code>.</p>
 <h2 id="etat-initial">État initial<a class="headerlink" href="#etat-initial" title="Permanent link">&para;</a></h2>
 <p>À l'ouverture de l'écran, la sélection de séquences est déjà générée, mais rien n'a encore été
 écouté et aucun verdict n'est posé.</p>

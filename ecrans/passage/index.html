@@ -852,6 +852,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Récupérer et envoyer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quand-quelquun-dautre-travaille-sur-la-meme-nuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quand quelqu'un d'autre travaille sur la même nuit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1598,6 +1615,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Récupérer et envoyer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quand-quelquun-dautre-travaille-sur-la-meme-nuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quand quelqu'un d'autre travaille sur la même nuit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2102,6 +2136,39 @@ serveur), le message le dit et la fenêtre <strong>reste ouverte</strong> pour q
 perdre votre saisie.</p>
 <p>Ces deux boutons n'apparaissent que si vous êtes <strong>connecté</strong> à Vigie-Chiro : hors connexion, la
 fenêtre reste utilisable pour tout le reste, elle ne propose simplement pas d'échange.</p>
+<h4 id="quand-quelquun-dautre-travaille-sur-la-meme-nuit">Quand quelqu'un d'autre travaille sur la même nuit<a class="headerlink" href="#quand-quelquun-dautre-travaille-sur-la-meme-nuit" title="Permanent link">&para;</a></h4>
+<p>L'application retient ce que la plateforme portait à votre dernière lecture. Elle sait donc distinguer
+ce que <strong>vous</strong> avez changé de ce qu'un <strong>collègue</strong> a changé, et elle n'écrase jamais son travail en
+silence.</p>
+<p>Trois situations, trois comportements :</p>
+<table>
+<thead>
+<tr>
+<th>Ce qui s'est passé</th>
+<th>Ce que fait « Envoyer »</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>votre collègue a saisi la météo, vous n'y avez pas touché</td>
+<td>l'envoi part, et <strong>sa</strong> météo reste : votre envoi ne parle pas de ce champ</td>
+</tr>
+<tr>
+<td>vous seul avez modifié la météo</td>
+<td>l'envoi part avec la vôtre</td>
+</tr>
+<tr>
+<td>vous <strong>et</strong> lui l'avez modifiée, différemment</td>
+<td><strong>rien n'est envoyé</strong> : personne ne peut trancher à votre place</td>
+</tr>
+</tbody>
+</table>
+<p>Dans le troisième cas, le message vous dit d'utiliser <strong>Récupérer depuis Vigie-Chiro</strong>. Suivez-le : il
+n'y a pas d'autre geste qui remette l'application à jour, et refermer puis rouvrir la fenêtre ne suffit
+pas. Vous verrez alors ce que votre collègue a saisi, et vous déciderez de ce qu'il faut garder.</p>
+<p>Les <strong>heures de la nuit</strong>, elles, ne bloquent jamais rien : l'application les recalcule à partir de vos
+enregistrements, qui sont une meilleure source qu'une saisie à la main - la sienne comme la vôtre. Si
+elle les corrige, elle vous le dit.</p>
 <div class="admonition tip">
 <p class="admonition-title">Vérifier sur la plateforme</p>
 <p>Après un envoi, le bouton <strong>Voir la participation</strong> (barre du haut de l'écran du passage) ouvre la

@@ -1700,10 +1700,22 @@ ne remet à zéro que le compteur.</p>
 <ul>
 <li>à <strong>gauche</strong>, le contexte (« Carré 640380 · A1 · N° 2 ») ;</li>
 <li>au <strong>centre</strong>, le statut et le récapitulatif (« Prêt à déposer · 4806 séquences · 13,2 Go ») ;</li>
-<li>à <strong>droite</strong>, l'état vivant : la progression du dépôt, sinon celle de la génération d'archives
-  (avec l'estimation du temps restant), sinon une alerte d'espace disque, sinon le bilan des archives
-  présentes (« 21 archive(s) · 5,9 Go dans depot/ »).</li>
+<li>à <strong>droite</strong>, l'état vivant : d'abord l'avertissement de réconciliation s'il y en a un, puis la
+  progression du dépôt, sinon celle de la génération d'archives (avec l'estimation du temps restant),
+  sinon une alerte d'espace disque, sinon le bilan des archives présentes (« 21 archive(s) · 5,9 Go
+  dans depot/ »).</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">« Déjà déposées : impossible à vérifier »</p>
+<p>Avant de téléverser, l'application demande à Vigie-Chiro ce qui s'y trouve déjà, pour ne pas
+renvoyer des archives inutilement. Quand cette question <strong>ne peut pas être posée</strong> (connexion
+coupée, session expirée), le dépôt continue quand même, mais des archives déjà en ligne vont
+repartir.</p>
+<p>L'avertissement le dit <strong>avant</strong> que vous attendiez, et non après, parce que c'est le seul moment
+où vous pouvez encore décider d'arrêter et de réessayer plus tard. Il passe donc devant
+« n/N déposées » : l'avancement ne vous apprend rien que vous puissiez utiliser, celui-ci si.</p>
+<p>La cause est nommée : une coupure se réessaie, une session expirée demande de se reconnecter.</p>
+</div>
 <h2 id="checklist-de-coherence-ce-qui-bloque">Checklist de cohérence : ce qui bloque<a class="headerlink" href="#checklist-de-coherence-ce-qui-bloque" title="Permanent link">&para;</a></h2>
 <p>Si la nuit n'est pas en état d'être déposée (par exemple séquences d'écoute absentes ou journal du
 capteur manquant), les contrôles concernés passent en <strong>✗</strong> dans la checklist, avec la raison et la

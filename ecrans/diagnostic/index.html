@@ -919,10 +919,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#alerte-hors-nuit" class="md-nav__link">
+  <a href="#la-fenetre-que-le-protocole-exige" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Alerte « hors nuit »
+        La fenêtre que le protocole exige
       
     </span>
   </a>
@@ -1180,10 +1180,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#alerte-hors-nuit" class="md-nav__link">
+  <a href="#la-fenetre-que-le-protocole-exige" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Alerte « hors nuit »
+        La fenêtre que le protocole exige
       
     </span>
   </a>
@@ -1278,8 +1278,8 @@ action transverse, accessible depuis l'écran <a href="../passage/">Passage</a> 
 <li>les <strong>anomalies</strong> détectées (par exemple réveil non programmé, batterie faible) ;</li>
 <li>les <strong>évènements du journal</strong> du capteur (démarrage, arrêt programmé...) ;</li>
 <li>la <strong>cohérence horaire</strong> : la fenêtre nocturne réelle au point d'écoute (heures de coucher et de
-  lever du soleil), assortie d'une alerte « hors nuit » si l'enregistrement déborde de cette fenêtre
-  (démarrage avant le coucher ou arrêt après le lever du soleil) ;</li>
+  lever du soleil), la fenêtre que le protocole exige de couvrir, la plage réellement enregistrée, et
+  un mot sur l'écart entre les deux ;</li>
 <li>la <strong>fenêtre nocturne</strong> matérialisée par un aplat pâle derrière la courbe : elle situe les mesures
   dans la nuit réelle, et sans coordonnées au point elle disparaît plutôt que d'être inventée ;</li>
 <li>un bouton <strong>Exporter le graphe…</strong> qui écrit la courbe en image, <strong>redessinée</strong> pour l'occasion (donc
@@ -1291,12 +1291,23 @@ action transverse, accessible depuis l'écran <a href="../passage/">Passage</a> 
 </ul>
 <p>L'enregistreur diagnostiqué et le nombre de mesures climatiques figurent dans la <strong>barre de statut</strong>
 en bas de la fenêtre.</p>
-<h2 id="alerte-hors-nuit">Alerte « hors nuit »<a class="headerlink" href="#alerte-hors-nuit" title="Permanent link">&para;</a></h2>
-<p>Quand l'enregistrement déborde de la fenêtre nocturne (démarrage <strong>avant</strong> le coucher du soleil ou
-arrêt <strong>après</strong> le lever), une alerte le signale sous la cohérence horaire : une partie du son est
-diurne, donc peu susceptible de contenir des cris de chauves-souris. La couleur et le pictogramme de
-l'alerte sont ceux d'un avertissement.</p>
-<p><img alt="L'écran de diagnostic avec l'alerte « hors nuit » : l'enregistrement déborde de la fenêtre nocturne." src="../../assets/captures/apercu-diagnostic-hors-nuit.png" /></p>
+<h2 id="la-fenetre-que-le-protocole-exige">La fenêtre que le protocole exige<a class="headerlink" href="#la-fenetre-que-le-protocole-exige" title="Permanent link">&para;</a></h2>
+<p>Le protocole Vigie-Chiro Point Fixe demande d'enregistrer <strong>au moins</strong> de 30 minutes avant le coucher
+du soleil à 30 minutes après son lever. C'est un <strong>plancher</strong> : commencer plus tôt ou finir plus tard
+couvre ce qui est demandé, et davantage.</p>
+<p>Cette marge est voulue. Elle produit bien une portion d'enregistrement en plein jour, et c'est le but :
+les premières chauves-souris sortent avant la nuit complète, et les dernières rentrent après l'aube.</p>
+<p>L'écran montre donc deux plages sous la fenêtre nocturne : ce que le protocole attendait, et ce que
+vous avez enregistré.</p>
+<ul>
+<li>Si votre plage <strong>couvre</strong> la fenêtre exigée, une information vous le dit. Ce n'est pas un défaut.</li>
+<li>Si elle <strong>ne la couvre pas</strong>, un avertissement le signale : une partie de la nuit demandée n'a pas
+  été enregistrée. Vérifiez le paramétrage de l'enregistreur pour la sortie suivante.</li>
+</ul>
+<p><img alt="L'écran de diagnostic quand la fenêtre du protocole n'est pas couverte : l'avertissement nomme la
+plage attendue et la plage enregistrée." src="../../assets/captures/apercu-diagnostic-protocole-non-couvert.png" /></p>
+<p>L'écran ne signale pas les interruptions survenues <strong>au milieu</strong> d'une nuit : cette information n'est
+pas conservée après l'import. L'absence d'avertissement ne prouve donc pas qu'une nuit est entière.</p>
 <h2 id="sans-releve-climatique">Sans relevé climatique<a class="headerlink" href="#sans-releve-climatique" title="Permanent link">&para;</a></h2>
 <p>Si la nuit ne comporte pas de relevé climatique, l'absence est signalée et seules les anomalies et
 les évènements du journal restent affichés.</p>

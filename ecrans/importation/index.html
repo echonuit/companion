@@ -768,6 +768,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#une-carte-qui-naccepte-plus-lecriture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Une carte qui n'accepte plus l'écriture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#des-fichiers-deja-prefixes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1476,6 +1487,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#une-carte-qui-naccepte-plus-lecriture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Une carte qui n'accepte plus l'écriture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#des-fichiers-deja-prefixes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1850,6 +1872,24 @@ numéro de série d'enregistreur trouvé ».</p>
 <p>Une <strong>incohérence</strong> entre le journal du capteur et les enregistrements (série ou date qui ne
 correspondent pas) est signalée plus fermement :</p>
 <p><img alt="Cas « incohérence » : le journal ne correspond pas aux enregistrements (série et date)." src="../../assets/captures/apercu-import-incoherence.png" /></p>
+<h3 id="une-carte-qui-naccepte-plus-lecriture">Une carte qui n'accepte plus l'écriture<a class="headerlink" href="#une-carte-qui-naccepte-plus-lecriture" title="Permanent link">&para;</a></h3>
+<p>Si le support de la source est <strong>monté en lecture seule</strong>, l'inspection le dit. C'est le mode de fin
+de vie normal d'une carte SD : quand l'usure devient telle que l'écriture n'est plus fiable, son
+contrôleur bascule et n'accepte plus rien.</p>
+<p>Le message dit trois choses, dans cet ordre :</p>
+<ul>
+<li><strong>l'import de cette nuit fonctionne.</strong> Companion lit la carte et n'y écrit jamais, y compris pour
+  poser cette question - elle est posée au support, pas en essayant d'écrire dessus. Vos
+  enregistrements sont saufs ;</li>
+<li><strong>le geste à faire</strong> : vérifier le verrou de la carte s'il y en a un, puis essayer d'y créer un
+  dossier depuis votre ordinateur ;</li>
+<li><strong>ce qui est en jeu</strong>, qui est la <strong>prochaine</strong> nuit. Une carte qui n'accepte plus l'écriture
+  n'enregistrera rien sur le terrain, et c'est la seule chose qu'aucune correction ultérieure ne
+  rattrapera.</li>
+</ul>
+<p>Companion ne dit pas <strong>pourquoi</strong> le support est en lecture seule, et ne le dira pas : un petit
+verrou poussé sans y penser sur le côté de la carte donne exactement le même symptôme qu'une mémoire
+en fin de vie. C'est vous qui pouvez regarder.</p>
 <h3 id="des-fichiers-deja-prefixes">Des fichiers déjà préfixés<a class="headerlink" href="#des-fichiers-deja-prefixes" title="Permanent link">&para;</a></h3>
 <p>Une carte peut avoir <strong>déjà été traitée</strong> - par vous, sur un autre poste, ou par quelqu'un d'autre. Ses
 enregistrements portent alors le préfixe que l'application pose : <code>Car130711-2026-Pass1-Z1-…</code>. L'étape
@@ -1870,7 +1910,8 @@ partiraient au dépôt sous le nom d'un <strong>autre carré</strong>. Deux issu
 </ul>
 <p>Chaque avertissement <strong>détaille ce qui cloche</strong> : les numéros de série trouvés pour un mélange, la
 série et la date en désaccord pour une incohérence, les passages déjà en base pour une nuit déjà
-importée. Vous n'avez pas à rouvrir le dossier pour savoir de quoi il s'agit.</p>
+importée, le geste à faire pour un support en lecture seule. Vous n'avez pas à rouvrir le dossier pour
+savoir de quoi il s'agit.</p>
 <p>Dans les deux cas, l'import reste possible : à vous de vérifier que le dossier correspond bien à ce
 que vous attendez avant de continuer. Le cas de <strong>plusieurs nuits</strong> d'un même enregistreur, lui, n'est
 pas un simple avertissement : il est <strong>pris en charge</strong> par le découpage décrit ci-dessous.</p>

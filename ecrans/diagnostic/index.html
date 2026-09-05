@@ -1323,7 +1323,8 @@ action transverse, accessible depuis l'écran <a href="../passage/">Passage</a> 
 <p>L'écran réunit :</p>
 <ul>
 <li>la <strong>température en début de nuit</strong> et une <strong>courbe climatique</strong> de la nuit (température et
-  hygrométrie), dont l'axe est gradué en heures ;</li>
+  hygrométrie), dont l'axe est gradué en heures. <strong>Survolez un point de la courbe</strong> : une bulle donne
+  son heure, sa série et sa valeur, par exemple « 22:00 · T° : 18,5 °C » ;</li>
 <li>les <strong>anomalies</strong> détectées (par exemple réveil non programmé, batterie faible) ;</li>
 <li>les <strong>évènements du journal</strong> du capteur (démarrage, arrêt programmé...) ;</li>
 <li>la <strong>cohérence horaire</strong> : la fenêtre nocturne réelle au point d'écoute (heures de coucher et de
@@ -1346,8 +1347,14 @@ du soleil à 30 minutes après son lever. C'est un <strong>plancher</strong> : c
 couvre ce qui est demandé, et davantage.</p>
 <p>Cette marge est voulue. Elle produit bien une portion d'enregistrement en plein jour, et c'est le but :
 les premières chauves-souris sortent avant la nuit complète, et les dernières rentrent après l'aube.</p>
-<p>L'écran montre donc deux plages sous la fenêtre nocturne : ce que le protocole attendait, et ce que
-vous avez enregistré.</p>
+<p>L'écran met donc les trois horaires de la nuit sur une seule ligne, de même forme : la fenêtre
+nocturne réelle, ce que le protocole attendait, et ce que vous avez enregistré.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Nuit : 20:30 à 06:45 · Protocole : 20:00 à 07:15 · Enregistré : 20:25 à 07:47
+</code></pre></div>
+<p>Quand la fenêtre n'est pas couverte, l'alerte <strong>dit de quel côté</strong> : « les enregistrements commencent
+moins de 30 minutes avant le coucher ; la fin est bien couverte ». Les deux bords ne se corrigent pas
+de la même façon, et un avertissement qui se contenterait de signaler ne dirait pas quoi faire
+autrement.</p>
 <ul>
 <li>Si votre plage <strong>couvre</strong> la fenêtre exigée, une information vous le dit. Ce n'est pas un défaut :
   c'est le cas de l'aperçu en tête de page, où l'encart est bleu et non ambre.</li>

@@ -987,6 +987,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#selecteur-de-l-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choisir les fichiers avec le sélecteur de l'application
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#choisir-les-fichiers-avec-le-selecteur-de-lapplication" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1192,6 +1203,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#selecteur-de-l-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choisir les fichiers avec le sélecteur de l'application
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#choisir-les-fichiers-avec-le-selecteur-de-lapplication" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1317,8 +1339,24 @@ quand on la cherche.</p>
 <li>le <strong>dossier de travail</strong>, qui contient les sessions et leur audio ;</li>
 <li>la <strong>base de données</strong> (<code>vigiechiro.db</code>) : vos observations, vos validations, les liens avec Vigie-Chiro. C'est le <strong>seul fichier irremplaçable</strong> ; le reste se réimporte ou se recalcule.</li>
 </ul>
-<p>Pour chacun, le chemin courant est affiché, un bouton <strong>« Copier »</strong> le place dans le presse-papier, un bouton <strong>« Choisir… »</strong> ouvre un sélecteur de dossier, et l'emplacement <strong>par défaut</strong> est rappelé. Un dossier que l'application ne peut pas utiliser (un fichier, un dossier non inscriptible) est <strong>refusé au moment du choix</strong>, avec la raison : vous ne le découvrez pas au prochain démarrage.</p>
+<p>Pour chacun, le chemin courant est affiché, un bouton <strong>« Copier »</strong> le place dans le presse-papier, un bouton <strong>« Choisir… »</strong> ouvre un sélecteur de dossier (celui de votre système, sauf si vous avez coché la case décrite <a href="#selecteur-de-l-application">juste après</a>), et l'emplacement <strong>par défaut</strong> est rappelé. Un dossier que l'application ne peut pas utiliser (un fichier, un dossier non inscriptible) est <strong>refusé au moment du choix</strong>, avec la raison : vous ne le découvrez pas au prochain démarrage.</p>
 <p>Le bouton <strong>« Copier »</strong> sert précisément quand la suite se passe <strong>ailleurs</strong> : coller le chemin dans votre explorateur de fichiers pour aller y regarder, dans un terminal, ou dans un message où vous demandez de l'aide. Vous n'avez pas à le recopier à l'œil.</p>
+<h3 id="selecteur-de-l-application">Choisir les fichiers avec le sélecteur de l'application<a class="headerlink" href="#selecteur-de-l-application" title="Permanent link">&para;</a></h3>
+<p>Partout où l'application vous demande de <strong>désigner</strong> un fichier ou un dossier - la carte SD à
+importer, l'emplacement de la base, un export à enregistrer - elle ouvre par défaut le <strong>sélecteur de
+votre système</strong> : celui que vous connaissez, avec vos raccourcis et vos favoris.</p>
+<p>La case en tête de l'onglet <strong>Emplacements</strong> remplace ce sélecteur par celui de l'application. Deux
+raisons de la cocher :</p>
+<ul>
+<li>vous travaillez sur <strong>plusieurs machines</strong> et voulez les mêmes repères partout ;</li>
+<li>vous préférez <strong>saisir un chemin à la main</strong>, ce que certains sélecteurs système ne permettent pas.</li>
+</ul>
+<p>La case est <strong>décochée</strong> par défaut, et le rester ne vous prive de rien.</p>
+<div class="admonition info">
+<p class="admonition-title">Ce que cette case ne change pas</p>
+<p>Elle change la <strong>fenêtre</strong> qui vous demande où regarder, pas ce que l'application a le <strong>droit</strong>
+de lire. Sous Flatpak notamment, le bac à sable borne l'accès de la même façon dans les deux cas.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Changer un emplacement ne déplace pas vos données</p>
 <p>Un emplacement est un <strong>pointeur</strong> : le changer dit à l'application <strong>où aller lire au prochain démarrage</strong>, il ne déplace rien. Si vous pointez la base vers un dossier <strong>vide</strong>, l'application y démarrera sur une base <strong>neuve</strong>, l'ancienne restant <strong>intacte</strong> à son ancien emplacement. Pour l'emporter, <strong>copiez le fichier vous-même</strong> avant de redémarrer. C'est le même principe que pour votre audio : l'application ne touche pas à vos fichiers à votre place.</p>

@@ -983,6 +983,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Où l&#39;application range ses données (onglet « Emplacements »)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choisir-les-fichiers-avec-le-selecteur-de-lapplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choisir les fichiers avec le sélecteur de l'application
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1171,6 +1188,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Où l&#39;application range ses données (onglet « Emplacements »)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choisir-les-fichiers-avec-le-selecteur-de-lapplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choisir les fichiers avec le sélecteur de l'application
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1294,6 +1328,11 @@ quand on la cherche.</p>
 <p class="admonition-title">En ligne de commande</p>
 <p>La commande <code>vigiechiro emplacements</code> fait la même chose sans l'interface : sans option elle <strong>affiche</strong> les emplacements, <code>--definir-travail</code> / <code>--definir-base</code> les <strong>changent</strong> (avec la même vérification), <code>--reinitialiser</code> les <strong>rétablit</strong>. Utile pour scripter une installation.</p>
 </div>
+<h3 id="choisir-les-fichiers-avec-le-selecteur-de-lapplication">Choisir les fichiers avec le sélecteur de l'application<a class="headerlink" href="#choisir-les-fichiers-avec-le-selecteur-de-lapplication" title="Permanent link">&para;</a></h3>
+<p>Par défaut, quand l'application vous demande un fichier ou un dossier, elle ouvre <strong>le dialogue de votre système</strong> : celui que vous connaissez, avec vos raccourcis, vos favoris et votre recherche.</p>
+<p>Cette case le remplace par un sélecteur <strong>de l'application</strong>. Il présente les mêmes repères sur toutes les plateformes, et il accepte qu'on <strong>saisisse un chemin à la main</strong>, ce que le dialogue du système ne permet pas toujours.</p>
+<p>Ce qu'il <strong>ne change pas</strong> : ce que l'application a le droit de lire. Sous Flatpak, le bac à sable borne l'accès de la même façon dans les deux cas, et un dossier hors de sa portée reste hors de sa portée. La différence est qu'un chemin inatteignable vous est <strong>dit</strong>, au lieu de vous montrer un dossier qui paraît vide.</p>
+<p>Le dialogue du système reste le défaut : une installation qui n'y touche pas se comporte comme avant.</p>
 <div class="admonition info">
 <p class="admonition-title">Sous Flatpak, un dossier réseau demande une autorisation</p>
 <p>La version Flatpak est volontairement limitée aux dossiers qu'elle a le droit de lire. Un disque externe ou une carte SD conviennent. Un <strong>partage réseau</strong> (NAS) ouvert depuis votre gestionnaire de fichiers, lui, est monté à un endroit que le bac à sable ne voit pas : pour y ranger vos données, il faut l'<strong>autoriser</strong> (<code>flatpak override --user --filesystem=xdg-run/gvfs</code>) ou utiliser la version <code>.deb</code>. La version Windows et le <code>.deb</code> n'ont pas cette limite.</p>

@@ -1030,6 +1030,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#retrouver-une-fiche" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retrouver une fiche
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ouvrir-la-fenetre-depuis-le-terminal" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1266,6 +1277,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#retrouver-une-fiche" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retrouver une fiche
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ouvrir-la-fenetre-depuis-le-terminal" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1452,8 +1474,16 @@ posez un alias dans votre <code>~/.zshrc</code> :</p>
 <a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># Sortir la liste des espèces dans un fichier</span>
 <a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>vigiechiro<span class="w"> </span>lister-especes<span class="w"> </span>--sortie<span class="w"> </span>especes.csv
 </code></pre></div>
+<h2 id="retrouver-une-fiche">Retrouver une fiche<a class="headerlink" href="#retrouver-une-fiche" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>vigiechiro<span class="w"> </span>lien-espece<span class="w"> </span>--code<span class="w"> </span>Pippip
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>vigiechiro<span class="w"> </span>lien-participation<span class="w"> </span>--passage<span class="w"> </span><span class="m">42</span>
+</code></pre></div>
+<p>Chaque commande écrit l'URL seule. Copiez-la dans votre navigateur ou récupérez-la dans un script.
+Le lien d'espèce suit les mêmes sources que l'écran : PNA en priorité, puis GBIF ou Wikipédia selon
+votre réglage. L'identifiant de passage est celui du workspace local. Sans rattachement à une
+participation Vigie-Chiro, la commande explique l'absence et rend le code 2.</p>
 <h2 id="ouvrir-la-fenetre-depuis-le-terminal">Ouvrir la fenêtre depuis le terminal<a class="headerlink" href="#ouvrir-la-fenetre-depuis-le-terminal" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>vigiechiro<span class="w"> </span>ihm
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>vigiechiro<span class="w"> </span>ihm
 </code></pre></div>
 <p>C'est le même geste que le double-clic. Sans ce mot, <code>vigiechiro</code> seul affiche l'aide : l'application
 n'ouvre une fenêtre que si on la lui demande.</p>
@@ -1488,29 +1518,29 @@ n'ouvre une fenêtre que si on la lui demande.</p>
 <p>La différence entre <code>1</code> et <code>2</code> est celle qui compte : un refus (<code>2</code>) laisse vos données exactement
 comme elles étaient, alors qu'un échec (<code>1</code>) demande de regarder ce qui a été écrit avant de
 recommencer.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">if</span><span class="w"> </span>vigiechiro<span class="w"> </span>deposer<span class="w"> </span>--passage<span class="w"> </span><span class="m">3</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"déposé"</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">else</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"rien déposé, code </span><span class="nv">$?</span><span class="s2">"</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">fi</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">if</span><span class="w"> </span>vigiechiro<span class="w"> </span>deposer<span class="w"> </span>--passage<span class="w"> </span><span class="m">3</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"déposé"</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">else</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"rien déposé, code </span><span class="nv">$?</span><span class="s2">"</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">fi</span>
 </code></pre></div>
 <h3 id="une-commande-peut-reussir-et-vous-avertir-quand-meme">Une commande peut réussir et vous avertir quand même<a class="headerlink" href="#une-commande-peut-reussir-et-vous-avertir-quand-meme" title="Permanent link">&para;</a></h3>
 <p>Un code <code>0</code> dit que l'opération a abouti, pas que tout est parfait. Certaines commandes écrivent en
 plus une remarque sur la <strong>sortie d'erreur</strong>, sans échouer pour autant.</p>
 <p>C'est le cas quand vous donnez une position à un point d'écoute : l'application regarde dans quel
 carré cette position tombe, et vous le dit si ce n'est pas celui que le site déclare.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nv">POINT</span><span class="o">=</span><span class="k">$(</span>vigiechiro<span class="w"> </span>ajouter-point<span class="w"> </span>--site<span class="w"> </span><span class="m">3</span><span class="w"> </span>--code<span class="w"> </span>A1<span class="w"> </span>--lat<span class="w"> </span><span class="m">44</span>.4467<span class="w"> </span>--lon<span class="w"> </span><span class="m">6</span>.2981<span class="k">)</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1"># stdout : 12</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># stderr : Ce point tombe dans le carré 040110 de la grille STOC, alors que ce</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1">#          site déclare le carré 130711. Vérifiez les coordonnées, ou le n° de</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="c1">#          carré du site.</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nv">POINT</span><span class="o">=</span><span class="k">$(</span>vigiechiro<span class="w"> </span>ajouter-point<span class="w"> </span>--site<span class="w"> </span><span class="m">3</span><span class="w"> </span>--code<span class="w"> </span>A1<span class="w"> </span>--lat<span class="w"> </span><span class="m">44</span>.4467<span class="w"> </span>--lon<span class="w"> </span><span class="m">6</span>.2981<span class="k">)</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="c1"># stdout : 12</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1"># stderr : Ce point tombe dans le carré 040110 de la grille STOC, alors que ce</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1">#          site déclare le carré 130711. Vérifiez les coordonnées, ou le n° de</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1">#          carré du site.</span>
 </code></pre></div>
 <p>Le point <strong>a bien été créé</strong>, et son identifiant est sur la sortie standard : <code>POINT=$(...)</code> marche
 comme avant. La remarque part ailleurs, exprès, pour ne pas se retrouver dans votre variable.</p>
 <p>Une faute de frappe sur un numéro de carré ne se voit sinon qu'au dépôt, très loin en aval, après
 avoir contaminé le nom de tous vos fichiers. Si vous voulez la voir passer, gardez la sortie
 d'erreur :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>vigiechiro<span class="w"> </span>ajouter-point<span class="w"> </span>--site<span class="w"> </span><span class="m">3</span><span class="w"> </span>--code<span class="w"> </span>A1<span class="w"> </span>--lat<span class="w"> </span><span class="m">44</span>.4467<span class="w"> </span>--lon<span class="w"> </span><span class="m">6</span>.2981<span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>alertes.txt
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>vigiechiro<span class="w"> </span>ajouter-point<span class="w"> </span>--site<span class="w"> </span><span class="m">3</span><span class="w"> </span>--code<span class="w"> </span>A1<span class="w"> </span>--lat<span class="w"> </span><span class="m">44</span>.4467<span class="w"> </span>--lon<span class="w"> </span><span class="m">6</span>.2981<span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>alertes.txt
 </code></pre></div>
 <p>Ce contrôle <strong>ne demande rien au réseau</strong> : la grille des carrés est embarquée dans l'application. Il
 fonctionne donc sans connexion et sans jeton, comme le reste de ces deux commandes.</p>
@@ -1520,9 +1550,9 @@ peut aussi être un petit verrou poussé sans y penser sur le côté de la carte
 l'import fonctionne, Companion ne faisant que <strong>lire</strong> la source. C'est la nuit <strong>suivante</strong> qui ne
 s'enregistrera pas.</p>
 <p><code>importer</code> le dit donc en fin de bilan, comme la fenêtre le fait depuis la 2.189.0 :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Support     : carte montée en lecture seule : cet import a fonctionné, mais vérifiez le verrou de la
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>              carte avant de repartir - si l'écriture reste impossible, elle n'enregistrera pas la
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>              prochaine nuit
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Support     : carte montée en lecture seule : cet import a fonctionné, mais vérifiez le verrou de la
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>              carte avant de repartir - si l'écriture reste impossible, elle n'enregistrera pas la
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>              prochaine nuit
 </code></pre></div>
 <p>Le geste tient en deux essais : regarder le verrou s'il y en a un, puis tenter de créer un dossier
 sur la carte depuis votre ordinateur. Si l'écriture reste impossible, la carte est à remplacer avant
@@ -1534,10 +1564,10 @@ que le volume est monté en lecture seule, et vous seul pouvez regarder la carte
 archive. Les limites sont larges - la plus basse vaut dix-sept mille fois le journal d'une nuit réelle -
 mais un cas légitime peut les dépasser.</p>
 <p>Le refus vous dit alors quoi taper :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Fichier de la carte refusé : « LogPR1925492.txt » fait 41,0 Mo, au-delà des 32,0 Mo admis.
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>Cette limite se relève en ligne de commande : vigiechiro --reglage import.journal.max-octets=&lt;valeur&gt;.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Fichier de la carte refusé : « LogPR1925492.txt » fait 41,0 Mo, au-delà des 32,0 Mo admis.
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Cette limite se relève en ligne de commande : vigiechiro --reglage import.journal.max-octets=&lt;valeur&gt;.
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>vigiechiro<span class="w"> </span>--reglage<span class="w"> </span>import.journal.max-octets<span class="o">=</span><span class="m">67108864</span><span class="w"> </span>importer<span class="w"> </span>--point<span class="w"> </span><span class="m">12</span><span class="w"> </span>--source<span class="w"> </span>/media/moi/CARTE
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>vigiechiro<span class="w"> </span>--reglage<span class="w"> </span>import.journal.max-octets<span class="o">=</span><span class="m">67108864</span><span class="w"> </span>importer<span class="w"> </span>--point<span class="w"> </span><span class="m">12</span><span class="w"> </span>--source<span class="w"> </span>/media/moi/CARTE
 </code></pre></div>
 <p>L'option se répète si plusieurs limites sont en cause, et une clé mal écrite vous liste celles qui
 existent. Elle ne vaut que pour la commande qu'elle accompagne : rien n'est retenu d'une fois sur
@@ -1552,15 +1582,15 @@ la ligne de commande est l'endroit où elle se relève.</p>
 <h2 id="le-dossier-de-travail">Le dossier de travail<a class="headerlink" href="#le-dossier-de-travail" title="Permanent link">&para;</a></h2>
 <p>Toutes les commandes travaillent sur le même dossier que l'application, <code>Documents/VigieChiro-Companion</code>.
 L'option <code>--workspace</code> permet d'en viser un autre :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>vigiechiro<span class="w"> </span>lister-passages<span class="w"> </span>--workspace<span class="w"> </span>/media/disque-externe/vigiechiro-2026
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>vigiechiro<span class="w"> </span>lister-passages<span class="w"> </span>--workspace<span class="w"> </span>/media/disque-externe/vigiechiro-2026
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Sous Flatpak, il faut aussi <strong>autoriser</strong> le dossier</p>
 <p>Un Flatpak ne voit que les dossiers qu'on lui accorde. Viser un autre dossier de travail demande
 donc les deux, l'autorisation <strong>et</strong> l'option :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>flatpak<span class="w"> </span>run<span class="w"> </span>--filesystem<span class="o">=</span>/media/disque-externe/vigiechiro-2026<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span>fr.echonuit.VigieChiroCompanion<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span>lister-passages<span class="w"> </span>--workspace<span class="w"> </span>/media/disque-externe/vigiechiro-2026
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>flatpak<span class="w"> </span>run<span class="w"> </span>--filesystem<span class="o">=</span>/media/disque-externe/vigiechiro-2026<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span>fr.echonuit.VigieChiroCompanion<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">  </span>lister-passages<span class="w"> </span>--workspace<span class="w"> </span>/media/disque-externe/vigiechiro-2026
 </code></pre></div>
 <p>Sans <code>--filesystem</code>, la commande échoue en disant qu'elle ne trouve pas le dossier, alors qu'il
 existe bien : c'est le bac à sable qui le lui cache.</p>

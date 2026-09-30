@@ -1596,7 +1596,7 @@ façon. L'application ne vous propose donc plus de la reprendre, et cela se voit
 s'appeler « Reprendre le dépôt » et redevient « <strong>Téléverser sur Vigie-Chiro</strong> », parce qu'il ne reste
 plus rien à reprendre.</p>
 <p>La table garde le détail : la cause de chaque échec y est lisible, archive par archive.</p>
-<p><img alt="Le compte rendu d'un dépôt incomplet : 11 archives sur 14 en ligne, trois refusées par Vigie-Chiro, dont deux qui redeviendront reprenables après une reconnexion." src="../../assets/captures/apercu-lot-depot-refus-definitif.png" /></p>
+<p><img alt="Le compte rendu d'un dépôt incomplet : 11 archives sur 15 en ligne, quatre refusées par Vigie-Chiro. Deux redeviendront reprenables après une reconnexion, une a été refusée par le stockage et se relance, une a un contenu refusé et demande de régénérer les archives." src="../../assets/captures/apercu-lot-depot-refus-definitif.png" /></p>
 <h4 id="ce-qui-peut-lever-un-refus-et-ce-qui-ne-le-peut-pas">Ce qui peut lever un refus, et ce qui ne le peut pas<a class="headerlink" href="#ce-qui-peut-lever-un-refus-et-ce-qui-ne-le-peut-pas" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -1613,6 +1613,10 @@ plus rien à reprendre.</p>
 <tr>
 <td><strong>contenu refusé</strong> (l'archive elle-même ne convient pas)</td>
 <td>se reconnecter n'y change rien : il faut <strong>régénérer les archives</strong> de la nuit, puis relancer le téléversement</td>
+</tr>
+<tr>
+<td><strong>stockage</strong> (l'espace de stockage de Vigie-Chiro refuse l'envoi des octets)</td>
+<td>se reconnecter n'y change rien : <strong>relancez le téléversement</strong>, qui redemande de nouvelles autorisations d'envoi. Si le refus persiste, déposez depuis le dossier de la nuit, comme le permet le dépôt manuel</td>
 </tr>
 </tbody>
 </table>

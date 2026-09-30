@@ -2081,6 +2081,12 @@ d'<strong>ignorer</strong> la nuit (garder l'existant) ou de l'<strong>écraser<
 <strong>atomique</strong> : soit le remplacement aboutit entièrement, soit rien n'est modifié, jamais un état
 intermédiaire. Le rapport final distingue les enregistrements <strong>importés</strong>, <strong>ignorés</strong> et <strong>rejetés</strong>.</p>
 <p><img alt="Confirmation d'une nuit déjà importée : importer quand même comme nouveau passage, ou annuler." src="../../assets/captures/apercu-import-doublon.png" /></p>
+<p>Sur une carte qui porte <strong>plusieurs nuits</strong>, la confirmation ne concerne que les nuits <strong>cochées</strong> qui
+ont déjà un passage en base, et elle les nomme <strong>chacune avec sa date</strong>. Ce sont les nuits trouvées dans
+les enregistrements de la carte qui comptent, pas la première date du journal : le journal du capteur
+est circulaire, et sur une carte réutilisée il commence souvent par une nuit dont les fichiers ont été
+effacés depuis. Décocher une nuit déjà importée la retire de la question.</p>
+<p><img alt="Confirmation de deux nuits déjà importées d'une même carte, chacune nommée avec sa date et son passage." src="../../assets/captures/apercu-import-doublon-multi-nuits.png" /></p>
 <p>Choisir d'<strong>écraser</strong> demande <strong>deux</strong> confirmations. La première pose le principe : ce numéro de passage
 est déjà pris, voulez-vous remplacer la nuit existante ?</p>
 <p><img alt="Première confirmation d'écrasement : le numéro de passage est déjà utilisé, remplacer la nuit existante ?" src="../../assets/captures/apercu-import-ecrasement-principe.png" /></p>

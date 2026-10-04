@@ -1668,24 +1668,33 @@ n'est modifié</strong> sur la plateforme.</p>
 <p><img alt="Le détail d'un site sans passage : le tableau des passages est vide." src="../../assets/captures/apercu-sites-detail-sans-passage.png" /></p>
 <h2 id="ajouter-ou-modifier-un-point-decoute">Ajouter ou modifier un point d'écoute<a class="headerlink" href="#ajouter-ou-modifier-un-point-decoute" title="Permanent link">&para;</a></h2>
 <p>L'ajout ou la modification d'un point d'écoute se fait dans une <strong>fenêtre dédiée</strong> : code du point,
-description, et coordonnées GPS (facultatives). En création, le formulaire est vierge ; en
-modification, il est pré-rempli avec les valeurs existantes.</p>
+description, et position (facultative). En création, le code est <strong>proposé</strong> : <code>Z</code> suivi du premier
+numéro libre du site, comme le fait le portail Vigie-Chiro pour un point libre. Vous pouvez le
+remplacer. En modification, le formulaire est pré-rempli avec les valeurs existantes.</p>
 <p>La fenêtre intègre une <strong>carte-outil</strong> centrée sur le carré du site, <strong>synchronisée dans les deux
-sens</strong> avec les champs latitude / longitude (#153) : <strong>glissez le marqueur</strong> sur la carte pour fixer
-la position (les champs se remplissent), ou <strong>saisissez les coordonnées</strong> (le marqueur se déplace).</p>
+sens</strong> avec le champ « Position » (#153) : <strong>glissez le marqueur</strong> sur la carte pour fixer la position
+(le champ se remplit), ou <strong>saisissez la position</strong> (le marqueur se déplace).</p>
 <p>Dès qu'un point géolocalisé est enregistré, sa <strong>commune</strong> est déterminée automatiquement depuis ses
 coordonnées (service public de géocodage, connexion requise) et mémorisée : c'est elle que retrouvent
 ensuite les recherches (« aix » dans <a href="../multisite/">Carte &amp; passages</a> ou la recherche globale) et
 l'export CSV des observations. Hors ligne, la commune attend simplement une prochaine occasion : une
 synchronisation, un nouvel enregistrement du point, ou la commande <code>rattraper-communes</code> en ligne de
 commande.</p>
-<p>Les champs acceptent <strong>deux formats</strong>, au choix : <strong>degrés décimaux</strong> (<code>43.5298</code>, la virgule est
-tolérée) <strong>ou</strong> <strong>degrés/minutes/secondes</strong> (<code>43°31'47"N</code>, <code>1°34'26.4"W</code>). Vous pouvez donc <strong>coller</strong>
-des coordonnées depuis n'importe quelle source ; elles sont converties automatiquement, et une saisie
-hors plage (latitude −90..90, longitude −180..180) est refusée.
+<p>La position se saisit dans <strong>un seul champ</strong>, exactement comme à la déclaration du site : <strong>latitude
+puis longitude</strong>, en degrés décimaux (<code>43.296482, 5.369780</code>), en degrés, minutes et secondes
+(<code>43°17'47.3"N 5°22'11.2"E</code>) ou en degrés et minutes décimales, la forme des GPS de terrain
+(<code>43°24.06'N 5°26.85'E</code>). Vous pouvez donc <strong>coller</strong> ce que donne une carte. Un texte qui ne se lit
+pas dit pourquoi sous le champ, et l'enregistrement attend : une virgule décimale (<code>43,401</code>), par
+exemple, se confond avec le séparateur des deux nombres, et le message demande le point décimal. Une
+position hors du globe (latitude −90..90, longitude −180..180) est refusée de même.</p>
+<p>Si un point du même site se trouve déjà <strong>à 40 m au plus</strong> de la position saisie, la fenêtre le
+signale par son code et sa distance. C'est un avertissement, pas un refus : 40 m est le rayon en deçà
+duquel le portail tient deux points pour le même endroit, et il vaut mieux le savoir avant de créer un
+doublon.
 Tant qu'aucun GPS n'est renseigné, le marqueur démarre <strong>au centre du carré</strong> en position
 <strong>approximative</strong> (anneau pointillé) : un point de départ à caler, pas une position mesurée.</p>
-<p><img alt="La fenêtre de création d'un point d'écoute : formulaire vierge." src="../../assets/captures/apercu-sites-modale-point-creation.png" /></p>
+<p><img alt="La fenêtre de création d'un point d'écoute : le code est proposé, la position reste à saisir." src="../../assets/captures/apercu-sites-modale-point-creation.png" /></p>
+<p><img alt="Un point du site est à 20 m de la position saisie : la fenêtre le nomme, sans empêcher d'enregistrer." src="../../assets/captures/apercu-sites-modale-point-voisin.png" /></p>
 <p><img alt="La même fenêtre en modification : les champs sont pré-remplis avec les valeurs du point existant." src="../../assets/captures/apercu-sites-modale-point.png" /></p>
 <h3 id="quand-la-position-ne-tombe-pas-dans-le-carre-declare">Quand la position ne tombe pas dans le carré déclaré<a class="headerlink" href="#quand-la-position-ne-tombe-pas-dans-le-carre-declare" title="Permanent link">&para;</a></h3>
 <p>Dès que vous renseignez des coordonnées, l'application regarde dans quel carré de la grille officielle

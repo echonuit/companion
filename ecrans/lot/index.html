@@ -1676,7 +1676,7 @@ Tadarida) et trace la date du dépôt : c'est une <strong>écriture locale</stro
 seule ce que vous avez déposé à la main.</p>
 <h2 id="suivre-lanalyse-la-carte-traitement-vigie-chiro">Suivre l'analyse : la carte « Traitement Vigie-Chiro »<a class="headerlink" href="#suivre-lanalyse-la-carte-traitement-vigie-chiro" title="Permanent link">&para;</a></h2>
 <p>Déposer n'est pas la fin. Une fois la participation lancée, la plateforme <strong>analyse la nuit</strong> avec
-Tadarida, et <strong>les observations ne sont récupérables qu'une fois cette analyse terminée</strong>. La carte
+Tadarida, et <strong>les observations n'arrivent qu'une fois cette analyse terminée</strong>. La carte
 « Traitement Vigie-Chiro » apparaît sous la dernière étape dès que l'application a déposé la nuit, et
 vous dit où en est le calcul :</p>
 <table>
@@ -1697,7 +1697,7 @@ vous dit où en est le calcul :</p>
 </tr>
 <tr>
 <td><strong>Analyse terminée</strong></td>
-<td>Les observations sont prêtes : importez-les depuis « Sons &amp; validation ».</td>
+<td>Les observations sont prêtes. « Actualiser » les importe : voir ci-dessous.</td>
 </tr>
 <tr>
 <td><strong>Un premier essai a échoué…</strong></td>
@@ -1724,6 +1724,38 @@ intacte : le dépôt pourra être relancé une fois la cause connue.</p>
 connaît, en précisant de quand il date : y compris hors connexion. Le bouton <strong>« Actualiser »</strong>
 redemande l'état à Vigie-Chiro, et vous pouvez fermer l'application entre-temps : le calcul se
 poursuit sur le serveur.</p>
+<p><strong>Quand « Actualiser » apprend que l'analyse est terminée, les observations sont importées dans le
+même geste.</strong> Il n'y a pas à passer par « Sons &amp; validation » : la carte affiche, sous l'état, ce qui
+vient d'arriver.</p>
+<table>
+<thead>
+<tr>
+<th>Ce que la carte ajoute sous « Analyse terminée »</th>
+<th>Ce que cela veut dire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Observations importées depuis Vigie-Chiro : …</strong></td>
+<td>L'import vient d'avoir lieu ; le nombre d'observations est indiqué.</td>
+</tr>
+<tr>
+<td><strong>Les observations de cette nuit sont déjà importées</strong></td>
+<td>Rien n'a été réimporté. Pour les remplacer, passez par <a href="../validation/">« Sons &amp; validation »</a>.</td>
+</tr>
+<tr>
+<td><strong>L'import des observations a échoué : …</strong></td>
+<td>L'analyse reste terminée. Cliquez de nouveau « Actualiser », ou importez depuis « Sons &amp; validation ».</td>
+</tr>
+<tr>
+<td><strong>Cliquez « Actualiser » pour importer les observations</strong></td>
+<td>L'écran vient de s'ouvrir sur un état déjà connu : rien n'est importé tant que vous ne le demandez pas.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="La carte « Traitement Vigie-Chiro » après un « Actualiser » sur une analyse terminée : les observations sont importées." src="../../assets/captures/apercu-lot-traitement-termine.png" /></p>
+<p>L'application ne remplace jamais, depuis cette carte, des observations que vous avez déjà : vos
+validations s'y trouvent.</p>
 <p>Si une analyse <strong>traîne depuis plus de 24 h</strong>, la carte vous le signale : elle semble bloquée, et il
 peut valoir la peine de la relancer.</p>
 <div class="admonition danger">

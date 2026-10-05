@@ -1746,20 +1746,28 @@ C'est l'écran sur lequel vous revenez entre chaque étape du <a href="../../par
 <p><img alt="L'écran Passage au statut « Vérifié » : bandeau d'identité, statut du workflow, résumé et cartes d'actions." src="../../assets/captures/apercu-passage.png" /></p>
 <p>De haut en bas :</p>
 <ul>
-<li><strong>En-tête</strong> : l'identifiant de la nuit (carré / point / numéro / année) et les actions sur le
+<li>
+<p><strong>En-tête</strong> : l'identifiant de la nuit (carré / point / numéro / année) et les actions sur le
   passage (<strong>Modifier le passage</strong>, <strong>Supprimer</strong>). Le bouton <strong>Voir la participation</strong> ouvre
   la participation liée sur le <strong>portail Vigie-Chiro</strong> dans votre navigateur, pour vérifier d'un
   coup d'œil que la nuit est rattachée au bon endroit ; il reste grisé tant que le passage n'est
-  pas lié (la participation est créée à l'import connecté, ou au premier dépôt).</li>
-<li><strong>Bandeau d'identité</strong> : date et plage horaire, enregistreur, <strong>statut</strong> et <strong>verdict</strong>.</li>
-<li><strong>Statut du workflow</strong> : une frise qui situe la nuit dans sa progression
+  pas lié (la participation est créée à l'import connecté, ou au premier dépôt). À côté de lui,
+  <strong>Vérifier le traitement</strong> demande à Vigie-Chiro où en est l'analyse de la nuit et, si elle est
+  terminée, <strong>importe ses observations</strong> : c'est le geste d'« Actualiser » sur l'écran
+  <a href="../lot/">Préparer le dépôt</a>, sans quitter le passage. La réponse s'affiche dans le bandeau de
+  retour, sous la frise du statut. Le bouton reste grisé tant que le passage n'est pas lié à une participation, ou que
+  l'application n'est pas connectée ; son infobulle dit ce qui manque.</p>
+<p><img alt="La fiche d'un passage déposé après « Vérifier le traitement » : sous la frise du statut, le bandeau dit que l'analyse est terminée et que les observations sont importées." src="../../assets/captures/apercu-passage-traitement-verifie.png" />
+- <strong>Bandeau d'identité</strong> : date et plage horaire, enregistreur, <strong>statut</strong> et <strong>verdict</strong>.
+- <strong>Statut du workflow</strong> : une frise qui situe la nuit dans sa progression
   (Importé, Transformé, Vérifié, Prêt à déposer, Dépôt en cours, Déposé). Une nuit <strong>récupérée</strong> de
   Vigie-Chiro n'a pas de frise : elle n'a parcouru aucune de ces étapes, elle est arrivée toute faite
-  de la plateforme. Son bandeau porte simplement « Récupéré ».</li>
-<li><strong>Résumé de la nuit</strong> : volumes (bruts et transformés), durée enregistrée, nombre de séquences.</li>
-<li><strong>Cartes d'actions</strong> : Vérifier l'enregistrement, Diagnostic matériel, Préparer le dépôt,
+  de la plateforme. Son bandeau porte simplement « Récupéré ».
+- <strong>Résumé de la nuit</strong> : volumes (bruts et transformés), durée enregistrée, nombre de séquences.
+- <strong>Cartes d'actions</strong> : Vérifier l'enregistrement, Diagnostic matériel, Préparer le dépôt,
   Sons &amp; validation et <a href="../activite/">Activité de la nuit</a>. Une seule carte est mise en avant :
-  la <strong>prochaine action recommandée</strong>.</li>
+  la <strong>prochaine action recommandée</strong>.</p>
+</li>
 </ul>
 <h2 id="le-deverrouillage-de-la-validation">Le déverrouillage de la validation<a class="headerlink" href="#le-deverrouillage-de-la-validation" title="Permanent link">&para;</a></h2>
 <p>La carte <strong>Sons &amp; validation</strong> est <strong>grisée</strong> tant que la nuit n'est pas déposée (voir la capture
@@ -2209,7 +2217,9 @@ elle les corrige, elle vous le dit.</p>
 <p class="admonition-title">Vérifier sur la plateforme</p>
 <p>Après un envoi, le bouton <strong>Voir la participation</strong> (barre du haut de l'écran du passage) ouvre la
 fiche dans votre navigateur : c'est le moyen le plus sûr de confirmer que la plateforme affiche
-bien ce que vous attendiez.</p>
+bien ce que vous attendiez. Pour savoir si l'analyse est finie sans ouvrir le navigateur,
+<strong>Vérifier le traitement</strong>, juste à côté, pose la question à la plateforme et rapatrie les
+observations dès qu'elles existent.</p>
 </div>
 <h3 id="en-ligne-de-commande">En ligne de commande<a class="headerlink" href="#en-ligne-de-commande" title="Permanent link">&para;</a></h3>
 <p>Les mêmes gestes existent en ligne de commande, sous les mêmes mots :</p>

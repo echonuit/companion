@@ -801,6 +801,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#le-repli-manuel-quand-des-sequences-sont-refusees-sans-recours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le repli manuel, quand des séquences sont refusées sans recours
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1391,6 +1402,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#le-repli-manuel-quand-des-sequences-sont-refusees-sans-recours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le repli manuel, quand des séquences sont refusées sans recours
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1535,7 +1557,9 @@ nuit elle-même. Elle reste alors l'étape courante tant que la participation n'
 déposée n'est pas une nuit traitée. Elle n'est franchie qu'une fois l'analyse demandée à Vigie-Chiro.</p>
 <p>En séquences WAV, rien ne produit d'archive : l'étape « Générer les archives » n'a pas lieu d'être, et
 l'écran ne l'affiche pas. Elle revient si vous choisissez les archives ZIP, et elle reste quand
-l'application n'est pas connectée, parce qu'elle sert alors au dépôt manuel.</p>
+l'application n'est pas connectée, parce qu'elle sert alors au dépôt manuel. Elle revient aussi, sans
+numéro, quand Vigie-Chiro refuse des séquences sans recours : c'est le
+<a href="#le-repli-manuel-quand-des-sequences-sont-refusees-sans-recours">repli manuel</a>.</p>
 <p>Un dépôt <strong>déjà entamé garde sa forme</strong> : si une archive de la nuit est en ligne, l'écran reste celui
 des archives, quoi que dise le réglage.</p>
 <p><img alt="L'écran en forme par défaut, prêt à déposer : trois étapes, et « Téléverser sur Vigie-Chiro » pour la deuxième." src="../../assets/captures/apercu-lot-sequences.png" /></p>
@@ -1646,12 +1670,12 @@ plus rien à reprendre.</p>
 <td><strong>vous reconnecter</strong>. Les archives refusées pour cette raison redeviennent reprenables aussitôt, sans autre geste</td>
 </tr>
 <tr>
-<td><strong>contenu refusé</strong> (l'archive elle-même ne convient pas)</td>
-<td>se reconnecter n'y change rien : il faut <strong>régénérer les archives</strong> de la nuit, puis relancer le téléversement</td>
+<td><strong>contenu refusé</strong> (l'archive ou la séquence elle-même ne convient pas)</td>
+<td>se reconnecter n'y change rien. Pour des archives, il faut <strong>régénérer les archives</strong> de la nuit, puis relancer le téléversement. Pour des séquences, l'écran offre le <a href="#le-repli-manuel-quand-des-sequences-sont-refusees-sans-recours">repli manuel</a></td>
 </tr>
 <tr>
 <td><strong>stockage</strong> (l'espace de stockage de Vigie-Chiro refuse l'envoi des octets)</td>
-<td>se reconnecter n'y change rien : <strong>relancez le téléversement</strong>, qui redemande de nouvelles autorisations d'envoi. Si le refus persiste, déposez depuis le dossier de la nuit, comme le permet le dépôt manuel</td>
+<td>se reconnecter n'y change rien : <strong>relancez le téléversement</strong>, qui redemande de nouvelles autorisations d'envoi. Si le refus persiste : pour des archives, déposez-les depuis le dossier de la nuit, comme le permet le dépôt manuel ; pour des séquences, l'écran offre le <a href="#le-repli-manuel-quand-des-sequences-sont-refusees-sans-recours">repli manuel</a></td>
 </tr>
 </tbody>
 </table>
@@ -1668,6 +1692,26 @@ vous dit alors d'attendre la fin du téléversement ou de l'annuler.</p>
 </div>
 <p><img alt="Un dépôt entamé : l'en-tête dit « Dépôt Vigie-Chiro entamé », le téléversement reste l'étape courante, et « Générer les archives de dépôt » reste offert." src="../../assets/captures/apercu-lot-depot-entame.png" /></p>
 <p><img alt="Pendant un téléversement, la génération est refusée : le bandeau demande d'attendre la fin du téléversement ou de l'annuler, et « Annuler le dépôt » est offert au-dessus de la table de suivi." src="../../assets/captures/apercu-lot-generation-refusee.png" /></p>
+<h4 id="le-repli-manuel-quand-des-sequences-sont-refusees-sans-recours">Le repli manuel, quand des séquences sont refusées sans recours<a class="headerlink" href="#le-repli-manuel-quand-des-sequences-sont-refusees-sans-recours" title="Permanent link">&para;</a></h4>
+<p>En séquences WAV, l'écran n'offre ni archives ni dépôt manuel : tant que le téléversement passe, ils ne
+servent pas. Si Vigie-Chiro refuse des séquences pour une raison que ni « Reprendre le dépôt » ni une
+reconnexion ne lèveront, c'est-à-dire un refus du stockage ou un contenu refusé, une carte
+<strong>« Repli : déposer à la main »</strong> apparaît <strong>sous</strong> l'étape de téléversement.</p>
+<p>Elle dit combien de séquences ont été refusées, et offre « <strong>Générer les archives de dépôt</strong> » : les
+archives ZIP de la nuit sont écrites dans le sous-dossier <code>depot/</code>. Le chemin de ce dossier et
+« Ouvrir le dossier (dépôt manuel) » reviennent avec elle, dans l'étape de téléversement. Déposez ces
+archives à la main sur le portail, puis cliquez « <strong>Marquer le passage déposé</strong> », dans la même carte :
+le bouton s'ouvre une fois les archives générées. Il reste alors à « Lancer la participation », comme
+après tout dépôt.</p>
+<p>Le fil d'étapes ne change pas : il compte toujours trois étapes. Le repli n'est pas une étape de plus,
+c'est l'issue de celle qui vient d'être refusée.</p>
+<p>Les archives contiennent <strong>toute la nuit</strong>, séquences déjà en ligne comprises.</p>
+<p>Un refus de <strong>droits</strong> n'offre pas le repli, puisqu'il suffit de vous reconnecter. Un échec que
+« Reprendre le dépôt » peut rattraper ne l'offre pas non plus.</p>
+<p>En ligne de commande, <code>deposer-vigiechiro</code> nomme le même repli sous son bilan :
+<code>exporter-lot --passage N</code> génère les archives, et <code>deposer --passage N</code> marque le passage une fois
+qu'elles sont sur le portail.</p>
+<p><img alt="Le repli manuel : une séquence en ligne, deux refusées par le stockage, et sous l'étape de téléversement la carte « Repli : déposer à la main » avec « Générer les archives de dépôt » et « Marquer le passage déposé »." src="../../assets/captures/apercu-lot-repli-manuel.png" /></p>
 <h3 id="ce-que-le-depot-vous-rend-a-la-fin">Ce que le dépôt vous rend à la fin<a class="headerlink" href="#ce-que-le-depot-vous-rend-a-la-fin" title="Permanent link">&para;</a></h3>
 <p>Quand le téléversement se termine, un <strong>compte rendu</strong> dit ce qui est en ligne, en proportions.</p>
 <p><img alt="Le compte rendu d'un dépôt complet : la barre est pleine, le volume téléversé est dit, et l'étape suivante est nommée." src="../../assets/captures/apercu-lot-depot-compte-rendu.png" /></p>

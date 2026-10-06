@@ -1698,14 +1698,15 @@ servent pas. Si Vigie-Chiro refuse des séquences pour une raison que ni « Repr
 reconnexion ne lèveront, c'est-à-dire un refus du stockage ou un contenu refusé, une carte
 <strong>« Repli : déposer à la main »</strong> apparaît <strong>sous</strong> l'étape de téléversement.</p>
 <p>Elle dit combien de séquences ont été refusées, et offre « <strong>Générer les archives de dépôt</strong> » : les
-archives ZIP de la nuit sont écrites dans le sous-dossier <code>depot/</code>. Le chemin de ce dossier et
+archives ZIP des séquences qui ne sont pas en ligne sont écrites dans le sous-dossier <code>depot/</code>. Le chemin de ce dossier et
 « Ouvrir le dossier (dépôt manuel) » reviennent avec elle, dans l'étape de téléversement. Déposez ces
 archives à la main sur le portail, puis cliquez « <strong>Marquer le passage déposé</strong> », dans la même carte :
 le bouton s'ouvre une fois les archives générées. Il reste alors à « Lancer la participation », comme
 après tout dépôt.</p>
 <p>Le fil d'étapes ne change pas : il compte toujours trois étapes. Le repli n'est pas une étape de plus,
 c'est l'issue de celle qui vient d'être refusée.</p>
-<p>Les archives contiennent <strong>toute la nuit</strong>, séquences déjà en ligne comprises.</p>
+<p>Les archives ne contiennent que les séquences que Vigie-Chiro <strong>n'a pas</strong> : celles qui sont déjà en ligne
+n'y sont pas remises, parce que la plateforme les garderait en double.</p>
 <p>Un refus de <strong>droits</strong> n'offre pas le repli, puisqu'il suffit de vous reconnecter. Un échec que
 « Reprendre le dépôt » peut rattraper ne l'offre pas non plus.</p>
 <p>En ligne de commande, <code>deposer-vigiechiro</code> nomme le même repli sous son bilan :

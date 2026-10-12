@@ -1289,9 +1289,16 @@ dossier de travail - jamais dans un dépôt git.</p>
 <p>Cette synchronisation est ensuite <strong>rejouable à la demande</strong>, sans se reconnecter, avec le bouton
 <strong>Récupérer depuis Vigie-Chiro</strong> de l'écran Mes sites.</p>
 <h2 id="jeton-expire-ou-absent">Jeton expiré ou absent<a class="headerlink" href="#jeton-expire-ou-absent" title="Permanent link">&para;</a></h2>
-<p>Hors connexion (ou jeton expiré), l'application <strong>se dégrade proprement</strong> : les actions liées à la
-plateforme sont grisées avec une explication, tout le reste fonctionne normalement. Rouvrez
-simplement <strong>☰ → Se connecter à Vigie-Chiro…</strong> et recollez un jeton frais.</p>
+<p>Hors connexion, l'application <strong>se dégrade proprement</strong> : les actions liées à la plateforme sont
+grisées avec une explication, tout le reste fonctionne normalement. Rouvrez simplement <strong>☰ → Se
+connecter à Vigie-Chiro…</strong> et recollez un jeton frais.</p>
+<p>Un jeton qui <strong>expire pendant que l'application est ouverte</strong>, ou que la plateforme <strong>refuse</strong> en cours
+de travail, se découvre au premier geste qui en a besoin : ce geste vous dit de vous reconnecter et où
+(« Reconnectez-vous depuis le menu principal, entrée « Se connecter à Vigie-Chiro… » »), puis il se
+grise, comme les autres actions de plateforme. Un jeton refusé est <strong>oublié</strong> : il ne repart plus, et
+la fenêtre de connexion affiche « Non connecté ». Ouvrir cette fenêtre suffit aussi à griser les actions
+d'un jeton expiré. Les envois d'un dépôt refusés pour cette raison redeviennent reprenables dès que
+vous vous reconnectez.</p>
 <p>Lors de la vérification d'un jeton, la modale distingue désormais les causes d'échec : <strong>« Token
 invalide ou expiré »</strong> signifie que la plateforme a réellement refusé le jeton (recollez-en un frais),
 tandis que <strong>« Vigie-Chiro est injoignable »</strong> signale un problème de réseau : votre jeton n'est

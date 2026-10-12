@@ -1510,7 +1510,9 @@ position. Sur une frontière entre deux carrés, rien ne s'affiche : l'applicati
 vous ne déclariez quoi que ce soit. Il reste fermé tant que le numéro n'a pas ses six chiffres, et
 répond en une seconde.</p>
 <p>Il reste fermé aussi <strong>tant que vous n'êtes pas connecté</strong> : sans connexion, la question ne peut être
-posée à personne. Le motif au survol le dit et rappelle où se connecter. <strong>Déclarer le carré reste
+posée à personne. Le motif au survol le dit et rappelle où se connecter. Si votre jeton a expiré ou que
+la plateforme le refuse, le clic vous dit que le carré n'a <strong>pas</strong> été vérifié et qu'il faut vous
+reconnecter, puis le bouton se ferme. <strong>Déclarer le carré reste
 possible</strong> : c'est la vérification qui attend, pas votre saisie - travailler hors ligne est normal.</p>
 <p>Un carré ne reçoit vos nuits déposées que s'il existe en <strong>Point Fixe</strong> sur Vigie-Chiro. Chaque réponse
 dit donc ce qu'elle implique pour le dépôt, et il y en a quatre.</p>
@@ -1591,7 +1593,9 @@ simplement reliés - vos données locales ne sont <strong>jamais écrasées</str
 que celle exécutée automatiquement à la connexion ; un message sous le bandeau récapitule ce qui a
 été récupéré (ou signale qu'il n'y avait rien à récupérer).</p>
 <p>Hors connexion, ce bouton est <strong>grisé</strong>, et son motif au survol nomme le geste qui manque. Il se
-rouvre <strong>dès que vous vous connectez</strong>, sans quitter l'écran ni le rouvrir.</p>
+rouvre <strong>dès que vous vous connectez</strong>, sans quitter l'écran ni le rouvrir. Un jeton qui a expiré ou
+que la plateforme refuse se découvre au clic : le message dit de vous reconnecter et où, et le bouton se
+grise aussitôt, sans renvoyer la demande refusée.</p>
 <p>Ce message dit <strong>chaque nature séparément</strong> - sites, nuits, taxons - et <strong>sur combien</strong> : « 12 nuit(s)
 récupérée(s) sur 55, dont 40 en attente d'analyse Vigie-Chiro ». Un compteur seul serait exact et
 pourtant muet sur la part qui reste à venir.</p>
@@ -1673,7 +1677,9 @@ Vigie-Chiro » sur l'écran Mes sites).</p>
   qui y sont déjà. Une fois le point en ligne, la carte l'indique par <strong>« Publié sur Vigie-Chiro »</strong> et
   ne repropose plus le geste. Les points <strong>rapatriés</strong> de la plateforme, eux, ne l'affichent pas : ils y
   sont déjà. Le lien reste <strong>grisé</strong>, avec son motif, tant que vous n'êtes pas connecté, que le carré
-  n'est pas enregistré sur la plateforme, ou que le point n'a pas de coordonnées.</p>
+  n'est pas enregistré sur la plateforme, ou que le point n'a pas de coordonnées. Si votre jeton a expiré
+  ou que la plateforme le refuse au moment de publier, le compte rendu vous dit de vous reconnecter, et
+  le lien se grise.</p>
 <p>Au moment où vous <strong>créez</strong> un point, la fenêtre propose de le publier dans la foulée : cochez
 <strong>« Publier ce point sur Vigie-Chiro après l'enregistrement »</strong>. La case reste grisée, avec son
 motif, tant que le geste n'est pas possible ; si vous effacez les coordonnées après l'avoir cochée,
